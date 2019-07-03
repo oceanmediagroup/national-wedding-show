@@ -1,0 +1,36 @@
+.blog {
+  .container {
+    .row {
+      .news-content {
+        @media screen and (max-width: 991px) {
+          order: 2;
+        }
+
+        a {
+          color: $primary;
+
+          &:hover {
+            color: $primary-dark;
+          }
+        }
+
+        .pagination {
+          justify-content: flex-end;
+
+          .page-numbers {
+            padding: 0 5px;
+            color: #FA8371;
+          }
+        }
+
+        .wrapper {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .exhibitor-of-the-week {
+    background-color: transparent;
+  }
+}

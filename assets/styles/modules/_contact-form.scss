@@ -1,0 +1,166 @@
+.contact-form {
+  padding: 40px 0 20px;
+  background-color: $gray-4;
+
+  &__title {
+    font-family: 'Freight';
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 400;
+    color: $brown;
+    margin-bottom: 15px;
+
+    &.small {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    color: $gray-dark;
+    margin-bottom: 25px;
+  }
+
+  &__info {
+    font-size: 12px;
+    color: $gray-dark;
+    margin-bottom: 0;
+  }
+
+  .wpcf7 {
+    width: 100%;
+  }
+  form {
+    display: flex;
+    flex-wrap: wrap;
+
+    .ajax-loader {
+      float: left;
+    }
+
+    p {
+      margin-bottom: 7px;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 20px;
+      }
+    }
+
+    input, select {
+      color: $gray-dark;
+      font-size: 20px;
+      font-style: italic;
+      line-height: 1;
+      background-color: $white;
+      padding: 12px 25px 8px;
+      width: 100%;
+      height: 48px;
+      border: 1px solid #F0F2F4;
+      border-radius: 4px;
+
+      &::-webkit-input-placeholder {
+        color: $gray-dark;
+        font-size: 20px;
+        font-style: italic;
+        line-height: 1;
+      }
+      &::-moz-placeholder {
+        color: $gray-dark;
+        font-size: 20px;
+        font-style: italic;
+        line-height: 1;
+      }
+      &:-ms-input-placeholder {
+        color: $gray-dark;
+        font-size: 20px;
+        font-style: italic;
+        line-height: 1;
+      }
+      &:-moz-placeholder {
+        color: $gray-dark;
+        font-size: 20px;
+        font-style: italic;
+        line-height: 1;
+      }
+
+      &.wpcf7-submit {
+        width: auto;
+        display: inline-block;
+        color: $primary;
+        font-size: 14px;
+        font-weight: 700;
+        font-style: normal;
+        border: 1px solid $primary;
+        padding: 10px 35px 7px;
+        letter-spacing: 0.01em;
+        border-radius: 0;
+        cursor: pointer;
+        margin-top: 15px;
+
+        &:hover {
+          color: $white;
+          background-color: $primary;
+        }
+      }
+    }
+    span.wpcf7-not-valid-tip {
+      font-size: 14px;
+      margin-bottom: -21px;
+      padding-left: 20px;
+    }
+    div.wpcf7-response-output {
+      margin: 0 15px 20px;
+      padding: 5px 25px;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  .acceptance-fields {
+    background-color: $white;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    color: $gray-dark;
+    font-size: 12px;
+    line-height: 19px;
+
+    &:before {
+      content: ' ';
+      position: absolute;
+      background-color: $white;
+      left: 0;
+      width: 100vw;
+      height: 197px;
+    }
+
+    &__wrapper {
+      padding: 33px 0 0;
+    }
+
+    &__warning {
+      margin-left: 24px;
+    }
+
+    input, select {
+      width: auto;
+      margin-right: 10px;
+      vertical-align: top;
+      height: auto;
+    }
+
+    .wpcf7-list-item-label {
+      display: inline-block;
+      width: auto;
+      max-width: calc(100% - 40px);
+    }
+
+    .wpcf7-list-item, .wpcf7-list-item label {
+      width: 100%;
+    }
+
+    .wpcf7-list-item {
+      margin: auto;
+    }
+  }
+}

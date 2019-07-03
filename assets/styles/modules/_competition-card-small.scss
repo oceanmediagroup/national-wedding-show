@@ -1,0 +1,108 @@
+.competition {
+  position: relative;
+  min-height: 375px;
+  margin-top: 15px;
+  padding: 14px;
+  background: url("/assets/img/dots-full.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    min-height: unset;
+    margin-top: 0;
+    padding: 20px;
+  }
+
+  &__img-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__img {
+    position: absolute;
+    margin: auto;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    max-width: 100%;
+    margin: 0 28px;
+    margin: auto;
+
+    @include media-breakpoint-up(md) {
+      max-width: 80%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: 300px;
+    }
+  }
+
+  &__category {
+    display: inline-block;
+    padding: 0 26px;
+    background-color: $primary-dark;
+    color: $white;
+    font-size: 23px;
+    font-family: 'Lobster';
+    line-height: 43px;
+    @include xdSpacing(7);
+  }
+
+  &__text {
+    display: inline-block;
+    background-color: rgba($white, 0.86);
+    padding: 12px 14px;
+    font-family: 'Freight';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 31px;
+    color: $brown;
+    margin: 0 28px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 33px;
+      padding: 12px 10px;
+      margin: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text em {
+    text-decoration: underline;
+    color: $primary;
+  }
+
+  &__link {
+    display: block;
+    margin-top: 5px;
+    font-family: 'Helvetica Neue';
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+    text-decoration: underline;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 10px;
+    }
+
+    &.text--coral:hover {
+      color: $primary-dark;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.container-gold {
+  position: relative;
+
+  &__confetti {
+    position: absolute;
+    z-index: -1;
+    max-width: 100%;
+
+    @include media-breakpoint-up(md) {
+      max-width: none;
+    }
+  }
+
+  &__confetti--top, &__confetti--bottom {
+    max-width: 50%;
+
+    @include media-breakpoint-up(md) {
+      max-width: 100%;
+    }
+  }
+
+  &__confetti--top {
+    top: 0;
+    right: 0;
+  }
+
+  &__confetti--bottom {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.container-gray {
+  background-color: $gray-4;
+  padding: 15px 0;
+
+  @include media-breakpoint-up(lg) {
+    padding: 42px 0;
+  }
+}
+
+.container-cards {
+  margin-bottom: 60px;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+  }
+
+  .container-gold__confetti--top, .container-gold__confetti--bottom {
+
+    max-width: 100%;
+  }
+}
+
+.container-dotted-bg {
+  background-image: url('/wp-content/uploads/2018/08/mask_group_344.png'), url('/wp-content/uploads/2018/08/mask_group_343.png');
+  background-position: left bottom, top right;
+  background-size: 13%;
+  background-repeat: no-repeat;
+}
+
+.container-dotted-bg-small {
+  background-image: url('/assets/img/patterns/contact-right-top-points.png'), url('/wp-content/uploads/2018/08/mask_group_343.png');
+  background-position: left bottom, top right;
+  background-size: 13%;
+  background-repeat: no-repeat;
+}

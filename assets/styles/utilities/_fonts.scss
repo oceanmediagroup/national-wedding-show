@@ -1,0 +1,143 @@
+/*
+100 - Thin
+200 - Extra Light, Ultra Light
+300 - Light
+400 - Normal, Book, Regular
+500 - Medium
+600 - Semi Bold, Demi Bold
+700 - Bold
+800 - Extra Bold, Ultra Bold
+900 - Black, Heavy
+*/
+
+/* Freight SANS SERIF FONTS*/
+@font-face {
+  font-family: 'Freight, sans-serif';
+  src: url('/assets/fonts/Freight Sans Medium.eot');
+  src: local('☺'), url('/assets/fonts/Freight Sans Medium.woff') format('woff'), url('/assets/fonts/Freight Sans Medium.ttf') format('truetype'), url('/assets/fonts/Freight Sans Medium.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Freight FONTS*/
+@font-face {
+  font-family: 'Freight';
+  src: url('/assets/fonts/Freight Text Light SC.eot');
+  src: local('☺'), url('/assets/fonts/Freight Text Light SC.woff') format('woff'), url('/assets/fonts/Freight Text Light SC.ttf') format('truetype'), url('/assets/fonts/Freight Text Light SC.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Freight';
+  src: url('/assets/fonts/Freight Text Light Italic.eot');
+  src: local('☺'), url('/assets/fonts/Freight Text Light Italic.woff') format('woff'), url('/assets/fonts/Freight Text Light Italic.ttf') format('truetype'), url('/assets/fonts/Freight Text Light Italic.svg') format('svg');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Freight';
+  src: url('/assets/fonts/Freight Text Book.eot');
+  src: local('☺'), url('/assets/fonts/Freight Text Book.woff') format('woff'), url('/assets/fonts/Freight Text Book.ttf') format('truetype'), url('/assets/fonts/Freight Text Book.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Freight';
+  src: url('/assets/fonts/Freight Text Book Italic.eot');
+  src: local('☺'), url('/assets/fonts/Freight Text Book Italic.woff') format('woff'), url('/assets/fonts/Freight Text Book Italic.ttf') format('truetype'), url('/assets/fonts/Freight Text Book Italic.svg') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Freight';
+  src: url('/assets/fonts/Freight Text Medium.eot');
+  src: local('☺'), url('/assets/fonts/Freight Text Medium.woff') format('woff'), url('/assets/fonts/Freight Text Medium.ttf') format('truetype'), url('/assets/fonts/Freight Text Medium.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Freight';
+  src: url('/assets/fonts/Freight Text Medium Italic.eot');
+  src: local('☺'), url('/assets/fonts/Freight Text Medium Italic.woff') format('woff'), url('/assets/fonts/Freight Text Medium Italic.ttf') format('truetype'), url('/assets/fonts/Freight Text Medium Italic.svg') format('svg');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Freight';
+  src: url('/assets/fonts/Freight Text Bold.eot');
+  src: local('☺'), url('/assets/fonts/Freight Text Bold.woff') format('woff'), url('/assets/fonts/Freight Text Bold.ttf') format('truetype'), url('/assets/fonts/Freight Text Bold.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Freight';
+  src: url('/assets/fonts/Freight Text Bold Italic.eot');
+  src: local('☺'), url('/assets/fonts/Freight Text Bold Italic.woff') format('woff'), url('/assets/fonts/Freight Text Bold Italic.ttf') format('truetype'), url('/assets/fonts/Freight Text Bold Italic.svg') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Freight';
+  src: url('/assets/fonts/Freight Text Black Italic.eot');
+  src: local('☺'), url('/assets/fonts/Freight Text Black Italic.woff') format('woff'), url('/assets/fonts/Freight Text Black Italic.ttf') format('truetype'), url('/assets/fonts/Freight Text Black Italic.svg') format('svg');
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+/* Lobster FONTS*/
+@font-face {
+  font-family: 'Lobster';
+  src: url('/assets/fonts/Lobster 1.4.eot');
+  src: local('☺'), url('/assets/fonts/Lobster 1.4.woff') format('woff'), url('/assets/fonts/Lobster 1.4.ttf') format('truetype'), url('/assets/fonts/Lobster 1.4.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Helvetica FONTS*/
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/assets/fonts/helveticaneue-light-001.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/assets/fonts/HelveticaNeueLTStd-Roman.eot');
+  src: local('☺'), url('/assets/fonts/HelveticaNeueLTStd-Roman.woff') format('woff'), url('/assets/fonts/HelveticaNeueLTStd-Roman.ttf') format('truetype'), url('/assets/fonts/HelveticaNeueLTStd-Roman.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/assets/fonts/HelveticaNeueLTStd-It.eot');
+  src: local('☺'), url('/assets/fonts/HelveticaNeueLTStd-It.woff') format('woff'), url('/assets/fonts/HelveticaNeueLTStd-It.ttf') format('truetype'), url('/assets/fonts/HelveticaNeueLTStd-It.svg') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/assets/fonts/HelveticaNeueLTStd-Bd.eot');
+  src: local('☺'), url('/assets/fonts/HelveticaNeueLTStd-Bd.woff') format('woff'), url('/assets/fonts/HelveticaNeueLTStd-Bd.ttf') format('truetype'), url('/assets/fonts/HelveticaNeueLTStd-Bd.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/assets/fonts/HelveticaNeueLTStd-BdIt.eot');
+  src: local('☺'), url('/assets/fonts/HelveticaNeueLTStd-BdIt.woff') format('woff'), url('/assets/fonts/HelveticaNeueLTStd-BdIt.ttf') format('truetype'), url('/assets/fonts/HelveticaNeueLTStd-BdIt.svg') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}

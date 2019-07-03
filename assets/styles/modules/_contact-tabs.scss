@@ -1,0 +1,89 @@
+.contact-tabs {
+  padding: 45px 0 55px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: ' ';
+    position: absolute;
+    z-index: -1;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    left: 0;
+    bottom: 0;
+    background-image: url('/assets/img/patterns/dots-mobile-bottom.png');
+    width: 100%;
+    height: 38px;
+    background-position: left bottom;
+
+    @include media-breakpoint-up(lg) {
+      background-image: url('/assets/img/patterns/contact-tab-right-bottom.png');
+      width: 225px;
+      height: 273px;
+      right: 0;
+      left: auto;
+    }
+  }
+
+  &::after {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 69px;
+    background-image: url('/assets/img/patterns/dots-mobile-top.png');
+    background-position: right top;
+
+    @include media-breakpoint-up(lg) {
+      width: 192px;
+      height: 315px;
+      background-image: url('/assets/img/patterns/contact-tab-left-top.png');
+    }
+  }
+
+  &__title{
+    color: $brown;
+    font-family: 'Freight';
+    font-weight: 400;
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+
+  &__pills{
+    border-left: 1px solid #F0F2F4;
+    border-top: 1px solid #F0F2F4;
+    padding: 0;
+
+    .nav-link{
+      border-radius: 0;
+      border-bottom: 1px solid #F0F2F4;
+      font-family: 'Helvetica Neue';
+      font-size: 22px;
+      line-height: 1;
+      color: $black;
+      padding: 28px 20px 23px;
+
+      &.active{
+        background-color: $primary;
+      }
+    }
+  }
+
+  &__content{
+    border: 1px solid #F0F2F4;
+    padding: 30px;
+    background-color: $white;
+
+    p, a{
+      font-size: 14px;
+      color: $gray-dark;
+      margin-bottom: 3px;
+    }
+    a{
+      font-weight: 600;
+      display: block;
+    }
+  }
+}

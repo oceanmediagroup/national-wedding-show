@@ -1,0 +1,26 @@
+.info-banner {
+  background-color: $primary;
+  padding: 30px 0;
+
+  &__text {
+    color: $white;
+    font-family: 'Freight';
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 31px;
+    margin-bottom: 0;
+    text-align: center;
+
+    @include xdSpacing(10);
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+      font-size: 41px;
+      line-height: 46px;
+    }
+
+    a:hover {
+      color: $white;
+    }
+  }
+}

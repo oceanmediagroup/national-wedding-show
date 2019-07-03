@@ -1,0 +1,31 @@
+.color-overlay-wrapper {
+  position: relative;
+}
+
+%color-overlay {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.color-overlay {
+  @extend %color-overlay;
+}
+
+.color-overlay--light {
+  @extend %color-overlay;
+  background-color: rgba($primary-dark, 0.15);
+  opacity: 1;
+}
+
+.color-overlay-wrapper:hover .color-overlay {
+  background-color: rgba($primary-dark, 0.3);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}

@@ -1,0 +1,23 @@
+.gallery-simple {
+
+  padding: 60px 0 0;
+
+  &__item{
+    margin-bottom: 30px;
+  }
+
+  &__wrapper{
+    overflow: hidden;
+  }
+
+  &__image{
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s ease-in-out;
+
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+}

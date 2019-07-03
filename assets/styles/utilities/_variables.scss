@@ -1,0 +1,14 @@
+$toggler-width: 80px;
+
+$card-padding: 7px;
+
+$navbar-height: 74px;
+
+%link-hover {
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+  }
+}

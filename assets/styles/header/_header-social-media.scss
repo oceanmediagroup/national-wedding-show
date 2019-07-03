@@ -1,0 +1,19 @@
+.header-social-media {
+    width: 100%;
+    margin: auto;
+    padding: 10px 20px;
+
+    &__icon {
+      color: $black;
+      font-size: 27px;
+
+      @extend %link-hover;
+    }
+  }
+
+  .footer__social-links {
+    .header-social-media__icon {
+      font-size: 14px;
+
+    }
+  }

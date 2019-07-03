@@ -1,0 +1,3 @@
+@mixin xdSpacing($adobeValue) {
+  letter-spacing: ($adobeValue / 1000) + 0em;
+}

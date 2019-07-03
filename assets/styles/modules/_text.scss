@@ -1,0 +1,40 @@
+.text {
+  &--coral {
+    color: $primary;
+  }
+}
+
+.title, .modal-title {
+  font-family: 'Freight';
+  color: #40261C;
+  line-height: 39px;
+  font-size: 2.25rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 2rem;
+  }
+
+}
+
+.cta-link {
+  display: block;
+  padding: 10px 20px 8px;
+  text-align: center;
+  border: 1px solid #FA8371;
+  color: #FA8371;
+  font-size: 0.875rem;
+  line-height: 17px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  font-weight: 700;
+
+  @media screen and (max-width: 1199px) {
+    margin: 5px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #FA8371;
+  }
+}

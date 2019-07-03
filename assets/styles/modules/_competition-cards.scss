@@ -1,0 +1,58 @@
+.competition-cards {
+
+  padding: 35px 0 40px;
+
+  .cards-list {
+
+    .card {
+      border: 1px solid $gray-2;
+      border-radius: 0;
+      margin: 15px;
+
+      @include media-breakpoint-up(md) {
+        margin: 0 0 30px;
+      }
+
+      .card-img-top {
+        border-radius: 0;
+        width: 100%;
+        height: 235px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .card-body {
+        min-height: 135px;
+
+        .card-title {
+          color: $brown;
+          font-family: 'Freight';
+          font-size: 22px;
+          line-height: 27px;
+        }
+      }
+
+      .card-footer {
+        border-top: none;
+        background-color: $white;
+        text-align: right;
+        padding: 0 20px 30px;
+        position: relative;
+
+        &:after {
+          content: ' ';
+          background-image: url('/assets/img/corner-confetti-bg.png');
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 180px;
+          height: 38px;
+        }
+      }
+    }
+    .button--light-coral {
+      width: auto;
+    }
+  }
+}

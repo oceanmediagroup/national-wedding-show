@@ -1,0 +1,56 @@
+.page-single-features {
+  .gallery .alm-reveal {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .gallery .alm-btn-wrap {
+    text-align: center;
+  }
+
+  .gallery .button--light-coral {
+    background-color: $primary;
+    padding: 10px 24px 7px;
+    color: $white;
+    cursor: pointer;
+    &:hover {
+      background-color: transparent;
+      color: $primary;
+    }
+  }
+
+  .gallery .alm-load-more-btn.done {
+    display: none;
+  }
+
+  .gallery .image-gallery-inside {
+    height: 220px;
+
+    @include media-breakpoint-up(md) {
+      height: 481px;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .gallery .col-6:nth-child(odd) {
+      padding-right: 8px;
+    }
+
+    .gallery .col-6:nth-child(even) {
+      padding-left: 8px;
+    }
+  }
+
+  .locations .page-description__title {
+    text-align: center !important;
+    width: auto;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+
+}
+

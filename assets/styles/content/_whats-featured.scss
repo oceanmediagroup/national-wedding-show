@@ -1,0 +1,29 @@
+.whats-featured {
+
+  &__title-row {
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    font-family: 'Freight';
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 400;
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 10px;
+    }
+  }
+}
+
+.locations-template-default {
+  .whats-featured {
+    &__title {
+      font-size: 36px;
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      padding-left: 15px;
+    }
+  }
+}

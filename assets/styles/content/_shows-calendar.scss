@@ -1,0 +1,47 @@
+.shows-calendar {
+  .item {
+    border-radius: 0;
+    border: 1px solid #F0F2F4;
+    background-color: $white;
+    text-align: center;
+    height: 100%;
+
+  }
+
+  hr {
+    border-color: #F0F2F4;
+    width: 100%;
+  }
+
+  .show {
+    &__name {
+      padding: 17px 10px 0;
+      font-family: 'Freight';
+      font-weight: 500;
+      font-size: 23px;
+      color: $primary-dark;
+      margin-bottom: 0;
+    }
+
+    &__dates, &__hours {
+      font-family: 'Helvetica Neue';
+      color: $gray-dark;
+    }
+
+    &__dates {
+      font-weight: 300;
+      font-size: 17px;
+      padding: 0px 10px;
+    }
+
+    &__hours {
+      font-weight: 400;
+      font-size: 14px;
+      padding: 5px 10px 10px;
+
+      br, p {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

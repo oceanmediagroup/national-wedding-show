@@ -1,0 +1,54 @@
+.exhibitors-video {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	padding: 35px 0 32px;
+
+	.container {
+		.row {
+			margin: 0;
+			
+			.video-col {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				background-color: rgba(237,236,232,.9);
+
+				h3 {
+					padding: 26px 0 10px;
+					font-family: 'Freight';
+					font-size: 2.25rem;
+					color: #40261C;
+					line-height: 36px;	
+					margin: 0;
+					text-align: center;
+				}
+
+				.embed-responsive {
+					max-width: 720px;
+				}
+
+				a {
+					display: block;
+					padding: 10px 10px 8px;
+					margin: 20px auto;
+					min-width: 250px;
+					text-align: center;
+					border: 1px solid #FA8371;
+					color: #FA8371;
+					font-size: 0.875rem;
+					line-height: 17px;
+					text-transform: uppercase;
+					transition: all 0.3s ease;
+					font-weight: 700;
+
+					&:hover {
+						text-decoration: none;
+						color: #fff;
+						background-color: #FA8371;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.breadcrumbs {
+  padding: 8px 0;
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+
+  a {
+    color: $gray-dark;
+    font-size: 11px;
+
+    &:hover {
+      color: $primary-dark;
+      text-decoration: none;
+    }
+  }
+
+  .current-item {
+    color: $primary;
+  }
+}

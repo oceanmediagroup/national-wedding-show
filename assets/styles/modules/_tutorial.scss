@@ -1,0 +1,47 @@
+.tutorial {
+
+  .tutorial-card {
+    overflow: hidden;
+
+    &__video {
+      height: 300px;
+      width: auto;
+      min-width: 100.1%;
+      background-color: black;
+      pointer-events: none;
+    }
+
+    &__title {
+      margin-top: -7px;
+      border: 1px solid $gray-5;
+      padding: 19px;
+      width: 100%;
+      font-family: 'Freight';
+      font-size: 22px;
+      line-height: 27px;
+    }
+  }
+
+  .tutorial-modal {
+    &__wrapper {
+
+    }
+
+    &__content {
+
+    }
+
+    &__header {
+
+    }
+
+    &__body {
+
+    }
+
+    &__text {
+
+    }
+  }
+
+}

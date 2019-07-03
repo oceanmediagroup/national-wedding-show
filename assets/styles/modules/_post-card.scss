@@ -1,0 +1,56 @@
+.post-card {
+  &__wrapper {
+    position: relative;
+    border: 1px solid $gray-5;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    height: 215px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__category {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    padding: 6px 18px;
+    background-color: $primary-dark;
+    font-family: 'Lobster' !important;
+    font-size: 18px;
+    line-height: 24px;
+    color: $white;
+  }
+
+  &__body {
+    padding: 19px;
+    min-height: 150px;
+  }
+
+  &__title {
+    font-family: 'Freight';
+    font-size: 22px;
+    line-height: 27px;
+    text-align: left;
+    color: $brown;
+  }
+
+  &__footer {
+    padding: 12px 0;
+    margin: 0 19px;
+    border-top: 1px solid $gray-5;
+  }
+
+  &__date, &__link {
+    font-family: 'Helvetica Neue';
+    font-size: 14px;
+    line-height: 23px;
+    color: $primary;
+  }
+
+  &__link:hover {
+    color: $primary-dark;
+  }
+}

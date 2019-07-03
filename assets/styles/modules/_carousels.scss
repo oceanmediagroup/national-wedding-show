@@ -1,0 +1,24 @@
+.owl-theme .owl-dots .owl-dot {
+  &.active span {
+    background: $gray-6;
+  }
+
+  span {
+    width: 14px;
+    height: 14px;
+    margin: 5px;
+    background: $gray-3;
+  }
+}
+
+.owl-carousel .video.item {
+  background-size: cover;
+  background-position: center;
+}
+
+.owl-carousel button.owl-prev:focus,
+.owl-carousel button.owl-next:focus,
+.clients-carousel__nav button.owl-prev:focus,
+.clients-carousel__nav button.owl-next:focus {
+  outline: 1px solid $primary;
+}

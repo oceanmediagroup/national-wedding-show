@@ -1,0 +1,218 @@
+.tabs-offer {
+  background-color: #F8F8F8;
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+  .container {
+    background-color: #fff;
+    border: 1px solid #F0F2F4;
+    border-top: none;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    .row {
+      margin: 0;
+
+      .col-lg-12 {
+        padding: 0;
+
+        .nav-tabs {
+          @media screen and (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .nav-item {
+            @media screen and (max-width: 767px) {
+              width: 100% !important;
+            }
+          }
+
+          .nav-item .nav-link {
+            border: 1px solid #F0F2F4;
+            border-left: none;
+            border-radius: 0;
+            text-align: center;
+            padding: 15px 10px 10px;
+            font-family: 'Helvetica Neue';
+            font-weight: 500;
+            color: $brown;
+            font-size: 20px;
+            line-height: 35px;
+            @include xdSpacing(70);
+
+            &.active {
+              background-color: #FA665B;
+              transition: all 0.3s ease;
+              color: #F8F8F8;
+            }
+          }
+
+
+          .nav-item:last-child .nav-link {
+            border-right: none;
+          }
+        }
+
+        .tab-content {
+          .tab-pane {
+            margin: 0;
+            padding: 30px 20px;
+
+            &.show {
+              display: flex;
+            }
+
+            .col-12 {
+              padding-top: 30px;
+              padding-bottom: 20px;
+
+              .title {
+                font-family: 'Freight';
+                color: #40261C;
+                font-weight: 400;
+                line-height: 39px;
+                font-size: 30px;
+                text-align: center;
+                padding-bottom: 20px;
+              }
+
+              .content {
+                color: #535252;
+                line-height: 24px;
+                font-size: 0.875rem;
+                font-family: 'Helvetica Neue';
+                text-align: center;
+              }
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__card-wrapper {
+    width: 100%;
+  }
+
+  &__card {
+    height: auto;
+    margin-bottom: 30px;
+    display: block;
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+      padding: 0 15px;
+      margin-bottom: 0;
+      min-height: 400px;
+    }
+  }
+
+  &__card-img-wrapper {
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include media-breakpoint-up(md) {
+      height: 50%;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 25px;
+      right: 0;
+      height: 85px;
+      width: 160px;
+      background-color: #fff;
+      z-index: 0;
+    }
+  }
+
+  &__card-logo {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 1;
+    height: 55px;
+
+  }
+
+  &__card-content {
+    height: auto;
+    min-height: 200px;
+    padding: 20px;
+    border-color: $gray-5;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    display: grid !important;
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+      height: 57%;
+    }
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-image: url('/assets/img/patterns/corner_confetti_bg.png');
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: bottom left;
+    }
+  }
+
+  &__card-title {
+    font-family: 'Freight';
+    color: $black;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  &__card-btn {
+    float: right;
+    justify-self: end;
+    align-self: end;
+    text-align: center;
+    z-index: 1;
+    background-color: white;
+  }
+
+}
+
+.show-offers {
+
+  &__text-wrapper {
+    padding: 44px 20px;
+
+    h2 {
+      font-family: 'Freight';
+      font-weight: 400;
+      color: $brown;
+      line-height: 39px;
+      font-size: 30px;
+      padding-bottom: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      color: $primary;
+      font-weight: normal;
+    }
+  }
+}

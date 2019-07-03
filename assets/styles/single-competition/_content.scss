@@ -1,0 +1,91 @@
+.single-competitions {
+  .image-header__wrapper {
+    @include media-breakpoint-down(md) {
+      height: 296px;
+    }
+  }
+}
+
+.single-competition-content {
+  padding: 0 0 30px;
+
+  &__title {
+    font-family: 'Freight';
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+    color: $brown;
+    margin-bottom: 25px;
+  }
+
+  &__excerpt {
+    font-size: 22px;
+    line-height: 36px;
+    color: $gray-dark;
+    margin-bottom: 50px;
+  }
+
+  &__data {
+    font-family: 'Freight';
+    font-size: 22px;
+    line-height: 23px;
+    color: $brown;
+    margin-bottom: 0;
+  }
+
+  &__enter {
+    padding: 30px 0;
+    margin-bottom: 40px;
+    background-color: $gray-4;
+    position: relative;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+      padding: 10px 0;
+    }
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      background-color: $gray-4;
+      width: 200%;
+      height: 100%;
+      left: -50%;
+      z-index: -1;
+    }
+
+    .single-competition-content__data {
+      margin-bottom: 20px;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
+    }
+
+    .button--light-coral {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    color: $gray-dark;
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    img {
+      @include media-breakpoint-down(sm) {
+        float: none;
+        margin: auto;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

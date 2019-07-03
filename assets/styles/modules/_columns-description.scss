@@ -1,0 +1,72 @@
+.columns-description {
+  padding: 45px 0;
+  position: relative;
+
+  &::before{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url('/assets/img/patterns/contact-left-bottom-points.png');
+    width: 273px;
+    height: 158px;
+  }
+  &::after{
+    content: ' ';
+    position: absolute;
+    right: 0;
+    top: -40px;
+    background-image: url('/assets/img/patterns/contact-right-top-points.png');
+    width: 315px;
+    height: 192px;
+  }
+
+  &__title{
+    font-family: 'Freight';
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+    color: $brown;
+    margin-bottom: 25px;
+  }
+
+  &__description{
+    font-size: 14px;
+    line-height: 24px;
+    color: $gray-dark;
+    p {
+      margin-bottom: 20px;
+    }
+    span{
+      color: $primary;
+      font-weight: 600;
+    }
+    ul>li{
+      position: relative;
+      padding-left: 15px;
+
+      &::before{
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: $primary;
+      }
+    }
+  }
+
+  &__link{
+    margin-top: 15px;
+  }
+
+  &__small-text{
+    font-size: 12px;
+    line-height: 19px;
+    color: $gray-dark;
+    margin-top: 50px;
+  }
+
+  &__image{
+    width: 100%;
+    margin-top: 20px;
+  }
+}

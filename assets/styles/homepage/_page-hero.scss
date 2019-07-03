@@ -1,0 +1,159 @@
+.page-hero {
+  position: relative;
+
+  .header-carousel-simple {
+    height: 570px;
+
+    @include media-breakpoint-up(md) {
+      height: 575px;
+    }
+
+    .item {
+      height: 470px;
+
+      @include media-breakpoint-up(md) {
+        height: 575px;
+      }
+    }
+
+    .color-overlay {
+      opacity: 1;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($primary, 0.15);
+    }
+
+    &.color-overlay-wrapper:hover .color-overlay {
+
+      background-color: rgba($primary, 0.15);
+    }
+  }
+
+  .locations {
+    position: absolute;
+    width: 100%;
+    bottom: 16px;
+    z-index: 1;
+    padding: 0;
+    box-shadow: 0px 2px 6px rgba($black, 0.37);
+
+    @include media-breakpoint-up(md) {
+      box-shadow: none;
+      bottom: 56px;
+    }
+
+    .row-wider {
+      @include media-breakpoint-up(md) {
+        margin-left: -23px;
+        margin-right: -23px;
+      }
+    }
+
+    .col-md-4 {
+      @include media-breakpoint-up(md) {
+        padding-left: 9px;
+        padding-right: 9px;
+      }
+    }
+
+    &__card {
+      display: flex;
+      justify-content: space-between;
+      background-color: $primary;
+      padding: 13px 14px 10px;
+      border-bottom: 1px solid $primary-dark;
+      transition: 0.2s transform;
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(md) {
+        display: block;
+        justify-content: unset;
+        padding: 14px 20px;
+        border-bottom: none;
+        background-color: rgba($gray-5, 0.9);
+        box-shadow: 0px 2px 6px rgba($black, 0.37);
+        margin-bottom: 18px;
+      }
+    }
+
+    &__card:hover {
+      background-color: $primary-dark;
+      color: $white;
+      text-decoration: none;
+
+      @include media-breakpoint-up(md) {
+        transform: translateY(-10px);
+        background-color: $primary;
+      }
+
+      .locations__name {
+        color: $white;
+      }
+
+      .locations__date, .locations__arrow {
+        color: $accent-color;
+      }
+    }
+
+    &__card--highlighted {
+      display: none;
+      background-color: rgba($primary, 0.9);
+
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+
+      .locations__name {
+        color: $white;
+      }
+
+      .link {
+        text-decoration: underline;
+      }
+
+      .link, .locations__arrow {
+        color: $accent-color;
+      }
+    }
+
+    &__name {
+      font-family: 'Freight';
+      font-size: 19px;
+      line-height: normal;
+      font-weight: 500;
+      color: $white;
+
+      @include media-breakpoint-up(md) {
+        display: block;
+        color: $primary-dark;
+        font-size: 26px;
+        line-height: 30px;
+      }
+    }
+
+    &__date {
+      font-family: 'Helvetica Neue';
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 19px;
+      color: $accent-color;
+
+      @include media-breakpoint-up(md) {
+        color: $brown;
+        font-size: 17px;
+        line-height: 19px;
+      }
+    }
+
+    &__arrow {
+      margin-left: 8px;
+      color: $white;
+
+      @include media-breakpoint-up(md) {
+        color: $brown;
+      }
+    }
+
+  }
+}

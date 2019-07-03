@@ -1,0 +1,108 @@
+.testimonials-carousel {
+  background-color: $white;
+  padding: 20px 15px;
+  margin-bottom: 15px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 20px 31px 15px;
+    margin-bottom: 0;
+  }
+
+  .testimonial {
+    text-align: center;
+
+    &__img {
+      border-radius: 50%;
+      width: 127px;
+      height: 127px;
+      position: relative;
+      margin: auto;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &__title {
+      color: $primary;
+      font-family: 'Helvetica Neue';
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 30px;
+      padding: 11px 0 5px;
+    }
+
+    &__text {
+      color: $gray-dark;
+      font-size: 14px;
+      font-family: 'Helvetica Neue';
+      line-height: 22px;
+      padding: 0 30px;
+      position: relative;
+
+      @include media-breakpoint-up(lg) {
+        padding: 0 44px;
+      }
+    }
+
+    &__text::before, &__text::after {
+      content: '“';
+      position: absolute;
+      color: $primary;
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 53px;
+      line-height: 30px;
+    }
+
+    &__text::before {
+      left: 0;
+      top: -5px;
+    }
+
+    &__text::after {
+      right: 0;
+      bottom: -5px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 0;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    width: 14px;
+    height: 14px;
+    background: $gray-3;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: $gray-6;
+  }
+}
+
+.page-exhibit {
+  .testimonials-carousel {
+    background-color: transparent;
+  }
+
+  .testimonial {
+    &__img {
+      border-radius: 0;
+      background-size: contain;
+      width: 175px;
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font-family: 'Arial';
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__text {
+      margin-bottom: 12px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.show-offers-banner {
+
+  &__wrapper{
+    padding: 40px 15px;
+    background-size: cover;
+    background-position: center;
+
+    @include media-breakpoint-up(md) {
+      padding: 80px 15px;
+    }
+  }
+
+  &__inner{
+    background-color: rgba(237,236,232,.9);
+    padding: 40px;
+    text-align: center;
+  }
+
+  &__title{
+    font-family: 'Freight';
+    font-weight: 400;
+    color: $brown;
+    font-size: 35px;
+    margin-bottom: 15px;
+    line-height: 1;
+  }
+
+  &__description{
+    color: $gray-dark;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__link{
+    padding: 10px 30px 7px;
+  }
+}

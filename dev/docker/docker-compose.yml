@@ -1,0 +1,70 @@
+---
+version: '3.7'
+
+services:
+  web:
+    image: registry.unity.software/nginx
+    volumes:
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+      - ../../web:/app/web:ro
+    networks:
+      - frontend
+    working_dir: /app/web
+    environment:
+      - NGINX_ROOT=/app/web
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+
+  app:
+    build:
+      context: ../../
+      dockerfile: ./dev/docker/app/Dockerfile
+    volumes:
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+      - ../../:/app
+      - $HOME/.composer/cache:$HOME/.composer/cache
+      # BEGIN PHP Storm integration
+      - $HOME:$HOME:ro
+      - /tmp:/tmp
+      # END PHP Storm integration
+    networks:
+      - database
+      - frontend
+      - mail
+    depends_on:
+      - database
+      - mailcatcher
+    working_dir: /app
+    environment:
+      - WAIT_FOR_DEPENDENCIES=1
+    depends_on:
+      - database
+      - mailcatcher
+
+  database:
+    image: mysql:5.7
+    ports:
+      - "3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=db
+    networks:
+      - database
+    volumes:
+      - ./db:/var/lib/mysql
+
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - "1080"
+    networks:
+      - mail
+
+networks:
+  database:
+  frontend:
+  mail:

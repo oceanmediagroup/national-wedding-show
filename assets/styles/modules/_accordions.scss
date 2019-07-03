@@ -1,0 +1,38 @@
+.accordion {
+  margin: 0 15px;
+
+  &__arrow {
+    float: right;
+    transition: 0.2s ease-in-out;
+  }
+
+  .card {
+    border: 1px solid $white;
+    border-bottom: white;
+  }
+
+  .card-header {
+    border-radius: 0 !important;
+    background-color: $primary;
+    border-bottom: none !important;
+    padding: 10px 0;
+
+    @media (min-width: 420px) {
+      padding: .75rem 1.25rem;
+    }
+  }
+
+  .card-header .btn-link {
+    color: $white;
+    width: 100%;
+  }
+
+  .card-header .btn-link[aria-expanded="true"] .accordion__arrow {
+    transform: rotate(90deg);
+  }
+
+  .card-body {
+    border: 1px solid $gray-5;
+  }
+
+}

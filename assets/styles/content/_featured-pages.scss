@@ -1,0 +1,174 @@
+.featured-pages {
+  background-color: $gray-4;
+  padding: 30px 0;
+
+  //Grid settings
+  .grid {
+    width: 100%;
+  }
+
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .grid-sizer,
+  .grid-item {
+    width: calc(50% - 8px);
+
+    @include media-breakpoint-up(md) {
+      width: calc(31%);
+    }
+  }
+
+  .grid-item {
+    float: left;
+    position: relative;
+    margin-bottom: 16px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 30px;
+    }
+
+    a:hover {
+      color: $primary;
+      text-decoration: none;
+
+      .read-more {
+        opacity: 1;
+      }
+
+      .featured-pages__card-title {
+        color: $primary-dark;
+      }
+    }
+  }
+
+  &__filters {
+    margin-bottom: 30px;
+    margin-top: 25px;
+    background-color: white;
+  }
+
+  &__filter {
+    background-color: $white;
+    color: $black;
+    font-family: 'Helvetica Neue';
+    @include xdSpacing(80);
+    background-image: none;
+    border: none;
+
+    font-size: 17px;
+    font-weight: 500;
+    padding: 13px 20px 7px;
+    display: inline-block;
+    cursor: pointer;
+
+    &.last {
+      border-right: none;
+    }
+
+    &:hover {
+      color: $black;
+      text-decoration: none;
+      &.is-checked {
+        color: $white;
+      }
+    }
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__filter.is-checked {
+    background-color: $primary;
+    color: $white;
+  }
+
+  &__cards {
+
+  }
+
+  .read-more {
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    color: $white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 26px;
+    font-family: 'Freight';
+    font-size: 17px;
+    z-index: 1;
+    @include xdSpacing(10);
+  }
+
+  &__card {
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      border: 1px solid $gray-5;
+    }
+  }
+
+  &__card-img-wrapper {
+    height: 113px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+
+    @include media-breakpoint-up(md) {
+      height: 248px;
+    }
+  }
+
+  &__card-img {
+    height: auto;
+    width: auto;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &__card-title {
+    width: 100%;
+    background-color: $white;
+    padding: 12px 14px;
+    margin: 0;
+    color: $brown;
+    font-family: 'Freight';
+    font-weight: 400;
+    font-size: 17px;
+    line-height: normal;
+    text-align: left;
+    min-height: 76px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+      @include xdSpacing(10);
+      padding: 16px 10px;
+      text-align: center;
+      min-height: unset;
+    }
+
+    &.coral {
+      color: $primary;
+      min-height: 75px;
+    }
+  }
+
+}

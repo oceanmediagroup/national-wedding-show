@@ -1,0 +1,31 @@
+.map {
+  &__container {
+    height: 500px;
+
+    @include media-breakpoint-up(md) {
+      height: 600px;
+    }
+  }
+
+  &__address-line {
+    display: inline-block;
+    font-family: 'Helvetica Neue';
+    color: $black;
+    font-size: 1em;
+    padding: 5px 0;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  &__address {
+    padding: 12px 25px 12px 15px;
+    min-width: 150px;
+    max-width: 200px;
+
+    @include media-breakpoint-up(md) {
+      max-width: none;
+    }
+  }
+}

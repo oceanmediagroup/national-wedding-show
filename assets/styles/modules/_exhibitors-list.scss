@@ -1,0 +1,231 @@
+.exhibitor-list {
+
+  @include media-breakpoint-up(md) {
+    padding: 15px 0 20px;
+
+    &.page-template-template-exhibitors-list {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    font-family: Helvetica Neue;
+    font-size: 20px;
+    font-weight: 400;
+    color: $black;
+
+    &-top {
+      text-align: center;
+      margin-top: 10px;
+      border: 2px solid $gray-4;
+      line-height: 1;
+      padding: 15px 20px 10px;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 37px;
+        margin-bottom: 30px;
+        padding: 22px 0 17px;
+      }
+    }
+  }
+
+  .filter {
+    font-family: 'Helvetica Neue';
+    line-height: 26px;
+    color: $gray-dark;
+    margin: 20px 2px 10px;
+    padding: 14px 14px 10px !important;
+    font-size: 18px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 14px;
+      margin: 0;
+      padding: 14px 6px 10px !important;
+    }
+
+    label {
+      margin-bottom: 0;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .filter input[type="checkbox"] {
+    margin: 0 10px;
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    background-color: #F8F8F8;
+    position: relative;
+    outline: none;
+    z-index: -1;
+
+    &:checked {
+      &:after {
+        content: '✓';
+        display: block;
+        width: 13px;
+        height: 13px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 1;
+        color: #FA665B;
+      }
+    }
+  }
+
+  .button--light-coral.light-weight {
+    margin-top: 15px;
+    font-weight: 300;
+    padding: 8px 70px;
+    cursor: pointer;
+  }
+
+  &__letter {
+    color: $primary;
+    font-family: Helvetica Neue;
+    font-size: 27px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .accordion:not(.filters-accordion) {
+    margin-bottom: 20px;
+  }
+
+  .alphabet-filter__item {
+    margin: 20px 2px;
+  }
+
+  .card {
+    border: none;
+    margin-bottom: 10px;
+    background-color: $gray-4;
+
+    .card-header {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      position: relative;
+
+      .btn-link {
+        width: 100%;
+        text-align: left;
+        padding: 25px 20px 20px;
+        font-family: Helvetica Neue;
+        font-size: 14px;
+        line-height: 1;
+        color: $brown;
+        text-transform: uppercase;
+        white-space: normal;
+
+        @include media-breakpoint-up(md) {
+          font-size: 16px;
+        }
+
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+        }
+
+        div {
+          padding-right: 20px;
+        }
+
+        .fas {
+          position: absolute;
+          right: 20px;
+          top: 23px;
+          font-size: 19px;
+          z-index: 1;
+          transform: rotate(180deg);
+          transition: 0.3s ease-in-out;
+        }
+        &.collapsed {
+          .fas {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+
+    .card-body {
+      margin-left: 0;
+      margin-right: 0;
+      border: none;
+
+      .card-image {
+        margin: auto;
+        max-width: 70%;
+        margin-bottom: 10px;
+
+        @include media-breakpoint-up(md) {
+          max-width: 100%;
+          margin-bottom: 0;
+        }
+      }
+
+      .card-description {
+        font-family: Helvetica Neue;
+        color: $gray-dark;
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      .card-category {
+        font-family: Helvetica Neue;
+        width: 100%;
+        color: $primary;
+        font-size: 15px;
+      }
+
+      .card-category-list > li {
+        font-family: Helvetica Neue;
+        color: $primary;
+        display: inline-block;
+        padding: 7px 12px 5px;
+        background-color: $white;
+        margin: 0 2px;
+      }
+
+      .card-button {
+        margin-right: 15px;
+        padding-right: 0;
+        margin-left: auto;
+
+        @include media-breakpoint-up(md) {
+          padding-right: 15px;
+        }
+
+        .button--light-coral {
+          @include media-breakpoint-up(md) {
+            padding: 10px 35px 7px;
+          }
+        }
+      }
+    }
+  }
+
+  .button--light-coral {
+    text-align: center;
+  }
+
+  #resetFilters {
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  #exhibitors .accordion {
+    margin: 0 0 20px;
+  }
+
+  #exhibitors button span {
+    width: 100%;
+  }
+}

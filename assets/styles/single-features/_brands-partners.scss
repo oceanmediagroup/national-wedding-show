@@ -1,0 +1,72 @@
+.brands-partners {
+  padding: 20px 0 24px;
+
+  @include media-breakpoint-up(md) {
+    padding: 46px 0;
+  }
+}
+
+.brands-partners-carousel {
+  margin-bottom: 20px;
+
+  .owl-carousel {
+    height: 100%;
+    //position: relative;
+    //display: inline-table;
+  }
+
+  .owl-stage {
+    margin: 0 auto;
+  }
+  .owl-carousel .owl-stage-outer {
+    text-align: center;
+  }
+
+  .brand {
+    width: auto;
+
+    &__name {
+      text-align: center;
+      font-family: Helvetica Neue;
+      font-weight: 300;
+      font-size: 13px;
+      color: $brown;
+      @include xdSpacing(34);
+    }
+
+    img {
+      max-height: 67px;
+      width: auto;
+      margin: auto;
+    }
+  }
+}
+
+.other-partners-carousel {
+  .item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .owl-stage {
+    margin: 0 auto;
+  }
+
+  .owl-item {
+    height: 120px;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

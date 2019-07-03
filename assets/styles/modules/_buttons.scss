@@ -1,0 +1,139 @@
+.button {
+  border-radius: 0;
+  padding: 17px 28px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  font-family: 'Helvetica Neue';
+  font-weight: 300;
+
+  &:hover {
+    background-color: $primary;
+    color: $black;
+  }
+
+  &--black {
+    background-color: $black;
+    color: $accent-color;
+  }
+
+  &--book {
+    font-size: 14px;
+    line-height: 30px;
+    padding: 22px 16px;
+
+    @include xdSpacing(80);
+  }
+
+  &--login {
+    width: 100%;
+    font-size: 14px;
+    height: 61px;
+
+    @include xdSpacing(68);
+
+    @include media-breakpoint-down(md) {
+      width:100%;
+      height:40px;
+      line-height: 6px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &--newsletter {
+    width:100%;
+    background:white;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+
+  &--light-coral, &--light-gold {
+    padding: 8px 18px;
+    display: inline-block;
+    font-weight: 300;
+    font-family: 'Helvetica Neue';
+    font-size: 14px;
+    text-align: center;
+    @include xdSpacing(10);
+
+    @include media-breakpoint-up(md) {
+      font-weight: 600;
+      padding: 10px 14px 7px;
+    }
+  }
+
+  &--light-coral {
+    border: 1px solid $primary;
+    color: $primary;
+    transition: 0.2s ease-in-out;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      background: transparent;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+
+  &--bg-coral {
+    border: 1px solid $primary;
+    color: $white;
+    background-color: $primary;
+    border-radius: 0;
+    padding: 12px 28px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    border: none;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    border: 1px solid $primary;
+    line-height: 1rem;
+
+    &:hover {
+      color: $primary;
+      background-color: transparent;
+      border: 1px solid $primary;
+    }
+  }
+
+  &--bg-coral-bold {
+    font-weight: bold;
+    font-size: 14px;
+    @include xdSpacing(10);
+
+    &:hover {
+      color: $primary;
+      background-color: $white;
+      border: 1px solid $primary;
+    }
+  }
+
+  &--light-gold {
+    border: 1px solid $white;
+    color: $accent-color;
+    line-height: 17px;
+    text-align: center;
+
+    &:hover {
+      color: $white;
+      background-color: $accent-color;
+    }
+  }
+
+  &--white-mobile {
+    @include media-breakpoint-down(sm) {
+      color: $primary;
+      background-color: $white;
+      margin-top: 10px;
+    }
+  }
+
+  &--light-solid {
+    background-color: $white;
+  }
+}

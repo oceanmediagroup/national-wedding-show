@@ -1,0 +1,44 @@
+.pages-cards {
+  padding-bottom: 30px;
+
+  .card, .card-img-top {
+    border-radius: 0;
+  }
+
+  .card {
+    border: 1px solid $gray-5;
+  }
+
+  .card-title {
+    font-family: 'Helvetica Neue';
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 12px;
+  }
+
+  .card-text {
+    font-family: 'Helvetica Neue';
+    font-size: 17px;
+    line-height: 23px;
+    color: $gray-dark;
+    @include xdSpacing(16);
+  }
+
+  .card-button {
+    float: right;
+  }
+
+  .owl-pages-cards .owl-dots {
+    position: absolute;
+    bottom: -70px;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+
+
+  .button--light-coral {
+    width: auto;
+  }
+}
