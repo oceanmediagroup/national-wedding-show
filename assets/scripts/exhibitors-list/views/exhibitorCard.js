@@ -25,7 +25,7 @@ const exhibitorCard = (exhibitor, itsCopy, getLetter) => {
 
     let logo = '/assets/img/exhibitor-logo-default.png';
     if (exhibitor['0'].logo) {
-        logo = `${window.baseUrl}${exhibitor['0'].logo.url}`;
+        logo = `${window.apiAssetUrl}${exhibitor['0'].logo.url}`;
     }
 
     let featuredInShows = exhibitor['0'].featured_in_shows.map(elem => {
