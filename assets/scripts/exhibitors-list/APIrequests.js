@@ -1,45 +1,5 @@
-// const getExhibitorsList = () => {
-//     return new Promise((resolve, reject) => {
-//         const ajax_url = `https://exhibitor.nationalweddingshow.co.uk/api/brands`;
-//
-//         // const xhr = new XMLHttpRequest();
-//         // xhr.open("GET", ajax_url, true);
-//         // xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-//         // xhr.onload = () => {
-//         //     if (xhr.status >= 200 && xhr.status < 300) {
-//         //         resolve(xhr.response);
-//         //     } else {
-//         //         reject(xhr.statusText);
-//         //     }
-//         // };
-//         // xhr.onerror = () => reject(xhr.statusText);
-//         // xhr.send();
-//
-//         // $.ajax({
-//         //     crossDomain: true,
-//         //     contentType: "application/json; charset=utf-8",
-//         //     type: "GET",
-//         //     url: ajax_url,
-//         //     dataType: 'json',
-//         //     success: function (data, status, xhr) {
-//         //         console.log(data);
-//         //         resolve(data ? JSON.parse(data) : null);
-//         //     },
-//         //     complete: function (xhr, status, error) {
-//         //         if (xhr.status != 200) {
-//         //             console.log(xhr.getResponseHeader('Location'));
-//         //         }
-//         //     },
-//         //     error: function () {
-//         //         reject(console.log('something went wrong'));
-//         //     }
-//         // });
-//
-//     });
-// };
-// getExhibitorsList();
-
 // XMLHttpRequest wrapper using callbacks
+
 const request = obj => {
     return new Promise((resolve, reject) => {
         let xhr = new XMLHttpRequest();
@@ -68,13 +28,9 @@ const request = obj => {
 
 const getAllExhibitors = () => {
     return new Promise((resolve, reject) => {
-        // console.log("GETTING ALL EXHIBITORS");
-
-        request({url: "https://exhibitor.nationalweddingshow.co.uk/api/brands"})
+        request({url: window.baseUrl + 'brands'})
             .then(data => {
                 let exhibitors = JSON.parse(data);
-                // console.log(employees);
-
                 resolve(exhibitors);
             })
             .catch(error => {
@@ -85,12 +41,9 @@ const getAllExhibitors = () => {
 
 const getAllShows = () => {
     return new Promise((resolve, reject) => {
-        // console.log("GETTING ALL SHOWS");
-
-        request({url: "https://exhibitor.nationalweddingshow.co.uk/api/show"})
+        request({url: window.baseUrl + 'show'})
             .then(data => {
                 let shows = JSON.parse(data);
-
                 resolve(shows);
             })
             .catch(error => {
@@ -101,12 +54,9 @@ const getAllShows = () => {
 
 const getAllCategories = () => {
     return new Promise((resolve, reject) => {
-        // console.log("GETTING ALL categories");
-
-        request({url: "https://exhibitor.nationalweddingshow.co.uk/api/brand-categories"})
+        request({url: window.baseUrl + 'brand-categories'})
             .then(data => {
                 let categories = JSON.parse(data);
-
                 resolve(categories);
             })
             .catch(error => {
@@ -118,12 +68,9 @@ const getAllCategories = () => {
 
 const getSingleExhibitor = (ID) => {
     return new Promise((resolve, reject) => {
-        // console.log("GETTING single exhibitor");
-
-        request({url: "https://exhibitor.nationalweddingshow.co.uk/api/brands", params: `id=${ID}`})
+        request({url: window.baseUrl + 'brands', params: `id=${ID}`})
             .then(data => {
                 let exhibitor = JSON.parse(data);
-
                 resolve(exhibitor);
             })
             .catch(error => {
@@ -135,10 +82,9 @@ const getSingleExhibitor = (ID) => {
 
 const getLocationExhibitors = (ID) => {
     return new Promise((resolve, reject) => {
-        request({url: "https://exhibitor.nationalweddingshow.co.uk/api/brands", params: `shows[]=${ID}`})
+        request({url: window.baseUrl + 'brands', params: `shows[]=${ID}`})
             .then(data => {
                 let exhibitors = JSON.parse(data);
-
                 resolve(exhibitors);
             })
             .catch(error => {

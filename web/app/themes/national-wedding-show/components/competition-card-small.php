@@ -10,8 +10,10 @@
     <div class="row h-100">
         <div class="col">
             <div class="competition__img-wrapper">
-                <img src="<?php echo get_field('competition_image')['url'] ?>"
-                     alt="<?php echo get_field('competition_image')['alt'] ?>" class="competition__img"/>
+                <picture class="competition__img lazy">
+                    <source media="(min-width: 769px)" data-srcset="<?php echo get_field('competition_image')['sizes']['medium_large'] ?>">
+                    <img alt="<?php echo get_field('competition_image')['alt'] ?>" class="lazy" data-src="<?php echo get_field('competition_image')['sizes']['thumbnail'] ?>">
+                </picture>
             </div>
 
             <div class="competition__content">

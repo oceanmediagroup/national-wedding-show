@@ -11,8 +11,8 @@
         <div class="competition-card-big__wrapper">
             <div class="row h-100">
                 <div class="col-12 col-md">
-                    <div class="competition-card-big__image-wrapper"
-                         style="background-image: url('<?php echo get_field('competition_image')['url'] ?>') ">
+                    <div class="competition-card-big__image-wrapper lazy"
+                         data-bg="url('<?php echo get_field('competition_image')['url'] ?>') ">
                     </div>
                 </div>
                 <div class="col-12 col-md align-self-center">

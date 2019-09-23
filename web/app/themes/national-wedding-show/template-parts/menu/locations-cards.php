@@ -18,8 +18,8 @@
                 $title = get_the_title($id);
                 ?>
 
-                <div class="col-lg-4 locations__single-wrapper color-overlay-wrapper"
-                     style="background-image: url('<?php echo get_sub_field('image'); ?>')">
+                <div class="col-lg-4 locations__single-wrapper color-overlay-wrapper lazy"
+                     data-bg="url('<?php echo get_sub_field('image')['sizes']['medium_large']; ?>')">
                     <div class="locations__single-link">
                         <div class="row align-items-center w-100 h-100">
                             <div class="col align-self-center">

@@ -11,8 +11,6 @@
                     'post_type' => 'post',
                     'post_status' => 'publish',
                     'posts_per_page' => 1,
-                    'orderby' => 'menu_order',
-                    'order' => 'DESC'
                 );
                 $the_query = new WP_Query($args);
 
@@ -21,8 +19,10 @@
                         $the_query->the_post(); ?>
 
                         <a href="<?php echo get_the_permalink() ?>">
-                            <div class="image-wrapper"
-                                 style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
+                            <div
+                                class="image-wrapper lazy"
+                                data-bg="url(<?php echo get_the_post_thumbnail_url(); ?>)"
+                                >
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title"><?php the_title(); ?></h5>
@@ -38,8 +38,6 @@
                     'post_type' => 'tutorials',
                     'post_status' => 'publish',
                     'posts_per_page' => 1,
-                    'orderby' => 'menu_order',
-                    'order' => 'DESC'
                 );
                 $the_query = new WP_Query($args);
 
@@ -51,7 +49,8 @@
 
                             <div class="image-wrapper tutorial">
                                 <iframe id="ytplayer" type="text/html" width="640" height="360"
-                                        src="<?php echo get_field('tutorial_video_link'); ?>"
+                                        class="lazy"
+                                        data-src="<?php echo get_field('tutorial_video_link'); ?>"
                                         frameborder="0" class="card-img-top"
                                         allowfullscreen="allowfullscreen"
                                         mozallowfullscreen="mozallowfullscreen"
@@ -76,41 +75,14 @@
                     </div>
                 </a>
             </div>
+
         </div>
-
-
-<!---->
-<!--        <div class="modal fade" id="instagram-11" tabindex="-1" role="dialog"-->
-<!--             aria-labelledby="instagram-11Label"-->
-<!--             aria-hidden="true">-->
-<!--            <div class="modal-dialog" role="document">-->
-<!--                <div class="modal-content">-->
-<!--                    <div class="modal-header">-->
-<!--                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-<!--                            <span aria-hidden="true">&times;</span>-->
-<!--                        </button>-->
-<!--                    </div>-->
-<!--                    <div class="modal-body">-->
-<!--                        <img src="--><?php //echo $instagram['image'] ?><!--" alt="">-->
-<!--                        <div class="text-wrapper">-->
-<!--                            <div class="modal-text">-->
-<!--                                <a href="--><?php //echo $instagram['url'] ?><!--" target="_blank">go to-->
-<!--                                    instagram</a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
 
         <?php
         $args = array(
             'post_type' => 'tutorials',
             'post_status' => 'publish',
             'posts_per_page' => 1,
-            'orderby' => 'menu_order',
-            'order' => 'DESC'
         );
         $the_query = new WP_Query($args);
 
@@ -151,9 +123,6 @@
             <?php }
         }
         wp_reset_postdata(); ?>
-
-
-
 
         <div class="row justify-content-center mt-4">
             <a href="/inspiration/" class="button--light-coral button--light-solid inspiration-section__link

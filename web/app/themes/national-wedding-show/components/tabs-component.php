@@ -52,8 +52,10 @@
                                         <div class="row tabs-offer__card-wrapper">
                                             <div class="col-12 tabs-offer__card">
                                                 <?php if ($image): ?>
-                                                    <img src="<?php echo $image['url']; ?>"
-                                                         alt="<?php echo $image['alt']; ?>"/>
+                                                    <img
+                                                        class="lazy"
+                                                        data-src="<?php echo $image['url']; ?>"
+                                                        alt="<?php echo $image['alt']; ?>"/>
                                                 <?php endif; ?>
                                                 <div class="cta-wrapper">
                                                     <?php if (have_rows('cta_repeater')): ?>
@@ -85,7 +87,7 @@
             <div class="col-lg-12">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <?php if (have_rows('tabs_repeater')): ?>
-                        <?php $counter1; ?>
+                        <?php $counter1 = 0; ?>
                         <?php while (have_rows('tabs_repeater')): the_row();
                             $name = get_sub_field('tab_name'); ?>
 
@@ -111,7 +113,7 @@
 
                 <div class="tab-content" id="myTabContent">
                     <?php if (have_rows('tabs_repeater')): ?>
-                        <?php $counter2; ?>
+                        <?php $counter2 = 0; ?>
                         <?php while (have_rows('tabs_repeater')): the_row();
                             $name = get_sub_field('tab_name');
                             $title = get_sub_field('title');
@@ -132,7 +134,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <?php if ($image): ?>
-                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                                        <img class="lazy" data-src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
                                     <?php endif; ?>
                                     <div class="cta-wrapper">
                                         <?php if (have_rows('cta_repeater')): ?>

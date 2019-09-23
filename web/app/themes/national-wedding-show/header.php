@@ -28,17 +28,33 @@
 
     <meta name="ahrefs-site-verification" content="5f48266e6cc9b6bbb6cac4ad8da4a00438ad0beb5507db661f4742696272e5e7">
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-ND95MV');</script>
+    <!-- End Google Tag Manager -->
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <!-- Google Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3929022621724249",
+            enable_page_level_ads: true
+        });
+    </script>
+    <!-- End Google Ads -->
 </head>
-<body <?php body_class(); ?>
+<body <?php body_class(); ?>>
 
 <!-- header -->
 <header class="header">
 
     <?php get_template_part('template-parts/menu/main-menu') ?>
 
-
     <?php get_template_part('template-parts/menu/header-menu') ?>
-
 
 </header>
 <!-- /header -->

@@ -27,8 +27,10 @@
                         $query->the_post(); ?>
 
                         <div class="item testimonial">
-                            <div class="testimonial__img"
-                                 style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')"></div>
+                            <div
+                                class="testimonial__img lazy"
+                                data-bg="url('<?php the_post_thumbnail_url('thumbnail'); ?>')"
+                                ></div>
                             <h4 class="testimonial__title">
                                 <?php echo get_the_title(); ?>
                             </h4>

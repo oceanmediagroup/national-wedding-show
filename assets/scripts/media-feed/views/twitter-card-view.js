@@ -101,11 +101,11 @@ const twitterCard = (card) => {
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
+                                    <span aria-hidden="true">X</span>
                                 </button>
                             </div>
-                            
-                            
+
+
                             <div class="modal-body">
                                 ${imageVideoContent}
                                 <div class="text-wrapper">
@@ -113,16 +113,16 @@ const twitterCard = (card) => {
                                        <img src="https://pbs.twimg.com/profile_images/1018856656548003840/XVdkgYjO.jpg" alt="National Wedding Show logo" />
                                        <h5>The National Wedding Show
                                        <span>@nationalwedding</span></h5>
-                                      
+
                                        <i class="fab fa-twitter"></i>
-                                       
+
                                     </div>
                                     <div class="modal-text">
                                         <p>${card['full_text']}</p>
-                                       
+
                                         <p class="data"></p>
                                         <a href="https://twitter.com/intent/retweet?tweet_id=${card['id_str']}" target="_blank">Share on Twitter</a>
-                                        <a href="https://twitter.com/nationalwedding"  target="_blank">View our tweets</a>                                    
+                                        <a href="https://twitter.com/nationalwedding"  target="_blank">View our tweets</a>
                                     </div>
                                 </div>
                             </div>

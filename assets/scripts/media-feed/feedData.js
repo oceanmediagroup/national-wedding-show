@@ -1,7 +1,7 @@
 // THIS CODE NEEDS REWRITING
 
 const getData = async (mediaFeed) => {
-    const pattern = ["post", "twitter", "post", "tutorial", "instagram", "twitter", "text", "text", "tutorial", "twitter", "post", "instagram"];
+    const pattern = ["post", "twitter", "post", "tutorial", "instagram", "twitter", "text", "text", "tutorial", "twitter", "post", "instagram", "tutorial", "tutorial", "tutorial", "tutorial"];
 
     const posts1 = getPosts(mediaFeed, "getPosts", 1);
     const tweets1 = getPosts(mediaFeed, "getTwitterPosts", 1);
@@ -15,9 +15,13 @@ const getData = async (mediaFeed) => {
     const tweets3 = getPosts(mediaFeed, "getTwitterPosts", 1);
     const posts3 = getPosts(mediaFeed, "getPosts", 1);
     const instagrams3 = getPosts(mediaFeed, "getInstagramPosts", 1);
+    const tutorials3 = getPosts(mediaFeed, "getTutorials", 1);
+    const tutorials4 = getPosts(mediaFeed, "getTutorials", 1);
+    const tutorials5 = getPosts(mediaFeed, "getTutorials", 1);
+    const tutorials6 = getPosts(mediaFeed, "getTutorials", 1);
 
     return new Promise((resolve, reject) => {
-        Promise.all([posts1, tweets1, posts2, tutorials1, instagrams1, tweets2, texts1, instagrams2, tutorials2, tweets3, posts3, instagrams3]).then(values => {
+        Promise.all([posts1, tweets1, posts2, tutorials1, instagrams1, tweets2, texts1, instagrams2, tutorials2, tweets3, posts3, instagrams3, tutorials3, tutorials4, tutorials5, tutorials6]).then(values => {
             values = values.filter(n => n);
 
             values.length ? resolve(values) : resolve(null);
@@ -36,7 +40,7 @@ function getPosts(mediaFeed, actionType, howMany) {
 
         // console.log("Getting posts after " + itemsRetrieved + " post type: " + postType);
 
-        const wpajax_url = `${document.location.protocol}//${document.location.host}/wp-admin/admin-ajax.php?action=${actionType}&itemsRetrieved=${itemsRetrieved}&how_many=${howMany}`;
+        const wpajax_url = `${document.location.protocol}//${document.location.host}/wp/wp-admin/admin-ajax.php?action=${actionType}&itemsRetrieved=${itemsRetrieved}&how_many=${howMany}`;
 
         mediaFeed.increaseItemsRetrieved(actionType);
 

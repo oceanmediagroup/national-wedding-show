@@ -13,8 +13,7 @@
 
             <div class="col-md-4">
                 <div class="item card">
-                    <div class="card-img-top" style="background-image: url(<?php echo get_the_post_thumbnail_url();
-                    ?>)"></div>
+                    <div class="card-img-top lazy" data-bg="url(<?php echo get_the_post_thumbnail_url(); ?>)"></div>
 
                     <div class="card-body">
                         <h5 class="card-title"><?php the_title(); ?></h5>

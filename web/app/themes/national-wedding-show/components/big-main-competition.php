@@ -1,6 +1,6 @@
 <section class="big-main-competition">
     <div class="container-fluid">
-        <div class="row big-main-competition__wrapper" style="background-image: url('<?php echo get_field('competition_image')['url'] ?>');">
+        <div class="row big-main-competition__wrapper lazy" data-bg="url('<?php echo get_field('competition_image')['url'] ?>');">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 offset-md-2">

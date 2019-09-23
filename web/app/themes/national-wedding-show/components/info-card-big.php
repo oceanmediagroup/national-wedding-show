@@ -20,7 +20,7 @@
         <div class="product-card-big__wrapper">
             <div class="row h-100">
                 <div class="col-12 col-md">
-                    <div class="product-card-big__image-wrapper" style="background-image: url('<?php echo $img['url'] ?>') ">
+                    <div class="product-card-big__image-wrapper lazy" data-bg="url('<?php echo $img['sizes']['medium_large'] ?>') ">
                     </div>
                 </div>
                 <div class="col-12 col-md align-self-center">

@@ -35,16 +35,24 @@ const createLayout = (exhibitorsList) => {
         layoutParams = exhibitorsList.searchParameters;
     }
 
-    let arrayLength = layoutParams.letters.length;
+    // don't filter featured by letters
+    const totalOfLetters = exhibitorsList.filters.letters.length;
+    for (let i = 0; i < totalOfLetters; i++) {
+        let letter = exhibitorsList.filters.letters[i];
+        const filtered = pleaseFilterIt(filteredExhibitorsArray[letter]);
+        for (let j = 0; j < filtered.length; j++) {
+            html += exhibitorCard(filtered[j], true);
+        }
+    }
 
+    const arrayLength = layoutParams.letters.length;
     for (let i = 0; i < arrayLength; i++) {
         let letter = layoutParams.letters[i];
-
         let itemsLength = filteredExhibitorsArray[letter].length;
 
         if (itemsLength) {
             html += `<h3 class="exhibitor-list__letter">${letter}</h3>
-                    <div class="accordion" id="accordion${letter}">`;
+                    <div class="accordion" id="accordion${letter == '#' ? 'A' : letter}">`;
 
             for (let j = 0; j < itemsLength; j++) {
                 html += exhibitorCard(filteredExhibitorsArray[letter][j]);
@@ -57,11 +65,16 @@ const createLayout = (exhibitorsList) => {
     document.getElementById("exhibitors").innerHTML = html;
 };
 
+const pleaseFilterIt = (arr) => {
+    const arr1 = arr.filter(a => a['0'].featured_in_categories.length > 0 || a['0'].featured_in_shows.length > 0)
+    return arr1
+}
+
 const redrawLayout = (exhibitorsList, letter) => {
     let html = '';
 
     html += `<h3 class="exhibitor-list__letter">${letter}</h3>
-                    <div class="accordion" id="accordion${letter}">`;
+                    <div class="accordion" id="accordion${letter == '#' ? 'A' : letter}">`;
 
     let itemsLength = exhibitorsList.length;
     for (let j = 0; j < itemsLength; j++) {

@@ -12,8 +12,10 @@
             <div class="row h-100">
                 <div class="col-12 col-md">
                     <div class="exhibitor__image-wrapper">
-                        <img src="<?php echo get_field('exhibitor_image')['url'] ?>"
-                             alt="<?php echo get_field('exhibitor_image')['alt'] ?>" class="exhibitor__image">
+
+                        <img data-src="<?php echo get_field('exhibitor_image')['url'] ?>"
+                             alt="<?php echo get_field('exhibitor_image')['alt'] ?>" class="exhibitor__image lazy">
+
                         <div class="exhibitor__logo-wrapper">
                             <img src="<?php echo get_field('exhibitor_logo')['url'] ?>"
                                  alt="<?php echo get_field('exhibitor_logo')['alt'] ?>" class="exhibitor_logo">

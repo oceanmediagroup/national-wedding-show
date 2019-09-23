@@ -4,6 +4,8 @@ import exhibitorDescription from './single-exhibitor/exhibitorDescription';
 import exhibitorGallery from './single-exhibitor/exhibitorGallery';
 
 const singleExhibitorLayout = (exhibitor) => {
+    document.body.classList.add('page-template-single-exhibitor');
+
     let html = '';
 
     html += exhibitorHeader(exhibitor);

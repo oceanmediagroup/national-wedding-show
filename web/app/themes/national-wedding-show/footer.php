@@ -41,7 +41,7 @@
     <div class="container">
         <div class="row footer__social align-items-center justify-content-between">
             <div class="col-12 col-md-8 footer__logo-div">
-                <a href="/"><img src="/assets/img/NWS_logo-01.svg" alt="The National Wedding Show Logo" class="footer__logo"></a>
+                <a href="/"><img data-src="/assets/img/NWS_logo-01.svg" alt="The National Wedding Show Logo" class="footer__logo lazy"></a>
                 <span class="footer__copyright">© The National Wedding Show | Ocean Media Group. All Rights Reserved.</span>
             </div>
             <div class="col-12 col-md-auto">
@@ -56,10 +56,12 @@
 </footer>
 <!-- /footer -->
 
-
 <script src="https://player.vimeo.com/api/player.js"></script>
 
 <script src="/assets/script/app.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://oceanmediaemail.co.uk/inc/cal.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
@@ -80,6 +82,19 @@
     });
 </script>
 
+<script type="text/javascript">
+    function onloadCallback () {
+        jQuery('.g-recaptcha').each(function (index, el) {
+            grecaptcha.render(el, {
+                'sitekey': '6LfTGX0UAAAAAP7lO9Y8_BqGB86_-9XFXzbAkxmK',
+                'callback': jQuery(el).attr('data-callback'),
+                'expired-callback': jQuery(el).attr('data-expired-callback'),
+                'error-callback': jQuery(el).attr('data-error-callback')
+            })
+        })
+    }
+</script>
+
 <script type="text/javascript" defer>
     WebFontConfig = {
         google: {families: ['Source+Sans+Pro:400']}
@@ -96,8 +111,6 @@
     });
 
 </script>
-
-<script src='https://www.google.com/recaptcha/api.js'></script>
 
 <?php wp_footer(); ?>
 

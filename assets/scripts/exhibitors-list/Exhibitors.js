@@ -14,6 +14,7 @@ function sortByName(a, b) {
 export default class Exhibitors {
     constructor() {
         this.allExhibitorsList = {};
+        this.featuredExhibitorsList = {};
         this.filters = {
             letters: ['#', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
             shows: {},
@@ -33,8 +34,18 @@ export default class Exhibitors {
         this.allExhibitorsList = exhibitors;
     }
 
+    setFeaturedExhibitorsList(exhibitors) {
+        this.featuredExhibitorsList = exhibitors.filter(elem => {
+            return (elem.featured_in_categories.length > 1 || elem.featured_in_shows.length > 1)
+        })
+    }
+
     getAllExhibitorsList() {
-        return this.allExhibitorsList;
+        // return this.allExhibitorsList
+        let exList = this.allExhibitorsList.filter(elem => {
+            return elem.is_live == 1
+        });
+        return exList
     }
 
     getExhibitorsFromLetter(letter) {
@@ -97,15 +108,23 @@ export default class Exhibitors {
         const exhibitors = this.getAllExhibitorsList();
 
         this.filters.letters.forEach((letter) => {
-            const filtered = exhibitors.filter(exhibitor => exhibitor.name.charAt(0).toUpperCase() === letter);
+            const filtered = exhibitors.filter(exhibitor => exhibitor['0'].name.charAt(0).toUpperCase() === letter);
             this.exhibitorsByLetter[letter.toString()] = filtered;
         });
 
         this.exhibitorsByLetter['#'] = exhibitors.filter(exhibitor =>
-            exhibitor.name.charAt(0).match(/[^a-z]/i));
+            exhibitor['0'].name.charAt(0).match(/[^a-z]/i));
 
         this.exhibitorsByLetter['*'] = exhibitors;
     };
+
+    getOnlyFeatured(exhibitors) {
+        const filteredExhibitors = exhibitors.filter(elem => {
+            return (elem.featured_in_categories || elem.featured_in_shows)
+        })
+
+        return filteredExhibitors
+    }
 
     writeUrlParameters = (key, newParam) => {
         return new Promise((resolve) => {
@@ -158,7 +177,6 @@ export default class Exhibitors {
             for (const key of Object.keys(this.searchParameters)) {
                 this.searchParameters[key] = Exhibitors.getParametersByName(key);
             }
-
             resolve(true);
         });
 

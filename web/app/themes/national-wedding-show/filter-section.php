@@ -1,6 +1,6 @@
 <?php
 $sort_by = '';
-if ($_GET['sort_by'] == 'views') {
+if (isset($_GET['sort_by']) && $_GET['sort_by'] == 'views') {
     $sort_by = $_GET['sort_by'];
 }
 ?>

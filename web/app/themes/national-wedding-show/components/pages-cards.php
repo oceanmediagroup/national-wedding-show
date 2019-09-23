@@ -23,9 +23,11 @@
                         ?>
 
                         <div class="item card">
-                            <img class="card-img-top" src="
-                            <?php echo $img['url'] ?>"
-                                 alt="<?php echo $img['alt'] ?>">
+
+                            <picture class="card-img-top lazy">
+                                <source media="(min-width: 769px)" data-srcset="<?php echo $img['sizes']['medium'] ?>">
+                                <img alt="<?php echo $img['alt'] ?>" class="lazy" data-src="<?php echo $img['sizes']['thumbnail'] ?>">
+                            </picture>
 
                             <div class="card-body">
                                 <h5 class="card-title text--coral">

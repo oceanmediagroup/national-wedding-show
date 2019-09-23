@@ -3,8 +3,8 @@ const exhibitorHeader = (data) => {
     let image = '';
     let url_image = '/assets/img/exhibitor-cover.jpg';
 
-    if (typeof exhibitor.image !== 'undefined') {
-        url_image = "https://exhibitor.nationalweddingshow.co.uk/" + exhibitor.image.url;
+    if (typeof exhibitor['0'].image !== 'undefined') {
+        url_image = window.baseUrl + exhibitor['0'].image.url;
     }
 
     image += `<div class="owl-carousel owl-theme owl-header-simple">
@@ -14,9 +14,9 @@ const exhibitorHeader = (data) => {
     return `
         <div class="header-carousel-simple">
             ${image}
-        
+
             <h1 class="header-carousel-simple__title">
-                    ${exhibitor.name}
+                    ${exhibitor['0'].name}
             </h1>
         </div>
     `;

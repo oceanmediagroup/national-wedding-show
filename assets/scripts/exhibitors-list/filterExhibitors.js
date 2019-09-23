@@ -19,7 +19,7 @@ const filterByShow = (shows, sortedExhibitors) => {
             filteredExhibitors[letter] = sortedExhibitors[letter].filter(exhibitor => {
                 let isInShows = false;
 
-                exhibitor.stands.forEach((stand) => {
+                exhibitor['0'].stands.forEach((stand) => {
                     if (shows.includes(stand.show.id.toString())) {
                         isInShows = true;
                     }
@@ -42,7 +42,7 @@ const filterByCategory = (categories, sortedExhibitors) => {
         filteredExhibitors[letter] = sortedExhibitors[letter].filter(exhibitor => {
             let isInCategory = false;
 
-            exhibitor.categories.forEach((category) => {
+            exhibitor['0'].categories.forEach((category) => {
                 // console.log("category id is");
 
                 // console.log(category.id);

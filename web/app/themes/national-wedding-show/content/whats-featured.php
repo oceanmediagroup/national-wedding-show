@@ -11,7 +11,7 @@
                 $page = get_field('essential_info_page');
                 ?>
                 <a href="<?php echo get_the_permalink($page->ID) ?>">
-                    <div class="featured-pages__card-img-wrapper" style="background-image: url(<?php echo get_the_post_thumbnail_url($page->ID); ?>)">
+                    <div class="featured-pages__card-img-wrapper lazy" data-bg="url(<?php echo get_the_post_thumbnail_url($page->ID); ?>)">
                         <span class="read-more">Read More</span>
                         <span class="color-overlay"></span>
                     </div>
@@ -23,7 +23,7 @@
 
             <div class="grid-item featured-pages__card inspiration-and-advice color-overlay-wrapper">
                 <a href="/whats-on/show-offers-competitions/">
-                    <div class="featured-pages__card-img-wrapper" style="background-image: url('/assets/img/show-offers-and-competitions.jpg')">
+                    <div class="featured-pages__card-img-wrapper lazy" data-bg="url('/assets/img/show-offers-and-competitions.jpg')">
                         <span class="read-more">Read More</span>
                         <span class="color-overlay"></span>
                     </div>
@@ -63,7 +63,7 @@
                     <?php if($show_feature): ?>
                     <div class="grid-item featured-pages__card inspiration-and-advice color-overlay-wrapper">
                         <a href="<?php echo get_the_permalink() ?>">
-                            <div class="featured-pages__card-img-wrapper" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
+                            <div class="featured-pages__card-img-wrapper lazy" data-bg="url(<?php the_post_thumbnail_url('medium'); ?>)">
                                 <span class="read-more">Read More</span>
                                 <span class="color-overlay"></span>
                             </div>

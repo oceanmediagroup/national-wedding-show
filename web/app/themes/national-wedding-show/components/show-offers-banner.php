@@ -1,6 +1,6 @@
 <section class="show-offers-banner">
     <div class="container-fluid">
-        <div class="row show-offers-banner__wrapper" style="background-image: url('/assets/img/big-show-offers-bg.jpg');">
+        <div class="row show-offers-banner__wrapper lazy" data-bg="url('/assets/img/big-show-offers-bg.jpg')">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 offset-md-3 show-offers-banner__inner">

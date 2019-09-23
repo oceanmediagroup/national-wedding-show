@@ -35,13 +35,14 @@
                 <?php endif; ?>
 
                 <?php if (get_sub_field('locations_slide-type') == 'video'): ?>
-                    <div class="video item custom-video video-container color-overlay-wrapper"
-                         style="background-image: url('<?php echo get_sub_field('locations_slide-image')['url'] ?>')">
+                    <div class="video item custom-video video-container color-overlay-wrapper lazy"
+                         data-bg="url('<?php echo get_sub_field('locations_slide-image')['url'] ?>')">
                         <div class="video-wrapper">
 
                             <?php if (!wp_is_mobile()): ?>
                                 <iframe width="560" height="315"
-                                        src="<?php echo get_sub_field('locations_slide-link') ?>?background=1"
+                                        class="lazy"
+                                        data-src="<?php echo get_sub_field('locations_slide-link') ?>?background=1"
                                         webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                             <?php endif; ?>
                             <h1 class="video-header__title">

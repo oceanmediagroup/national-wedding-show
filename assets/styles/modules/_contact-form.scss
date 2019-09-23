@@ -164,3 +164,28 @@
     }
   }
 }
+
+.js-form-callback-sent,
+.js-form-callback-error,
+.js-form-callback-captcha {
+  display: none;
+  margin-top: 45px;
+}
+
+.js-form-sent {
+  .js-form-callback-sent {
+    display: block;
+  }
+}
+
+.js-form-fail {
+  .js-form-callback-error {
+    display: block;
+  }
+}
+
+.js-form-captcha-fail {
+  .js-form-callback-captcha {
+    display: block;
+  }
+}

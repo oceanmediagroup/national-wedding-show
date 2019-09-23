@@ -1,12 +1,10 @@
 $(document).ready(function () {
     if ($('#featuredPagesGrid').length) {
         const $featuredPagesGrid = $('#featuredPagesGrid');
-        console.log("elellelellelle1111l");
         let gutterWidth = 16;
 
         if ($(window).width() >= 992) {
             gutterWidth = 30;
-            console.log("width bigger than 992");
         }
         $featuredPagesGrid.isotope({
             itemSelector: '.grid-item',

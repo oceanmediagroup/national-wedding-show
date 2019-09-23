@@ -12,8 +12,8 @@ const locations = {
 };
 
 function sortByName(a, b) {
-    const nameA = a.name.toUpperCase(); // ignore upper and lowercase
-    const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+    const nameA = a[0].name.toUpperCase(); // ignore upper and lowercase
+    const nameB = b[0].name.toUpperCase(); // ignore upper and lowercase
     if (nameA < nameB) {
         return -1;
     }
@@ -34,10 +34,10 @@ function getAllFeatured(id, exhibitorsList) {
     exhibitorsList.forEach((exhibitor) => {
         let isFeatured = false;
 
-        if (typeof exhibitor.featured_in_shows !== undefined) {
-            for (let i = 0; i < exhibitor.featured_in_shows.length; i++) {
+        if (typeof exhibitor['0'].featured_in_shows !== undefined) {
+            for (let i = 0; i < exhibitor['0'].featured_in_shows.length; i++) {
 
-                if (exhibitor.featured_in_shows[i].id === id) {
+                if (exhibitor['0'].featured_in_shows[i].id === id) {
                     isFeatured = true;
 
                     list["featured"].push(exhibitor);
@@ -50,24 +50,19 @@ function getAllFeatured(id, exhibitorsList) {
         }
     });
 
+    if (list['featured'].length >= 2) {
+        list["featured"].sort(function (a, b) {
+            return sortByName(a, b);
+        })
+    }
 
-    list["featured"].sort(function (a, b) {
-        return sortByName(a, b);
-    });
-
-    list["normal"].sort(function (a, b) {
-        return sortByName(a, b);
-    });
+    if (list['normal'].length >= 2) {
+        list["normal"].sort(function (a, b) {
+            return sortByName(a, b);
+        })
+    }
 
     const finalList = list["featured"].concat(list["normal"]);
-
-    //
-    // if (nameA < nameB) {
-    //     return -1;
-    // }
-    // if (nameA > nameB) {
-    //     return 1;
-    // }
 
     return finalList;
 }
@@ -83,21 +78,13 @@ const retrieveIdFromDiv = () => {
 const main = async () => {
     const ID = await retrieveIdFromDiv();
 
-    // console.log("location ID = " + ID);
-
     await API.getLocationExhibitors(locations[ID]).then(data => {
-        // console.log(data);
 
         const exhibitors = getAllFeatured(locations[ID], data);
 
-        // console.log(exhibitors);
-
         if (typeof exhibitors !== 'undefined') {
-
             document.getElementById("locationExhibitorsList").innerHTML = singleLocationExhibitors(exhibitors);
-
             document.getElementById("locationExhibitorsListMobile").innerHTML = singleLocationExhibitorsCarousel(exhibitors);
-
         }
     });
 

@@ -9,7 +9,6 @@ const registerFilters = () => {
         let letter = $(this).attr('value');
 
         window.history.pushState('obj', 'title', document.location);
-        // console.log(document.location.search);
 
         await exhibitorsList.writeUrlParameters('letters', letter);
 
@@ -57,6 +56,7 @@ const registerFilters = () => {
         }).then(data => {
             layout.createLayout(exhibitorsList);
         });
+
     });
 
     $('#resetFilters').on('click', async function () {
@@ -81,6 +81,7 @@ const registerFilters = () => {
 const exhibitorsList = new Exhibitors();
 
 const main = async () => {
+
     await exhibitorsList.retrieveUrlParameters();
 
     await API.getAllExhibitors().then(data => {

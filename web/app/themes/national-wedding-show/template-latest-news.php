@@ -7,7 +7,7 @@
 <?php get_header(); ?>
 
 <?php
-    if (!$_GET['sort_by']) :
+    if (!isset($_GET['sort_by']) || !$_GET['sort_by']) :
         ?>
             <script>
                 window.location.href += '?sort_by=recent'
@@ -70,7 +70,7 @@
                                     'post_type' => 'post',
                                     'posts_per_page' => 12,
                                     'paged' => $paged,
-                                    'category_name' => $cats_imploded,
+                                    // 'category_name' => $cats_imploded,
                                     'meta_key' => $meta_key,
                                     'orderby' => $orderby,
                                     'order' => $order
@@ -82,8 +82,8 @@
                                     <div class="grid-item news post post-card col-lg-6 mb-4" data-post-views="<?php echo $count = get_post_meta($post->ID, 'post_views_count', true); ?>">
                                         <a href="<?php the_permalink(); ?>">
                                             <div class="post-card__wrapper">
-                                                <div class="post-card__img-wrapper"
-                                                    style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'gallery'); ?>')">
+                                                <div class="post-card__img-wrapper lazy"
+                                                    data-bg="url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'gallery'); ?>')">
                                                     <span class="post-card__category"><?php $category_name = get_the_category();
                                                         echo $category_name[0]->name; ?></span>
                                                 </div>

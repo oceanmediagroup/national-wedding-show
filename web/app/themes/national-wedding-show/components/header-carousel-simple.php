@@ -12,18 +12,22 @@
             while (have_rows('slides')) : the_row(); ?>
 
                 <?php if (get_sub_field('slide_type') == 'image'): ?>
-                    <div class="image item"
-                         style="background-image: url('<?php echo get_sub_field('background_image')['url'] ?>')"></div>
+                    <div class="image item lazy"
+                        data-bg="url('<?php echo get_sub_field('background_image')['url'] ?>')"></div>
                 <?php endif; ?>
 
                 <?php if (get_sub_field('slide_type') == 'video'): ?>
-                    <div class="video item custom-video video-container color-overlay-wrapper"
-                         style="background-image: url('<?php echo get_sub_field('background_image')['url'] ?>')">
+                    <div
+                        class="video item custom-video video-container color-overlay-wrapper lazy"
+                        data-bg="url('<?php echo get_sub_field('background_image')['url'] ?>')">
                         <div class="video-wrapper">
                             <?php if (!wp_is_mobile()): ?>
-                                <iframe width="560" height="315"
-                                        src="<?php echo get_sub_field('video_link') ?>?background=1"
-                                        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                <iframe
+                                    width="560" height="315"
+                                    class="lazy"
+                                    data-src="<?php echo get_sub_field('video_link') ?>?background=1"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscree
+                                    ></iframe>
                             <?php endif; ?>
                         </div>
                         <div class="video-overlay"></div>
@@ -46,4 +50,18 @@
             <?php echo get_field('header_title') ?>
         </h1>
     <?php endif; ?>
+
+    <?php if (!is_front_page()) : ?>
+        <?php
+            $button = get_field('cta_button', $post->ID);
+        ?>
+        <?php if ($button['cta_title']): ?>
+            <a href="<?php echo $button['external_link_checkbox'] ? $button['cta_link_external'] : $button['cta_link_internal']; ?>"
+                class="button--bg-coral button--bg-coral-bold video-header__cta"
+                <?php if ($button['link_in_new_tab']) echo "target='_blank'" ?>>
+                <?php echo $button['cta_title'] ?>
+            </a>
+        <?php endif; ?>
+    <?php endif; ?>
+
 </div>

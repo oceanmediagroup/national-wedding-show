@@ -1,70 +1,10 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Dominika
- * Date: 05/09/2018
- * Time: 15:31
- */ ?>
-<!-- Start of signup -->
-<style>
-
-    #g-recaptcha-response {
-        display: block !important;
-        position: absolute;
-        margin: -78px 0 0 0 !important;
-        width: 302px !important;
-        height: 76px !important;
-        z-index: -999999;
-        opacity: 0;
-    }
-
-</style>
-<script language="javascript">
-    window.onload = function() {
-        var $recaptcha = document.querySelector('#g-recaptcha-response');
-        if($recaptcha) {
-            $recaptcha.setAttribute("required", "required");
-        }
-    };
-
-    var allowSubmit = false;
-
-    function capcha_filled () {
-        allowSubmit = true;
-    }
-    function capcha_expired () {
-        allowSubmit = false;
-    }
-    function check_if_capcha_is_filled (e) {
-        if(allowSubmit) return true;
-        e.preventDefault();
-        alert('You have to fill the captcha.');
-    }
-
-    function validate_signup(frm) {
-        var emailAddress = frm.Email.value;
-        var errorString = '';
-
-        if (emailAddress == '' || emailAddress.indexOf('@') == -1) {
-            errorString = 'Please enter your email address';
-        }
-
-        if (allowSubmit) {
-            var isError = false;
-            if (errorString.length > 0)
-                isError = true;
-
-            if (isError)
-                alert(errorString);
-            return !isError;
-        }
-    }
-
-</script>
-<script src='https://oceanmediaemail.co.uk/inc/cal.js'></script>
-
-<form name="signup" id="signup" action="https://oceanmediaemail.co.uk/signup.ashx" method="post" onsubmit="return validate_signup(this)">
-
+<form
+    name="signup"
+    id="signup"
+    class="js-dotmailer-form js-dotmailer-form--modal"
+    action="https://oceanmediaemail.co.uk/signup.ashx"
+    method="post"
+    >
     <div class="newsletter-container">
 
         <p class="modal-subtitle text-center">Register your details below:</p>
@@ -85,7 +25,7 @@
             <input type="text" name="Email" placeholder="Email*" required/>
         </div>
         <div class="newsletter-row">
-            <input class="date" onclick="displayDatePicker('cd_DATE_OF_WEDDING');" placeholder="Date of Wedding*" type="text" name="cd_DATE_OF_WEDDING" required/>
+            <input id="form-date" placeholder="Date of Wedding*" type="text" name="cd_DATE_OF_WEDDING" required/>
         </div>
         <div class="newsletter-row">
             <input class="text" type="text" name="cd_POSTCODE" placeholder="Postcode*" required/>
@@ -98,7 +38,6 @@
                     <option value="Manchester Central">Manchester Central</option>
                     <option value="NEC Birmingham">NEC Birmingham</option>
                     <option value="ExCeL London">ExCeL London</option>
-
                 </select>
             </div>
         </div>
@@ -120,27 +59,44 @@
         <div class="newsletter-row">
             <div
                 class="g-recaptcha"
-                data-callback="capcha_filled"
-                data-expired-callback="capcha_expired"
-                data-sitekey="6LfTGX0UAAAAAP7lO9Y8_BqGB86_-9XFXzbAkxmK"
+                id="RecaptchaField1"
+                data-callback="capcha_filled_modal"
+                data-expired-callback="captcha_expired_modal"
+                data-error-callback="captcha_error_modal"
                 ></div>
+            <p class="js-form-callback-captcha" style="color: red;">
+                <?php _e('Please fill in the captcha.', 'nws'); ?>
+            </p>
+            <p class="js-form-callback-sent" style="color: green; opacity: 0;">
+                <?php _e('', 'nws'); ?>
+            </p>
+            <p class="js-form-callback-error" style="color: red;">
+                <?php _e('There was an error sending your message.', 'nws'); ?>
+            </p>
         </div>
         <div class="newsletter-row">
             <input type="hidden" name="ci_userConsentText" value="">
             <input type="hidden" id="ci_consenturl" name="ci_consenturl" value="">
-            <p><input type="Submit" name="Submit" onsubmit="check_if_capcha_is_filled" value="ENTER NOW"/></p>
+            <input type="hidden" class="js-recaptcha-response" name="grecaptcha_modal" required>
+
+            <p><input type="Submit" name="Submit" value="ENTER NOW"/></p>
         </div>
 
     </div>
 
 </form>
-
-<script language="javascript">
-    var urlInput = document.getElementById("ci_consenturl");
-
-    if (urlInput != null && urlInput != 'undefined') {
-        urlInput.value = encodeURI(window.location.href);
+<script>
+    function capcha_filled_modal (response) {
+        var form = document.querySelector('.js-dotmailer-form--modal')
+        var captchaResponse = form.querySelector('.js-recaptcha-response')
+        captchaResponse.value = response
+    }
+    function captcha_expired_modal (response) {
+        var form = document.querySelector('.js-dotmailer-form--modal')
+        var captchaResponse = form.querySelector('.js-recaptcha-response')
+        captchaResponse.value = ''
+    }
+    function captcha_error_modal (response) {
+        console.log('Captcha error')
     }
 </script>
-
-<!-- End of signup -->

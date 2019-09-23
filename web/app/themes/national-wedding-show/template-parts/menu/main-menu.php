@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col">
                     <div class="main-menu__header">
-                        <a href="/"><img src="/assets/img/NWS_logo-01.svg" alt="The National Wedding Show Logo" class="main-menu__logo"></a>
+                        <a href="/"><img data-src="/assets/img/NWS_logo-01.svg" alt="The National Wedding Show Logo" class="main-menu__logo lazy"></a>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                             while ( have_rows('main-menu_cards', 'option') ) : the_row();
                             ?>
                             <div class="main-menu__card-wrapper">
-                                <div class="main-menu__card" style="background-image: url('<?php the_sub_field('image'); ?>')">
+                                <div class="main-menu__card lazy" data-bg="url('<?php the_sub_field('image'); ?>')">
                                     <a href="<?php the_sub_field('link'); ?>" class="main-menu__card-link"></a>
                                     <p><?php the_sub_field('title'); ?></p>
                                 </div>

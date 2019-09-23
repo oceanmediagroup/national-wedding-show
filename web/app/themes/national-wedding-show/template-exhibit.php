@@ -36,7 +36,7 @@
 						<a class="cta-link" href="<?php the_field('about_visitors_cta_link'); ?>"><?php the_field('about_visitors_cta_text'); ?></a>
 					</div>
 					<div class="col-lg-6 col-img">
-						<img class="img-fluid" src="<?php $image = get_field('about_visitors_image'); echo $image['url']; ?>" alt="">
+						<img class="img-fluid lazy" data-src="<?php $image = get_field('about_visitors_image'); echo $image['sizes']['medium_large']; ?>" alt="">
 					</div>
 				</div>
 			</div>
@@ -44,7 +44,7 @@
 
 		<?php get_template_part('components/info-card-big'); ?>
 
-		<section class="upcoming-shows" style="background-image: url('<?php $bg_image = get_field('us_background_image'); echo $bg_image['url']; ?>');">
+		<section class="upcoming-shows lazy" data-bg="url('<?php $bg_image = get_field('us_background_image'); echo $bg_image['url']; ?>')">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6"></div>
@@ -81,12 +81,14 @@
 		                            $image = get_sub_field('single_image'); ?>
 
                                     <div class="col-6 col-lg-4">
-										<a href="<?php echo $image['url']; ?>"
+										<a
+											href="<?php echo $image['url']; ?>"
 											data-toggle="exhibit-lightbox"
-                                           data-gallery="exhibit-gallery"
-                                           data-title="<?php if (get_sub_field('single_image_title')) { the_sub_field('single_image_title'); } else { echo ' '; } ?>">
+                                           	data-gallery="exhibit-gallery"
+                                           	data-title="<?php if (get_sub_field('single_image_title')) { the_sub_field('single_image_title'); } else { echo ' '; } ?>"
+											>
                                             <div class="image-wrapper">
-                                                <div class="image-gallery-inside" style="background-image: url(<?php echo $image['url']; ?>);"></div>
+                                                <div class="image-gallery-inside lazy" data-bg="url(<?php echo $image['sizes']['medium_large']; ?>)"></div>
                                             </div>
                                         </a>
                                     </div>

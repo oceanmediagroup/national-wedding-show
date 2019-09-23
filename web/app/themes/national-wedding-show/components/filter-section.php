@@ -1,6 +1,6 @@
 <?php
 $sort_by = '';
-if ($_GET['sort_by'] == 'views') {
+if (isset($_GET['sort_by']) && $_GET['sort_by'] == 'views') {
     $sort_by = $_GET['sort_by'];
 }
 ?>
@@ -36,7 +36,7 @@ if ($_GET['sort_by'] == 'views') {
             foreach ($categories as $category) {
                 $args = array(
                     'category__in' => array($category->term_id),
-                    'caller_get_posts' => 1
+                    'ignore_sticky_posts' => 1
                 );
                 $cat_boolean = '';
                 $cat_name = single_term_title('', false);
@@ -72,27 +72,29 @@ if ($_GET['sort_by'] == 'views') {
     <?php if (is_single()) : ?>
         <?php
         $next_post = get_next_post(false, (string)get_the_ID());
-        $next_post_id = $next_post->ID;
-        ?>
-        <div class="grid-item news post post-card col-lg-12 p-0 mb-3">
-            <a href="<?php echo esc_url(get_permalink($next_post_id)); ?>">
-                <div class="post-card__wrapper">
-                    <div class="highlight">UP NEXT</div>
-                    <div class="post-card__img-wrapper"
-                         style="background-image: url('<?php echo get_the_post_thumbnail_url($next_post_id, 'gallery'); ?>')">
-                    <span class="post-card__category"><?php $category_name = get_the_category($next_post_id);
-                        echo $category_name[0]->name; ?></span>
+        if ($next_post) :
+            $next_post_id = $next_post->ID;
+            ?>
+            <div class="grid-item news post post-card col-lg-12 p-0 mb-3">
+                <a href="<?php echo esc_url(get_permalink($next_post_id)); ?>">
+                    <div class="post-card__wrapper">
+                        <div class="highlight">UP NEXT</div>
+                        <div class="post-card__img-wrapper"
+                            style="background-image: url('<?php echo get_the_post_thumbnail_url($next_post_id, 'gallery'); ?>')">
+                        <span class="post-card__category"><?php $category_name = get_the_category($next_post_id);
+                            echo $category_name[0]->name; ?></span>
+                        </div>
+                        <div class="post-card__body">
+                            <h5 class="post-card__title"><?php echo get_the_title($next_post_id); ?></h5>
+                        </div>
+                        <div class="post-card__footer d-flex justify-content-between">
+                        <span class="post-card__date"><?php $post_date = get_the_date('d M Y', $next_post_id);
+                            echo $post_date; ?></span>
+                            <span class="post-card__link">read more</span>
+                        </div>
                     </div>
-                    <div class="post-card__body">
-                        <h5 class="post-card__title"><?php echo get_the_title($next_post_id); ?></h5>
-                    </div>
-                    <div class="post-card__footer d-flex justify-content-between">
-                    <span class="post-card__date"><?php $post_date = get_the_date('d M Y', $next_post_id);
-                        echo $post_date; ?></span>
-                        <span class="post-card__link">read more</span>
-                    </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
+        <?php endif; ?>
     <?php endif; ?>
 </div>

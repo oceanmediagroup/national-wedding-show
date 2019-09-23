@@ -3,8 +3,8 @@ const exhibitorCard = (exhibitor) => {
 
     let url_image = '/assets/img/exhibitor-cover.jpg';
 
-    if (typeof exhibitor.image !== 'undefined') {
-        url_image = "https://exhibitor.nationalweddingshow.co.uk/" + exhibitor.image.url;
+    if (typeof exhibitor[0].image !== 'undefined' && exhibitor[0].image !== null) {
+        url_image = window.baseUrl + exhibitor[0].image.url;
     }
 
     image += `style="background-image: url('${url_image}')"`;
@@ -12,10 +12,10 @@ const exhibitorCard = (exhibitor) => {
     return `
         <div class="item exhibitor-card">
             <div class="exhibitors__img-wrapper">
-                <a href="/exhibitor-list/${exhibitor.id}/${exhibitor.name.toString().split(' ').filter(n => n).join('-').toLowerCase()}/">
+                <a href="/exhibitor-list/${exhibitor[0].id}/${exhibitor[0].name.toString().split(' ').filter(n => n).join('-').toLowerCase()}/">
                     <div class="exhibitors__img" ${image}">
                         <div class="exhibitors__title-wrapper">
-                            <p>${exhibitor.name}</p>
+                            <p>${exhibitor[0].name}</p>
                         </div>
                     </div>
                 </a>

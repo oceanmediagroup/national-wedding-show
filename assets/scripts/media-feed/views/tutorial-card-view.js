@@ -10,8 +10,8 @@ const tutorialCard = (card) => {
                                 </div>
                             </div>
                         </div>
-                        
-        
+
+
                         <div class="modal fade tutorial-modal" id="tutorial-${card['id']}" tabindex="-1" role="dialog"
                              aria-labelledby="tutorial-${card['id']}Label"
                              aria-hidden="true"
@@ -20,7 +20,7 @@ const tutorialCard = (card) => {
                                 <div class="modal-content tutorial-modal__content">
                                     <div class="modal-header tutorial-modal__header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true">X</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
@@ -28,15 +28,15 @@ const tutorialCard = (card) => {
                                                 src="${card['video']}"
                                                 frameborder="0" class="tutorial-modal__video"
                                                 allowfullscreen="allowfullscreen"
-        mozallowfullscreen="mozallowfullscreen" 
-        msallowfullscreen="msallowfullscreen" 
-        oallowfullscreen="oallowfullscreen" 
+        mozallowfullscreen="mozallowfullscreen"
+        msallowfullscreen="msallowfullscreen"
+        oallowfullscreen="oallowfullscreen"
         webkitallowfullscreen="webkitallowfullscreen"></iframe>
                                         <div class="text-wrapper">
                                             <div class="modal-text">
                                                 <p>${card['title']}</p>
-                                                <p>${card['text']}</p> 
-                                            </div>   
+                                                <p>${card['text']}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

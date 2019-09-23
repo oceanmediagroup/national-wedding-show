@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-6 page-locations-desc__img-wrapper">
-                <img class="page-locations-desc__img" src="<?php the_field('locations_description-image'); ?>" alt="">
+                <img class="page-locations-desc__img lazy" data-src="<?php echo get_field('locations_description-image'); ?>" alt="">
             </div>
             <div class="col-12 col-lg-6 page-locations-desc__text-wrapper">
                 <div class="row">
