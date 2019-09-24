@@ -16,7 +16,7 @@ const exhibitorDescription = (data) => {
     let logo_img = '/assets/img/exhibitor-logo-default.png';
 
     if (typeof exhibitor['0'].logo !== 'undefined' && typeof exhibitor['0'].logo.url !== 'undefined') {
-        logo_img = window.baseUrl + exhibitor['0'].logo.url;
+        logo_img = window.apiAssetUrl + exhibitor['0'].logo.url;
     }
 
     let logo = `

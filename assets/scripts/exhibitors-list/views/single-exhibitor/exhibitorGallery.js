@@ -8,7 +8,7 @@ const exhibitorGallery = (data) => {
             if (product.image) {
                 const imgUrl = product.image.url
 
-                const url_image = window.baseUrl + imgUrl;
+                const url_image = window.apiAssetUrl + imgUrl;
                 console.log(url_image)
                 gallery += `<div class="col-sm-4 gallery-simple__item">
                                 <div class="gallery-simple__wrapper">

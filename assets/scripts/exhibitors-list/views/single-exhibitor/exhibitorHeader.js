@@ -3,8 +3,9 @@ const exhibitorHeader = (data) => {
     let image = '';
     let url_image = '/assets/img/exhibitor-cover.jpg';
 
-    if (typeof exhibitor['0'].image !== 'undefined') {
-        url_image = window.baseUrl + exhibitor['0'].image.url;
+    if (typeof exhibitor['0'].image !== 'undefined' && exhibitor['0'].image !== null) {
+        console.log('e', exhibitor['0'])
+        url_image = window.apiAssetUrl + exhibitor['0'].image.url;
     }
 
     image += `<div class="owl-carousel owl-theme owl-header-simple">

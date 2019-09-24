@@ -4,7 +4,7 @@ const exhibitorCard = (exhibitor) => {
     let url_image = '/assets/img/exhibitor-cover.jpg';
 
     if (typeof exhibitor[0].image !== 'undefined' && exhibitor[0].image !== null) {
-        url_image = window.baseUrl + exhibitor[0].image.url;
+        url_image = window.apiAssetUrl + exhibitor[0].image.url;
     }
 
     image += `style="background-image: url('${url_image}')"`;
