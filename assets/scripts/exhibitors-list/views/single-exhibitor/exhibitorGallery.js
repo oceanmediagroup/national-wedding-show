@@ -9,7 +9,7 @@ const exhibitorGallery = (data) => {
                 const imgUrl = product.image.url
 
                 const url_image = window.apiAssetUrl + imgUrl;
-                console.log(url_image)
+
                 gallery += `<div class="col-sm-4 gallery-simple__item">
                                 <div class="gallery-simple__wrapper">
                                     <a href="${url_image}"
