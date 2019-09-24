@@ -106,7 +106,7 @@
             <div class="newsletter-modal">
                 <div class="row">
                     <h5 class="modal-title text-center" id="newsletterTitle">
-                        Sign up to our newsletter and be in with a chance of winning a £3,000 shopping spree at the
+                        Sign up to our newsletter and be in with a chance of winning a £10,000 shopping spree at the
                         shows!
                         Plus get access to exclusive show news and offers! Register your details below:
                     </h5>
