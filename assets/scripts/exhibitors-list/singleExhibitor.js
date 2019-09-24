@@ -13,7 +13,6 @@ const main = async () => {
     const ID = await retrieveIdFromUrl();
 
     await API.getSingleExhibitor(ID).then(data => {
-        console.log('data', data);
 
         document.getElementById("exhibitorLayout").innerHTML = singleExhibitorLayout(data);
     });
