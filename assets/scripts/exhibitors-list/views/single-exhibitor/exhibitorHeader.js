@@ -4,7 +4,7 @@ const exhibitorHeader = (data) => {
     let url_image = '/assets/img/exhibitor-cover.jpg';
 
     if (typeof exhibitor['0'].image !== 'undefined' && exhibitor['0'].image !== null) {
-        console.log('e', exhibitor['0'])
+
         url_image = window.apiAssetUrl + exhibitor['0'].image.url;
     }
 
