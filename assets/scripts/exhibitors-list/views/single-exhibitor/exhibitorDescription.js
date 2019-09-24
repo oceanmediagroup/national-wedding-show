@@ -1,8 +1,6 @@
 const exhibitorDescription = (data) => {
     const exhibitor = data[0];
 
-    // console.log(exhibitor);
-
     const socialMediaIcons = {
         'twiter': 'fab fa-twitter',
         'facebook': 'fab fa-facebook-f',
@@ -15,8 +13,8 @@ const exhibitorDescription = (data) => {
 
     let logo_img = '/assets/img/exhibitor-logo-default.png';
 
-    if (typeof exhibitor['0'].logo !== 'undefined' && typeof exhibitor['0'].logo.url !== 'undefined') {
-        logo_img = window.baseUrl + exhibitor['0'].logo.url;
+    if (exhibitor['0'].logo !== null && exhibitor['0'].logo.url !== null) {
+        logo_img = window.apiAssetUrl + exhibitor['0'].logo.url;
     }
 
     let logo = `
@@ -27,7 +25,7 @@ const exhibitorDescription = (data) => {
 
     let description = '';
 
-    if (typeof exhibitor['0'].description !== 'undefined') {
+    if (exhibitor['0'].description !== null) {
         description = exhibitor['0'].description;
     }
 
@@ -45,21 +43,21 @@ const exhibitorDescription = (data) => {
     }
 
     let website = '';
-    if (typeof exhibitor['0'].website !== 'undefined') {
+    if (exhibitor['0'].website !== null) {
         website += ` <h3>Website:</h3>
                     <a href="${exhibitor['0'].website}" target="_blank">${exhibitor['0'].website}</a>
         `;
     }
 
     let phone = '';
-    if (typeof exhibitor['0'].telephone !== 'undefined') {
+    if (exhibitor['0'].telephone !== null) {
         phone += ` <div class="phone-wrapper"><span class="phone">Tel:</span>
                     <a href="tel:${exhibitor['0'].telephone}">${exhibitor['0'].telephone}</a></div>
         `;
     }
 
     let exhibitingAt = '';
-    if (typeof exhibitor['0'].stands !== 'undefined'  && typeof exhibitor['0'].stands[0] !== 'undefined') {
+    if (exhibitor['0'].stands.length > 0 && exhibitor['0'].stands[0] !== null) {
         exhibitingAt += '<h3>Exhibiting at</h3>';
 
         exhibitor['0'].stands.forEach(stand => {
@@ -68,7 +66,7 @@ const exhibitorDescription = (data) => {
     }
 
     let offers = '';
-    if (typeof exhibitor['0'].offers !== 'undefined' && typeof exhibitor['0'].offers[0] !== 'undefined') {
+    if (exhibitor['0'].offers.length > 0 && exhibitor['0'].offers[0] !== null) {
         offers += '<h3>Show offers and competitions</h3>';
         exhibitor['0'].offers.forEach(offer => {
             offers += `<p>${offer.name} - ${offer.description}</p>`;
@@ -77,13 +75,13 @@ const exhibitorDescription = (data) => {
 
     let socialLinks = '';
     socialLinks += '<div class="exhibitor-single__social-media">';
-    if (typeof exhibitor['0'].social_media_links !== 'undefined') {
+    if (exhibitor['0'].social_media_links.length > 0 && exhibitor['0'].social_media_links[0] !== null) {
         for (let i in exhibitor['0'].social_media_links){
             socialLinks += `<a href="${exhibitor['0'].social_media_links[i].url}" target="_blank"><i class="${socialMediaIcons[exhibitor['0'].social_media_links[i].type]}"></i></a>`;
         }
     }
 
-    if (typeof exhibitor['0'].secondary_email !== 'undefined' && exhibitor['0'].secondary_email !== '') {
+    if (exhibitor['0'].secondary_email !== null) {
         socialLinks += `<a href="mailto:${exhibitor['0'].secondary_email}"><i class="fas fa-envelope"></i></a>`;
     }
 
@@ -91,7 +89,7 @@ const exhibitorDescription = (data) => {
 
     let brochure = '';
 
-    if (typeof exhibitor['0'].brochure_url !== 'undefined') {
+    if (exhibitor['0'].brochure_url !== null) {
         brochure += `<a href="${exhibitor['0'].brochure_url}" class="button--light-coral" download>DOWNLOAD OUR BROCHURE</a>`;
     }
 
