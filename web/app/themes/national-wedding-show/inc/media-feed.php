@@ -112,54 +112,56 @@ date_default_timezone_set('UTC');
 
 function getInstagramPosts()
 {
-    $howManyToRetrieve = isset($_GET['how_many']) ? $_GET['how_many'] : 1;
-    $minToRetrieve = isset($_GET['itemsRetrieved']) && isset($_GET['how_many']) ? $_GET['itemsRetrieved'] + $_GET['how_many'] : 1;
-    $json_link = 'https://www.instagram.com/thenationalweddingshow/?__a=1';
+//    CONFIG
+    $access_token = "EAAHdXcCDscYBAHFL8nxcVkL0E725yZCNRyGZCprHUpVRbNOiTcGJUPmy1NZA42hlZBKifEtANQq0I0HNYzPTyOdllEmXPnoHl1mZArvOUOZAZAcwCINMTDs9sr0bw3a5MEU0QMfJGO445FPEaZBV1S32Iidx1ZBEarwIh52dJZABnP5gZDZD";
+    $howManyToRetrieve = isset( $_GET['how_many'] ) ? $_GET['how_many'] : null;
+    $minToRetrieve = ( isset( $_GET['itemsRetrieved'] ) && isset( $_GET['how_many'] ) ) ? $_GET['itemsRetrieved'] + $_GET['how_many'] : 1;
+    $json_url ="https://graph.facebook.com/17841400744197417/media?fields=id,shortcode,media_url,thumbnail_url&access_token=" . $access_token;
 
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_URL, $json_link);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    $res = curl_exec($ch);
-    $res_json = json_decode($res);
+    $response = [];
+    $cache = dirname(__FILE__) . '/cache/' . 'cache-instagram.json';
 
-    $post_data = $res_json->graphql->user->edge_owner_to_timeline_media->edges;
+    if (file_exists($cache) && (filemtime($cache) > (time() - 60 * 60))) {
+        $response = json_decode(file_get_contents($cache));
+    } else {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_URL, $json_url);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $res = curl_exec($ch);
 
-    $user = $res_json->graphql->user;
-    $user_data = array(
-        'profile_picture' => $user->profile_pic_url,
-        'full_name' => $user->full_name,
-        'username' => $user->username
-    );
+        $response = json_decode($res);
 
-    $posts = array_slice($post_data, isset($_GET['itemsRetrieved']) ? $_GET['itemsRetrieved'] : 1, $howManyToRetrieve);
+        $file = file_put_contents($cache, $res);
+    }
 
-    $postArray = array();
+    $itemsRetrieved = isset( $_GET['itemsRetrieved'] ) ? $_GET['itemsRetrieved'] : null;
+
+    $posts = array_slice($response->data, $itemsRetrieved, $howManyToRetrieve);
+
+    $thumb_url = !empty($post->thumbnail_url) ? $post->thumbnail_url : null;
 
     foreach ($posts as $key => $post) {
         $postArray[$key] = [
-            "image" => $post->node->thumbnail_src,
+            "image" => $post->media_url,
             "type" => 'instagram',
-            "url" => 'https://www.instagram.com/p/' . $post->node->shortcode,
-            "pid" => $post->node->shortcode,
-            "id" => $post->node->id,
-            "profile_picture" => $user_data['profile_picture'],
-            "full_name" => $user_data['full_name'],
-            "username" => $user_data['username'],
-            "text" => $post->node->edge_media_to_caption->edges[0]->node->text,
-            "video_url" => null
+            "url" => 'https://instagram.com/p/' . $post->shortcode,
+            "id" => $post->id,
+            "shortcode" => $post->shortcode,
+            "thumbnail_url" => $thumb_url
         ];
     }
 
+    // return result as json
     $json_result = json_encode($postArray);
 
-    if ($howManyToRetrieve !== 1) {
+    if ($howManyToRetrieve) {
         die($json_result);
     } else {
         return $postArray[0];
     }
-}
 
+}
 
 function getTutorials()
 {

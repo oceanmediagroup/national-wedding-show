@@ -71,7 +71,11 @@
             <div class="item card">
                 <a href="/inspiration/" class="h-100 w-100">
                     <div class="image-wrapper inspire">
-                        <img class="card-img-top" src="<?php echo $instagram['image'] ?>" alt="Card image cap">
+                        <?php if ($instagram['thumbnail'] !== null) : ?>
+                            <img class="card-img-top" src="<?php echo $instagram['thumbnail'] ?>" alt="Card image cap">
+                        <?php else : ?>
+                            <img class="card-img-top" src="<?php echo $instagram['image'] ?>" alt="Card image cap">
+                        <?php endif; ?>
                     </div>
                 </a>
             </div>
