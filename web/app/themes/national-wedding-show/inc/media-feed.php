@@ -7,7 +7,9 @@
  */
 
 require(__DIR__ . '/TweetPHP.php');
-$dotenv = Dotenv\Dotenv::create(__DIR__);
+
+$root_dir = dirname(__DIR__) . '/../../';
+$dotenv = Dotenv\Dotenv::create($root_dir);
 $dotenv->load();
 
 //use GuzzleHttp\Client;
@@ -149,7 +151,7 @@ function getInstagramPosts()
             "url" => 'https://instagram.com/p/' . $post->shortcode,
             "id" => $post->id,
             "shortcode" => $post->shortcode,
-            "thumbnail_url" => $post->thumbnail_url
+            "thumbnail_url" => isset($post->thumbnail_url) ? $post->thumbnail_url : null
         ];
     }
 
