@@ -7,6 +7,8 @@
  */
 
 require(__DIR__ . '/TweetPHP.php');
+$dotenv = Dotenv\Dotenv::create(__DIR__);
+$dotenv->load();
 
 //use GuzzleHttp\Client;
 
@@ -82,10 +84,10 @@ function getTwitterPosts()
 //    var_dump("minimum to retrieve is going to be: " . $minToRetrieve);
 
     $TweetPHP = new TweetPHP(array(
-        'consumer_key' => '14WM9MS1r6Sf4rm1KpX6T9HLd',
-        'consumer_secret' => 'PNaK6KAfywdYFcnXM5qQKWHQ1tgdJzfrn834cVpFEb5YQ6Gm7N',
-        'access_token' => '47293325-IvTsimc12aJBEKtw4ZzJXk0RBGpiEixEQF0Ls1H2w',
-        'access_token_secret' => 'dwjC4BT1q4sEYqgnVYWX0JAPSFSnQIklWTSuNL63bUwOm',
+        'consumer_key' => getenv('TWITTER_CONSUMER_KEY'),
+        'consumer_secret' => getenv('TWITTER_CONSUMER_SECRET'),
+        'access_token' => getenv('TWITTER_ACCESS_TOKEN'),
+        'access_token_secret' => getenv('TWITTER_TOKEN_SECRET'),
         'tweets_to_retrieve' => 100,
         'tweets_to_display' => $minToRetrieve,
         'enable_cache' => true,
@@ -113,10 +115,11 @@ date_default_timezone_set('UTC');
 function getInstagramPosts()
 {
 //    CONFIG
-    $access_token = "EAAHdXcCDscYBAHFL8nxcVkL0E725yZCNRyGZCprHUpVRbNOiTcGJUPmy1NZA42hlZBKifEtANQq0I0HNYzPTyOdllEmXPnoHl1mZArvOUOZAZAcwCINMTDs9sr0bw3a5MEU0QMfJGO445FPEaZBV1S32Iidx1ZBEarwIh52dJZABnP5gZDZD";
+    $access_token = getenv('INSTAGRAM_ACCESS_TOKEN');
+    $user_id = getenv('INSTAGRAM_USER_ID');
     $howManyToRetrieve = isset( $_GET['how_many'] ) ? $_GET['how_many'] : null;
     $minToRetrieve = ( isset( $_GET['itemsRetrieved'] ) && isset( $_GET['how_many'] ) ) ? $_GET['itemsRetrieved'] + $_GET['how_many'] : 1;
-    $json_url ="https://graph.facebook.com/17841400744197417/media?fields=id,shortcode,media_url,thumbnail_url&access_token=" . $access_token;
+    $json_url ="https://graph.facebook.com/$user_id/media?fields=id,shortcode,media_url,thumbnail_url&access_token=$access_token";
 
     $response = [];
     $cache = dirname(__FILE__) . '/cache/' . 'cache-instagram.json';
@@ -139,8 +142,6 @@ function getInstagramPosts()
 
     $posts = array_slice($response->data, $itemsRetrieved, $howManyToRetrieve);
 
-    $thumb_url = !empty($post->thumbnail_url) ? $post->thumbnail_url : null;
-
     foreach ($posts as $key => $post) {
         $postArray[$key] = [
             "image" => $post->media_url,
@@ -148,7 +149,7 @@ function getInstagramPosts()
             "url" => 'https://instagram.com/p/' . $post->shortcode,
             "id" => $post->id,
             "shortcode" => $post->shortcode,
-            "thumbnail_url" => $thumb_url
+            "thumbnail_url" => $post->thumbnail_url
         ];
     }
 

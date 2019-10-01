@@ -1,5 +1,5 @@
 const instagramCard = (card, id) => {
-    const cardBg = card['thumbnail_url'] ? card['thumbnail_url'] : card['image'];
+    const cardBg = card['thumbnail_url'] !== null ? card['thumbnail_url'] : card['image'];
     const gridItem = `<div class="grid-item instagram">
         <a href="${card['url']}" target="_blank">
             <div data-url="/?type=instagram&id=${card['ig_id']}">
@@ -9,6 +9,9 @@ const instagramCard = (card, id) => {
                 </div>
             </div>
         </a>`
+    console.log('cardBg', cardBg)
+    console.log('card.url', card['url'])
+    console.log('---------------------------------')
     return $($.parseHTML(gridItem));
 };
 
