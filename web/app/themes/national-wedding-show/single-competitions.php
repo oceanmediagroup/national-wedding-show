@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part('components/image-header') ?>
+<?php get_template_part('components/image-header-competition') ?>
 
 <section class="breadcrumbs">
     <div class="container">
