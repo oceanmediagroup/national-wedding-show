@@ -9,9 +9,6 @@ const instagramCard = (card, id) => {
                 </div>
             </div>
         </a>`
-    console.log('cardBg', cardBg)
-    console.log('card.url', card['url'])
-    console.log('---------------------------------')
     return $($.parseHTML(gridItem));
 };
 
