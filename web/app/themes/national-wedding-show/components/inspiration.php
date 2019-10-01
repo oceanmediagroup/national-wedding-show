@@ -71,7 +71,7 @@
             <div class="item card">
                 <a href="/inspiration/" class="h-100 w-100">
                     <div class="image-wrapper inspire">
-                        <?php if ($instagram['thumbnail'] !== null) : ?>
+                        <?php if ( array_key_exists('thumbnail', $instagram) ) : ?>
                             <img class="card-img-top" src="<?php echo $instagram['thumbnail'] ?>" alt="Card image cap">
                         <?php else : ?>
                             <img class="card-img-top" src="<?php echo $instagram['image'] ?>" alt="Card image cap">
