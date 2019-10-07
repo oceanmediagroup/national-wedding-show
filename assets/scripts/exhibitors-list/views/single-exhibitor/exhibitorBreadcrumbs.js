@@ -11,7 +11,7 @@ const exhibitorBreadcrumbs = (exhibitor) => {
                             <a href="/exhibitor-list/">Exhibitor List</a>
                             >
                             <a href="">
-                                <span class="post post-page current-item">${exhibitor[0].name}</span>
+                                <span class="post post-page current-item">${exhibitor[0][0].name}</span>
                             </a>
                         </div>
                     </div>
