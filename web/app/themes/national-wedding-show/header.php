@@ -37,15 +37,6 @@
     <!-- End Google Tag Manager -->
 
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-    <!-- Google Ads -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-3929022621724249",
-            enable_page_level_ads: true
-        });
-    </script>
-    <!-- End Google Ads -->
 </head>
 <body <?php body_class(); ?>>
 
