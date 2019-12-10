@@ -59,6 +59,18 @@
           "type": "zip"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "mt/wpcf7-save-to-db",
+        "type": "wordpress-plugin",
+        "version": "1.0.0",
+        "dist": {
+          "url": "./lib/wpcf7-save-to-db/wpcf7-save-to-db.zip",
+          "type": "zip"
+        }
+      }
     }
   ],
   "require": {
@@ -96,6 +108,7 @@
     "wpackagist-plugin/wp-migrate-db": "1.0.2",
     "nws/advanced-custom-fields-pro": "5.7.2",
     "nws/simple-embed-code": "2.3.2",
+    "mt/wpcf7-save-to-db": "1.0.0",
     "wpackagist-plugin/classic-editor": "^1.5"
   },
   "require-dev": {
