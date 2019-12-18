@@ -75,10 +75,10 @@ const exhibitorDescription = (data) => {
 
     let socialLinks = '';
     socialLinks += '<div class="exhibitor-single__social-media">';
-    if (exhibitor['0'].social_media_links.length > 0 && exhibitor['0'].social_media_links[0] !== null) {
-        for (let i in exhibitor['0'].social_media_links){
-            socialLinks += `<a href="${exhibitor['0'].social_media_links[i].url}" target="_blank"><i class="${socialMediaIcons[exhibitor['0'].social_media_links[i].type]}"></i></a>`;
-        }
+    if ( JSON.stringify(exhibitor['0'].social_media_links) !== `{}` ) {
+        Object.values(exhibitor['0'].social_media_links).forEach(sm => {
+            socialLinks += `<a href="${sm.url}" target="_blank"><i class="${socialMediaIcons[sm.type]}"></i></a>`
+        })
     }
 
     if (exhibitor['0'].secondary_email !== null) {
