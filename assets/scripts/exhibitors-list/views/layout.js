@@ -37,12 +37,25 @@ const createLayout = (exhibitorsList) => {
 
     // don't filter featured by letters
     const totalOfLetters = exhibitorsList.filters.letters.length;
-    for (let i = 0; i < totalOfLetters; i++) {
-        let letter = exhibitorsList.filters.letters[i];
-        const filtered = pleaseFilterIt(filteredExhibitorsArray[letter]);
-        for (let j = 0; j < filtered.length; j++) {
-            html += exhibitorCard(filtered[j], true);
+
+    // show featured on top only if they're featured in current category
+    if (exhibitorsList.searchParameters.cats) {
+
+        const featuredCatIds = exhibitorsList.searchParameters.cats.map(cat => {
+            return parseInt(cat)
+        })
+
+        for (let i = 0; i < totalOfLetters; i++) {
+            let letter = exhibitorsList.filters.letters[i];
+            const filtered = pleaseFilterIt(filteredExhibitorsArray[letter]);
+            for (let j = 0; j < filtered.length; j++) {
+                const currentExhibitorId = filtered[j][0].featured_in_categories[0].id
+                if (featuredCatIds.includes(currentExhibitorId) ) {
+                    html += exhibitorCard(filtered[j], true);
+                }
+            }
         }
+
     }
 
     const arrayLength = layoutParams.letters.length;
