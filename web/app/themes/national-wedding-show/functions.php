@@ -77,10 +77,70 @@ if (function_exists('acf_add_options_page')) {
     ));
 
     acf_add_options_sub_page(array(
-        'page_title' => 'Theme Footer Settings',
-        'menu_title' => 'Footer',
+        'page_title' => 'Contact form settings',
+        'menu_title' => 'Contact form settings',
         'parent_slug' => 'theme-general-settings',
     ));
+
+    acf_add_local_field_group( array (
+        'key' => 'group_5e1f16e0f14e2',
+        'title' => 'Contact form settings',
+        'fields' => array (
+            array(
+                'key' => 'field_5e1f16ecbbe85',
+                'label' => 'To email',
+                'name' => 'wpcf7_to_email',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => ''
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => ''
+            ),
+            array(
+                'key' => 'field_5e1f16f8bbe86',
+                'label' => 'From email',
+                'name' => 'wpcf7_from_email',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => ''
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => ''
+            )
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'acf-options-contact-form-settings',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+    ) );
 
 }
 
