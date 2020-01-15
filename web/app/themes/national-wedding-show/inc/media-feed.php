@@ -9,8 +9,6 @@
 require(__DIR__ . '/TweetPHP.php');
 
 $root_dir = dirname(__DIR__) . '/../../';
-$dotenv = Dotenv\Dotenv::create($root_dir);
-$dotenv->load();
 
 //use GuzzleHttp\Client;
 
