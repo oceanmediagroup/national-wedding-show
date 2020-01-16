@@ -8,8 +8,6 @@
 
 require(__DIR__ . '/TweetPHP.php');
 
-$root_dir = dirname(__DIR__) . '/../../';
-
 //use GuzzleHttp\Client;
 
 //register myAction with wordpress
