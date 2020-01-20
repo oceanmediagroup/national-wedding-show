@@ -108,7 +108,7 @@
     "wpackagist-plugin/wp-migrate-db": "1.0.2",
     "nws/advanced-custom-fields-pro": "5.7.2",
     "nws/simple-embed-code": "2.3.2",
-    "mt/wpcf7-save-to-db": "1.0.0",
+    "mt/wpcf7-save-to-db": "1.0.1",
     "wpackagist-plugin/classic-editor": "^1.5"
   },
   "require-dev": {
