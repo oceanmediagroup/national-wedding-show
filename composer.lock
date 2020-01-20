@@ -130,7 +130,7 @@
         },
         {
             "name": "mt/wpcf7-save-to-db",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "dist": {
                 "type": "zip",
                 "url": "./lib/wpcf7-save-to-db/wpcf7-save-to-db.zip"
