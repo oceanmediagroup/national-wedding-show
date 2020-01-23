@@ -12,7 +12,7 @@
             <div class="col col-md-auto">
                 <div class="button-group featured-pages__filters d-none d-md-block" id="filters">
                     <button data-filter="*" class="featured-pages__filter is-checked">Show all</button>
-                    <a href="/blog/" class="featured-pages__filter">Latest News</a>
+                    <a href="/blog/" class="featured-pages__filter">Blog</a>
                     <button data-filter=".at-the-show" class="featured-pages__filter">At the Show</button>
                     <button data-filter=".tutorial" class="featured-pages__filter">Videos</button>
                     <button data-filter=".twitter, .instagram" class="featured-pages__filter last">Get Social</button>
@@ -23,7 +23,7 @@
                     <div class="select-style">
                         <select class="filter-group filters-select-dropdown" id="filtersMobile">
                             <option value="*">Show All</option>
-                            <option value=".news" type="link" page="/blog/">Latest News</option>
+                            <option value=".news" type="link" page="/blog/">Blog</option>
                             <option value=".at-the-show">At the Show</option>
                             <option value=".tutorial">Videos</option>
                             <option value=".twitter, .instagram">Get Social</option>
