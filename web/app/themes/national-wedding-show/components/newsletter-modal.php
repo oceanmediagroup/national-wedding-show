@@ -18,7 +18,7 @@
             <div class="modal-body">
 
                 <h5 class="modal-title text-center" id="newsletterTitle">
-                    Sign up to our newsletter and be in with a chance of winning a £10,000 shopping spree at the shows! Plus get access to exclusive show news and offers!
+                    Sign up to our newsletter and be in with a chance of winning a £5,000 shopping spree at the shows! Plus get access to exclusive show news and offers!
                 </h5>
 
                 <?php get_template_part('components/dotmailer-form'); ?>
