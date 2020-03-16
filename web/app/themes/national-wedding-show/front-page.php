@@ -3,6 +3,8 @@
 
     <?php get_template_part('homepage/hero') ?>
 
+    <?php get_template_part('homepage/covid') ?>
+
     <?php get_template_part('components/product-cards') ?>
 
     <?php get_template_part('components/ad-banners') ?>
