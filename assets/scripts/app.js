@@ -158,3 +158,19 @@ $(document).on('click', '[data-toggle="exhibit-lightbox"]', function(event) {
 $('.exhibitor-list__title-top').on('click', function() {
 	$(this).toggleClass('active');
 })
+
+$(document).ready(function () {
+	const $inputDate = $("input[type='date']");
+	if ($inputDate.length) {
+		$inputDate.each(function () {
+			const $input = $(this);
+			$input.on('change', function () {
+				if ($input.val() === '') {
+					$input.removeClass('has-value');
+				} else {
+					$input.addClass('has-value');
+				}
+			})
+		})
+	}
+})

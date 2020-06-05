@@ -16,28 +16,73 @@
         <input type="hidden" name="ReturnURL" value="">
 
         <div class="newsletter-row">
-            <input class="text" type="text" name="cd_FIRSTNAME" placeholder="First Name*" required/>
+            <input class="text" type="text" name="cd_FIRSTNAME" placeholder="Name"/>
         </div>
         <div class="newsletter-row">
-            <input class="text" type="text" name="cd_LASTNAME" placeholder="Last Name*" required/>
+            <input class="text" type="text" name="YOUREMAIL" placeholder="Email"/>
         </div>
         <div class="newsletter-row">
-            <input type="text" name="Email" placeholder="Email*" required/>
+            <input class="text" type="date" name="ENGAGEMENTDATE" placeholder="Engagement date"/>
         </div>
         <div class="newsletter-row">
-            <input id="form-date" placeholder="Date of Wedding*" type="text" name="cd_DATE_OF_WEDDING" required/>
+            <input class="text" type="date" name="WEDDINGDATE" min="<?php echo date('Y-m-d'); ?>" placeholder="Wedding Date"/>
         </div>
         <div class="newsletter-row">
-            <input class="text" type="text" name="cd_POSTCODE" placeholder="Postcode*" required/>
+            <input class="text" type="text" name="cd_POSTCODE" placeholder="Postcode*"/>
         </div>
         <div class="newsletter-row">
             <div class="select-style">
-                <select class="text" type="text" name="cd_WHICH_SHOW" id="cd_WHICH_SHOW" required>
-                    <option value=""></option>
-                    <option value="Olympia London">Olympia London</option>
-                    <option value="Manchester Central">Manchester Central</option>
-                    <option value="NEC Birmingham">NEC Birmingham</option>
-                    <option value="ExCeL London">ExCeL London</option>
+                <select class="text" type="text" name="SHOWLOCATION">
+                    <option value="" disabled selected>Show location (NWS)</option>
+                    <option value="London">London</option>
+                    <option value="Manchester">Manchester</option>
+                    <option value="Birmingham">Birmingham</option>
+                </select>
+            </div>
+        </div>
+        <div class="newsletter-row">
+            <div class="select-style">
+                <select class="text" type="text" name="BUDGET">
+                    <option value="" disabled selected>Budget</option>
+                    <option value="0-10000">£0 - £10,000</option>
+                    <option value="10000-20000">£10,000 - £20,000</option>
+                    <option value="20000-30000">£20,000 - £30,000</option>
+                    <option value="30000-40000">£30,000 - £40,000</option>
+                    <option value="40000+">£40,000 +</option>
+                </select>
+            </div>
+        </div>
+        <div class="newsletter-row">
+            <div class="select-style">
+                <select class="text" type="text" name="WEDDINGLOCATION">
+                    <option value="" disabled selected>Wedding Location</option>
+                    <option value="All UK Regions">All UK Regions </option>
+                    <option value="Option International">Option ‘International’</option>
+                    <option value="Option Not yet decided">Option ‘Not yet decided’</option>
+                </select>
+            </div>
+        </div>
+        <div class="newsletter-row">
+            <div class="select-style">
+                <select class="text" type="text" name="YOURGENDER">
+                    <option value="" disabled selected>Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Nonbinary">Nonbinary</option>
+                    <option value="Other">Other</option>
+                    <option value="Choose not to answer">Choose not to answer</option>
+                </select>
+            </div>
+        </div>
+        <div class="newsletter-row">
+            <div class="select-style">
+                <select class="text" type="text" name="PARTNERGENDER">
+                    <option value="" disabled selected>Partner gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Nonbinary">Nonbinary</option>
+                    <option value="Other">Other</option>
+                    <option value="Choose not to answer">Choose not to answer</option>
                 </select>
             </div>
         </div>
@@ -51,6 +96,12 @@
             <input class="checkbox" type="checkbox" name="cd_SISTER_OPT_IN_radio" value="y">
             <span>
                 Ocean Media Group, organiser of this event, would like to contact you by email with news and offers from our other products confetti.co.uk, Wedding Style collective and wedify. Please tick this box to receive them. View our privacy policy.
+            </span>
+        </div>
+        <div class="newsletter-row checkbox-container">
+            <input class="checkbox" type="checkbox" name="CHECKBOX-AGREE" value="y">
+            <span>
+                * By entering my details, I accept the terms and conditions and opt in to being emailed about Ocean Media Group's wedding products which include The National Wedding Shows & Confetti.
             </span>
         </div>
         <div class="newsletter-row info-container">

@@ -16,47 +16,125 @@
     <!-- Email - the user's email address -->
     <table>
         <tr>
-            <td>First Name*</td>
-            <td><input class="text" type="text" name="cd_FIRSTNAME" required/></td>
+            <td>
+                Name
+            </td>
+            <td>
+                <input class="text" type="text" name="cd_FIRSTNAME"/>
+            </td>
         </tr>
         <tr>
-            <td>Last Name*</td>
-            <td><input class="text" type="text" name="cd_LASTNAME" required/></td>
+            <td>
+                Email
+            </td>
+            <td>
+                <input type="email" name="YOUREMAIL">
+            </td>
         </tr>
 
         <tr>
             <td>
-                Email*
+                Engagement date
             </td>
-            <td><input type="text" name="Email" required></td>
+            <td>
+                <input class="text" type="date" name="ENGAGEMENTDATE"/>
+            </td>
         </tr>
         <tr>
-            <td>Date of Wedding*</td>
-            <td><input type="text"
-                       name="cd_DATE_OF_WEDDING" required/></td>
+            <td>
+                Wedding Date
+            </td>
+            <td>
+                <input class="text" type="date" name="WEDDINGDATE" min="<?php echo date('Y-m-d'); ?>" />
+            </td>
         </tr>
 
         <tr>
-            <td>Postcode*</td>
-            <td><input class="text" type="text" name="cd_POSTCODE" required/></td>
+            <td>
+                Postcode*
+            </td>
+            <td>
+                <input class="text" type="text" name="cd_POSTCODE" />
+            </td>
         </tr>
         <tr>
-            <td>Which Show*</td>
-            <!--            <td><input class="text" type="text" name="cd_WHICH_SHOW"/></td>-->
-
+            <td>
+                Show location (NWS)
+            </td>
             <td>
                 <div class="select-style">
-                    <select class="text" type="text" name="cd_WHICH_SHOW" id="cd_WHICH_SHOW" required>
-                        <option value></option>
-                        <option value="Olympia London">Olympia London</option>
-                        <option value="Manchester Central">Manchester Central</option>
-                        <option value="NEC Birmingham">NEC Birmingham</option>
-                        <option value="ExCeL London">ExCeL London</option>
-
+                    <select class="text" type="text" name="SHOWLOCATION" >
+                        <option value=""></option>
+                        <option value="London">London</option>
+                        <option value="Manchester">Manchester</option>
+                        <option value="Birmingham">Birmingham</option>
                     </select>
                 </div>
             </td>
-
+        </tr>
+        <tr>
+            <td>Budget</td>
+            <td>
+                <div class="select-style">
+                    <select class="text" type="text" name="BUDGET">
+                        <option value=""></option>
+                        <option value="0-10000">£0 - £10,000</option>
+                        <option value="10000-20000">£10,000 - £20,000</option>
+                        <option value="20000-30000">£20,000 - £30,000</option>
+                        <option value="30000-40000">£30,000 - £40,000</option>
+                        <option value="40000+">£40,000 +</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Wedding Location
+            </td>
+            <td>
+                <div class="select-style">
+                    <select class="text" type="text" name="WEDDINGLOCATION">
+                        <option value=""></option>
+                        <option value="All UK Regions">All UK Regions </option>
+                        <option value="Option International">Option ‘International’</option>
+                        <option value="Option Not yet decided">Option ‘Not yet decided’</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Gender
+            </td>
+            <td>
+                <div class="select-style">
+                    <select class="text" type="text" name="YOURGENDER">
+                        <option value=""></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Nonbinary">Nonbinary</option>
+                        <option value="Other">Other</option>
+                        <option value="Choose not to answer">Choose not to answer</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Partner gender
+            </td>
+            <td>
+                <div class="select-style">
+                    <select class="text" type="text" name="PARTNERGENDER">
+                        <option value=""></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Nonbinary">Nonbinary</option>
+                        <option value="Other">Other</option>
+                        <option value="Choose not to answer">Choose not to answer</option>
+                    </select>
+                </div>
+            </td>
         </tr>
         <tr class="w-100">
             <td class="w-100">
@@ -81,6 +159,14 @@
                 <input class="checkbox" type="checkbox" name="cd_SISTER_OPT_IN_radio" value="y">
                 <span>
                     Ocean Media Group, organiser of this event, would like to contact you by email with news and offers from our other products confetti.co.uk, <br> Wedding Style collective and wedify. Please tick this box to receive them. View our privacy policy.
+                </span>
+            </td>
+        </tr>
+        <tr class="w-100 secondary">
+            <td>
+                <input class="checkbox" type="checkbox" name="CHECKBOX-AGREE" value="y">
+                <span>
+                    * By entering my details, I accept the terms and conditions and opt in to being emailed about Ocean Media Group's wedding products which include The National Wedding Shows & Confetti.
                 </span>
             </td>
         </tr>

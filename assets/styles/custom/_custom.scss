@@ -442,6 +442,20 @@ ol {
                 font-style: italic;
               }
             }
+            input[type="date"] {
+              border: none;
+              border: 1px solid #F0F2F4;
+              width: 100%;
+              padding: 18px;
+              width: 100%;
+              font-size: 19px;
+              color: #B9B4B4;
+              font-style: italic;
+              &.has-value {
+                font-style: normal;
+                color: #000;
+              }
+            }
             select {
               height: 52px;
               background-color: #fff;
