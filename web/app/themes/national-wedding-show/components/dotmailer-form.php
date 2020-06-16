@@ -33,7 +33,7 @@
         <div class="newsletter-row">
             <div class="select-style">
                 <select class="text" type="text" name="SHOWLOCATION">
-                    <option value="" disabled selected>Show location (NWS)</option>
+                    <option value="" disabled selected>Which show are you likely to attend</option>
                     <option value="London">London</option>
                     <option value="Manchester">Manchester</option>
                     <option value="Birmingham">Birmingham</option>
@@ -43,7 +43,7 @@
         <div class="newsletter-row">
             <div class="select-style">
                 <select class="text" type="text" name="BUDGET">
-                    <option value="" disabled selected>Budget</option>
+                    <option value="" disabled selected>Expected wedding budget</option>
                     <option value="0-10000">£0 - £10,000</option>
                     <option value="10000-20000">£10,000 - £20,000</option>
                     <option value="20000-30000">£20,000 - £30,000</option>
@@ -55,7 +55,7 @@
         <div class="newsletter-row">
             <div class="select-style">
                 <select class="text" type="text" name="WEDDINGLOCATION">
-                    <option value="" disabled selected>Wedding Location</option>
+                    <option value="" disabled selected>Expected wedding location</option>
                     <option value="All UK Regions">All UK Regions </option>
                     <option value="Option International">Option ‘International’</option>
                     <option value="Option Not yet decided">Option ‘Not yet decided’</option>
@@ -85,18 +85,6 @@
                     <option value="Choose not to answer">Choose not to answer</option>
                 </select>
             </div>
-        </div>
-        <div class="newsletter-row checkbox-container">
-            <input class="checkbox" type="checkbox" name="cd_WEDDING_OPT_IN_radio" value="y" required>
-            <span>
-                * By entering my details, I accept the terms and conditions and opt in to being emailed about The National Wedding Show news and products.
-            </span>
-        </div>
-        <div class="newsletter-row checkbox-container">
-            <input class="checkbox" type="checkbox" name="cd_SISTER_OPT_IN_radio" value="y">
-            <span>
-                Ocean Media Group, organiser of this event, would like to contact you by email with news and offers from our other products confetti.co.uk, Wedding Style collective and wedify. Please tick this box to receive them. View our privacy policy.
-            </span>
         </div>
         <div class="newsletter-row checkbox-container">
             <input class="checkbox" type="checkbox" name="CHECKBOX-AGREE" value="y">
