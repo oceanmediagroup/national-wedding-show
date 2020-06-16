@@ -22,10 +22,10 @@
             <input class="text" type="text" name="YOUREMAIL" placeholder="Email"/>
         </div>
         <div class="newsletter-row">
-            <input class="text" type="date" name="ENGAGEMENTDATE" placeholder="Engagement date"/>
+            <input class="text datepicker" type="text" name="ENGAGEMENTDATE" placeholder="Engagement date"/>
         </div>
         <div class="newsletter-row">
-            <input class="text" type="date" name="WEDDINGDATE" min="<?php echo date('Y-m-d'); ?>" placeholder="Wedding Date"/>
+            <input class="text datepicker" type="text" name="WEDDINGDATE" min="<?php echo date('Y-m-d'); ?>" placeholder="Wedding Date"/>
         </div>
         <div class="newsletter-row">
             <input class="text" type="text" name="cd_POSTCODE" placeholder="Postcode*"/>
