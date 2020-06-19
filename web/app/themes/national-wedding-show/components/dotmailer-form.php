@@ -56,9 +56,19 @@
             <div class="select-style">
                 <select class="text" type="text" name="WEDDINGLOCATION">
                     <option value="" disabled selected>Expected wedding location</option>
-                    <option value="All UK Regions">All UK Regions </option>
-                    <option value="Option International">Option ‘International’</option>
-                    <option value="Option Not yet decided">Option ‘Not yet decided’</option>
+                    <option value="Scotland">Scotland</option>
+                    <option value="Northern Ireland">Northern Ireland</option>
+                    <option value="Wales">Wales</option>
+                    <option value="North East">North East</option>
+                    <option value="North West">North West</option>
+                    <option value="Yorkshire and the Humber">Yorkshire and the Humber</option>
+                    <option value="West Midlands">West Midlands</option>
+                    <option value="East Midlands">East Midlands</option>
+                    <option value="South West">South West</option>
+                    <option value="South East">South East</option>
+                    <option value="East of England">East of England</option>
+                    <option value="Greater London">Greater London</option>
+                    <option value="International">International</option>
                 </select>
             </div>
         </div>
