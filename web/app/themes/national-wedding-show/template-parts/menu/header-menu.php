@@ -1,4 +1,11 @@
 <div class="header-menu w-100" id="headerMenu">
+<div class="container-fluid">
+        <div class="row">
+            <div class="info-bar">
+                <?php get_template_part('components/info-bar') ?>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid h-100">
         <nav class="nav header-menu__nav">
             <div class="row h-100 w-100 align-items-center header-menu__mobile">
@@ -13,37 +20,39 @@
             </div>
 
             <div class="row w-100 h-100 align-items-center header-menu__nav-wrapper">
+            <!---
                 <div class="header__menu-toggler">
                     <div class="header__toggler-bar header__toggler-bar--top"></div>
                     <div class="header__toggler-bar header__toggler-bar--middle"></div>
                     <div class="header__toggler-bar header__toggler-bar--bottom"></div>
-                </div>
-                <div class="col col--left h-100">
-                    <div class="left-col-wrapper  h-100">
-                        <div id="locationLink" class="header-menu__location-link">
-                            <a data-toggle="collapse" id="locationsMenuDropdown" data-target="#locationsCollapse"
-                               class="header-menu__link header-menu__link--dropdown">Location</a>
-                            <a href="<?php the_field('header_whats', 'option'); ?>" class="header-menu__link">What's
-                                On</a>
-                        </div>
+                </div>--->
+                <div class="col col-4 col--left h-100">
+                    <div class="left-col-wrapper h-100">
+                    <a href="<?php echo get_home_url(); ?>" class="header-menu__link header-menu__link--home">HOME</a>
+                        
                     </div>
                 </div>
 
-                <div class="col">
-                    <a href="<?php echo get_home_url(); ?>" class="header-menu__link header-menu__link--home">HOME</a>
-                </div>
+               
 
                 <div class="col col--right">
-
+                    
+                        <a data-toggle="collapse" id="locationsMenuDropdown" data-target="#locationsCollapse"
+                            class="header-menu__link header-menu__link--dropdown">Locations</a>
+                            <a href="<?php the_field('header_whats', 'option'); ?>" class="header-menu__link">What's
+                                On</a>
+                    <a href="<?php the_field('header_exhibit', 'option'); ?>" class="header-menu__link">Exhibitors</a>
+                    <a href="<?php the_field('header_exhibit', 'option'); ?>" class="header-menu__link">Competitions</a>
                     <a href="<?php the_field('header_exhibit', 'option'); ?>" class="header-menu__link">Exhibit</a>
-
-                    <div class="btn-group">
-                        <a href="https://weddingshow.seetickets.com" class="button button--black button--book">BUY
+                    <a href="https://weddingshow.seetickets.com" class="button button--new-primary button--book">BOOK
                             TICKETS</a>
+                    <div class="btn-group">
+                        
+                            <!---
                         <a class="dropdown-toggle header-menu__link header-menu__link-dropdown" data-toggle="modal"
                                 data-target="#socialModal">
                             Follow us
-                        </a>
+                        </a>--->
                     </div>
                 </div>
             </div>
@@ -53,13 +62,7 @@
 
     <?php get_template_part('template-parts/menu/locations-cards') ?>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="info-bar">
-                <?php get_template_part('components/info-bar') ?>
-            </div>
-        </div>
-    </div>
+    
 
 
     <!--    --><?php

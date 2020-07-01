@@ -94,6 +94,7 @@
     text-align: end;
   }
 
+
   .left-col-wrapper {
     padding-left: $toggler-width;
   }
@@ -108,6 +109,8 @@
   &__link {
     padding: 0 10px;
     color: black;
+    line-height: $navbar-height;
+    display: inline-block;
     @extend %link-hover;
 
     &--dropdown {
@@ -138,17 +141,19 @@
 
   &__link--home {
     width: 193px;
-    height: 38px;
-    background-image: url("/assets/img/NWS_logo-01.svg");
+    height: 60px;
+    float:left;
+    background-image: url("/assets/img/NWS_logo-02.svg");
     background-size: contain;
-    background-position: center;
+    background-position: left ;
     background-repeat: no-repeat;
     color: transparent !important;
     display: block;
     margin: auto;
+    margin-top:15px;
 
     @include media-breakpoint-up(md) {
-      height: 45px;
+      height: 100px;
       width: 289px;
     }
   }

@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col">
                     <div class="main-menu__header">
-                        <a href="/"><img data-src="/assets/img/NWS_logo-01.svg" alt="The National Wedding Show Logo" class="main-menu__logo lazy"></a>
+                        <a href="/"><img data-src="/assets/img/NWS_logo-02.svg" alt="The National Wedding Show Logo" class="main-menu__logo lazy"></a>
                     </div>
                 </div>
             </div>

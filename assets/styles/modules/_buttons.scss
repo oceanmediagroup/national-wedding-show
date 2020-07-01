@@ -17,6 +17,11 @@
     color: $accent-color;
   }
 
+  &--new-primary {
+    background-color: $primary;
+    color: $white;
+  }
+
   &--book {
     font-size: 14px;
     line-height: 30px;
