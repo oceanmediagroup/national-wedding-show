@@ -1,4 +1,4 @@
-FROM registry.unity.software/php:7.1
+FROM unitysoftware/php:7.1
 
 RUN set -x \
  && apt-get update \
