@@ -2,17 +2,18 @@
   width: 100%;
   background-color: $secondary;
   color: $black;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 15px;
   text-align: center;
   padding: 6px 5px 4px;
   display: block;
   font-family: 'Druk Wide Web';
+
   
 
   @include media-breakpoint-up(md) {
     padding: 8px 10px;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 30px;
     @include xdSpacing(68);
     font-weight: 300;

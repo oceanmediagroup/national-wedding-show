@@ -26,7 +26,7 @@
                     <div class="header__toggler-bar header__toggler-bar--middle"></div>
                     <div class="header__toggler-bar header__toggler-bar--bottom"></div>
                 </div>--->
-                <div class="col col-4 col--left h-100">
+                <div class="col col-3 col--left h-100">
                     <div class="left-col-wrapper h-100">
                     <a href="<?php echo get_home_url(); ?>" class="header-menu__link header-menu__link--home">HOME</a>
                         
