@@ -108,6 +108,9 @@
 
   &__link {
     padding: 0 10px;
+    top:0px !important;
+    font-family: 'Druk Wide Web';
+    text-transform: uppercase;
     color: black;
     line-height: $navbar-height;
     display: inline-block;

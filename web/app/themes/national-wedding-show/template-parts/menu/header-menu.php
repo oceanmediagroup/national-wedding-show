@@ -44,7 +44,8 @@
                     <a href="<?php the_field('header_exhibit', 'option'); ?>" class="header-menu__link">Exhibitors</a>
                     <a href="<?php the_field('header_exhibit', 'option'); ?>" class="header-menu__link">Competitions</a>
                     <a href="<?php the_field('header_exhibit', 'option'); ?>" class="header-menu__link">Exhibit</a>
-                    <a href="https://weddingshow.seetickets.com" class="button button--new-primary button--book">BOOK
+                  
+                    <a href="https://weddingshow.seetickets.com" class="button--new-primary  header-menu__link">BOOK 
                             TICKETS</a>
                     <div class="btn-group">
                         
