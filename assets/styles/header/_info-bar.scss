@@ -9,7 +9,11 @@
   display: block;
   font-family: 'Druk Wide Web';
 
-  
+  .envelope-top{
+    width:20px;
+    margin-right:8px;
+    margin-top:-3px;
+  }
 
   @include media-breakpoint-up(md) {
     padding: 8px 10px;

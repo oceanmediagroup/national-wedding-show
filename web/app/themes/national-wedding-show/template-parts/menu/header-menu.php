@@ -26,7 +26,7 @@
                     <div class="header__toggler-bar header__toggler-bar--middle"></div>
                     <div class="header__toggler-bar header__toggler-bar--bottom"></div>
                 </div>--->
-                <div class="col col-3 col--left h-100">
+                <div class="col col-2 col--left h-100">
                     <div class="left-col-wrapper h-100">
                     <a href="<?php echo get_home_url(); ?>" class="header-menu__link header-menu__link--home">HOME</a>
                         
@@ -39,16 +39,17 @@
                     
                         <a data-toggle="collapse" id="locationsMenuDropdown" data-target="#locationsCollapse"
                             class="header-menu__link header-menu__link--dropdown">Locations</a>
-                            <a href="<?php the_field('header_whats', 'option'); ?>" class="header-menu__link">What's
+                            <a href="<?php echo get_home_url(null,'/whats-on/', null); ?>" class="header-menu__link">What's
                                 On</a>
-                    <a href="<?php the_field('header_exhibit', 'option'); ?>" class="header-menu__link">Exhibitors</a>
-                    <a href="<?php the_field('header_exhibit', 'option'); ?>" class="header-menu__link">Competitions</a>
-                    <a href="<?php the_field('header_exhibit', 'option'); ?>" class="header-menu__link">Exhibit</a>
+                    <a href="<?php echo get_home_url(null,'/exhibitor-list/', null); ?>" class="header-menu__link">Exhibitors</a>
+                    <a href="<?php echo get_home_url(null,'/competitions/', null); ?>" class="header-menu__link">Competitions</a>
+                    <a href="<?php echo get_home_url(null,'/exhibit/', null); ?>" class="header-menu__link">Exhibit</a>
                   
                     <a href="https://weddingshow.seetickets.com" class="button--new-primary  header-menu__link">BOOK 
                             TICKETS</a>
                     <div class="btn-group">
-                        
+                    <a href="https://www.instagram.com/thenationalweddingshow/" target="blank" class="header-menu__link--img"><img data-src="/assets/img/1.png" alt="The National Wedding Show Instagram" class="first lazy"></a>
+                    <a href="https://www.facebook.com/nationalweddingshow" target="blank" class="header-menu__link--img"> <img data-src="/assets/img/2.png" alt="The National Wedding Show Facebook" class="lazy"></a>
                             <!---
                         <a class="dropdown-toggle header-menu__link header-menu__link-dropdown" data-toggle="modal"
                                 data-target="#socialModal">
