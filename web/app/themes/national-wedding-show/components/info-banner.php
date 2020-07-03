@@ -6,7 +6,7 @@
  * Time: 15:38
  */ ?>
 
-<section class="info-banner" style="background-color: <?php echo get_field('ribbon_color'); ?>">
+<section class="info-banner" style="background-color: #C87169">
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-12 col-md col-xl">
