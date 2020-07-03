@@ -45,7 +45,7 @@
                     <a href="<?php echo get_home_url(null,'/competitions/', null); ?>" class="header-menu__link">Competitions</a>
                     <a href="<?php echo get_home_url(null,'/exhibit/', null); ?>" class="header-menu__link">Exhibit</a>
                   
-                    <a href="https://weddingshow.seetickets.com" class="button--new-primary header-menu__link">BOOK TICKETS</a>
+                    <a href="https://weddingshow.seetickets.com" class="button--new-primary header-menu__link book-bttn">BOOK TICKETS</a>
                     <div class="btn-group">
                     <a href="https://www.instagram.com/thenationalweddingshow/" target="blank" class="header-menu__link--img"><img data-src="/assets/img/1.png" alt="The National Wedding Show Instagram" class="first lazy"></a>
                     <a href="https://www.facebook.com/nationalweddingshow" target="blank" class="header-menu__link--img"> <img data-src="/assets/img/2.png" alt="The National Wedding Show Facebook" class="lazy"></a>

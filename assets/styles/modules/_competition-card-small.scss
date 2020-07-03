@@ -65,15 +65,15 @@
     display: inline-block;
     background-color: rgba($white, 0.86);
     padding: 12px 14px;
-    font-family: 'Freight';
+    font-family: 'Druk Wide Web';
     font-weight: 400;
-    font-size: 30px;
+    font-size: 18px;
     line-height: 31px;
     color: $brown;
     margin: 0 28px;
 
     @include media-breakpoint-up(lg) {
-      font-size: 33px;
+      font-size: 18px;
       padding: 12px 10px;
       margin: 0;
     }
