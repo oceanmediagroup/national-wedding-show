@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="/assets/style/critical.min.css?t=<?=time();?>" rel="stylesheet" type="text/css">
+    <link href="/assets/style/critical.min.css?t=1593787366" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 
-    <link href="/assets/style/main.min.css?t=<?=time();?>" rel="stylesheet" type="text/css">
+    <link href="/assets/style/main.min.css?t=159378736466" rel="stylesheet" type="text/css">
 
 
     <link rel="icon" type="image/png" href="/assets/img/favicon.png"/>
