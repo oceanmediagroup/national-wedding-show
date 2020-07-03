@@ -9,10 +9,10 @@
 
     <div class="container ">
         <div class="row align-items-center" >
-            <div class="col-3">
+            <div class="col-lg-3 col-sm-6">
                 <a href="<?php echo get_home_url(); ?>" ><img data-src="/assets/img/nws-logo.svg" alt="The National Wedding Show Instagram" class="first lazy footer-logo"></a>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-sm-6">
                 <a href="<?php echo get_home_url(null, '/contact/', null); ?>" class="footer-link">CONTACT</a>
                 <a href="<?php echo get_home_url(null, '/insurance/', null); ?>" class="footer-link">WEDDING INSURANCE</a>
                 <a href="<?php echo get_home_url(null, '/cookie-policy/', null); ?>" class="footer-link">COOKIE POLICY</a>
@@ -20,12 +20,12 @@
                 <a href="https://www.oceanmedia.co.uk/terms-and-conditions" target="blank" class="footer-link">TERMS & CONDITIONS</a>
                 <a href="<?php echo get_home_url(null, '/blog/', null); ?>" class="footer-link">BLOG</a>
             </div>
-            <div class="col-3 follow">
+            <div class="col-lg-3 col-sm-6 follow">
                 <h6 class="footer-link">FOLLOW US</h6>
                 <a href="https://www.instagram.com/thenationalweddingshow/" target="blank" class="header-menu__link--img"><img data-src="/assets/img/1.png" alt="The National Wedding Show Instagram" class="first lazy"></a>
                     <a href="https://www.facebook.com/nationalweddingshow" target="blank" class="header-menu__link--img"> <img data-src="/assets/img/2.png" alt="The National Wedding Show Facebook" class="lazy"></a>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-sm-6">
             <a href="https://exhibitor.nationalweddingshow.co.uk/login" target="blank" class="button--new-primary-dark ex-button">EXHIBITOR LOGIN</a>
             </div>
         </div>
