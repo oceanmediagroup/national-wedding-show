@@ -1,22 +1,27 @@
 .info-bar {
   width: 100%;
-  background-color: $primary;
-  color: $white;
-  font-size: 12px;
+  background-color: $secondary;
+  color: $black;
+  font-size: 10px;
   line-height: 15px;
   text-align: center;
   padding: 6px 5px 4px;
   display: block;
-  font-family: 'Helvetica Neue';
-  font-weight: 400;
+  font-family: 'Druk Wide Web';
+
+  .envelope-top{
+    width:20px;
+    margin-right:8px;
+    margin-top:-3px;
+  }
 
   @include media-breakpoint-up(md) {
     padding: 8px 10px;
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 30px;
     @include xdSpacing(68);
     font-weight: 300;
-    box-shadow: 0 7px 6px rgba(#000, 0.22);
+  //  box-shadow: 0 7px 6px rgba(#000, 0.22);
   }
 
   &.invisible {
@@ -30,11 +35,11 @@
   u {
     font-weight: bold;
     text-decoration: underline;
-    color: $accent-color;
+    color: $gray-dark;
     cursor: pointer;
 
     &:hover {
-      color: $white;
+      color: $primary;
     }
   }
 

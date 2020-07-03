@@ -17,6 +17,26 @@
     color: $accent-color;
   }
 
+  &--new-primary {
+    background-color: $primary;
+    color: $white;
+  }
+
+  &--new-primary:hover {
+    background-color: $primary;
+    color: $black;
+  }
+
+  &--new-primary-dark {
+    background-color: $primary-dark;
+    color: $white;
+  }
+
+  &--new-primary-dark:hover {
+    background-color: $white;
+    color: $primary-dark;
+  }
+
   &--book {
     font-size: 14px;
     line-height: 30px;

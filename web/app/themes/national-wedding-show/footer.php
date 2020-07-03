@@ -7,49 +7,37 @@
 
     <?php get_template_part('components/network-carousel') ?>
 
-    <div class="container footer__links">
-        <div class="row align-items-center justify-content-between">
-            <div class="col footer__link-container">
-                <?php
-                wp_nav_menu($menuParameters = array(
-                    'theme_location' => 'footer-menu',
-                    'container' => false,
-                    'echo' => false,
-                    'items_wrap' => '%3$s',
-                    'depth' => 0,
-                )
-                );
-                echo strip_tags(wp_nav_menu($menuParameters), '<a>');
-                ?>
+    <div class="container ">
+        <div class="row align-items-center" >
+            <div class="col-lg-3 col-sm-6">
+                <a href="<?php echo get_home_url(); ?>" ><img data-src="/assets/img/nws-logo.svg" alt="The National Wedding Show Instagram" class="first lazy footer-logo"></a>
             </div>
-
-            <div class="col-xs-12 col-lg-2 exhibitor-login-wrapper">
-                <?php $link = get_field('footer_exhibitor_login_button', 'option'); ?>
-                <?php
-                $target = '';
-                if ($link['target']) {
-                    $target = "target='" . $link['target'] . "'";
-                } ?>
-                <?php if ($link['url']): ?>
-                    <a href="<?php echo $link['url']; ?>"
-                        <?php echo $target ?>
-                       class="button button--black button--login">Exhibitor login</a>
-                <?php endif; ?>
+            <div class="col-lg-3 col-sm-6">
+                <a href="<?php echo get_home_url(null, '/contact/', null); ?>" class="footer-link">CONTACT</a>
+                <a href="<?php echo get_home_url(null, '/insurance/', null); ?>" class="footer-link">WEDDING INSURANCE</a>
+                <a href="<?php echo get_home_url(null, '/cookie-policy/', null); ?>" class="footer-link">COOKIE POLICY</a>
+                <a href="<?php echo get_home_url(null, '/privacy/', null); ?>" class="footer-link">PRIVACY</a>
+                <a href="https://www.oceanmedia.co.uk/terms-and-conditions" target="blank" class="footer-link">TERMS & CONDITIONS</a>
+                <a href="<?php echo get_home_url(null, '/blog/', null); ?>" class="footer-link">BLOG</a>
+            </div>
+            <div class="col-lg-3 col-sm-6 follow">
+                <h6 class="footer-link">FOLLOW US</h6>
+                <a href="https://www.instagram.com/thenationalweddingshow/" target="blank" class="header-menu__link--img"><img data-src="/assets/img/1.png" alt="The National Wedding Show Instagram" class="first lazy"></a>
+                    <a href="https://www.facebook.com/nationalweddingshow" target="blank" class="header-menu__link--img"> <img data-src="/assets/img/2.png" alt="The National Wedding Show Facebook" class="lazy"></a>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+            <a href="https://exhibitor.nationalweddingshow.co.uk/login" target="blank" class="button--new-primary-dark ex-button">EXHIBITOR LOGIN</a>
             </div>
         </div>
     </div>
+
+    
     <div class="container">
-        <div class="row footer__social align-items-center justify-content-between">
-            <div class="col-12 col-md-8 footer__logo-div">
-                <a href="/"><img data-src="/assets/img/NWS_logo-01.svg" alt="The National Wedding Show Logo" class="footer__logo lazy"></a>
-                <span class="footer__copyright">© The National Wedding Show | Ocean Media Group. All Rights Reserved.</span>
+        <div class="row footer__social align-items-center justify-content">
+            <div class="col-12">
+                <p class="footer__copyright">© The National Wedding Show | Ocean Media Group. All Rights Reserved.</p>
             </div>
-            <div class="col-12 col-md-auto">
-                <span class="footer__social-text">Follow us</span>
-                <div class="footer__social-links">
-                    <?php get_template_part('template-parts/social-media-icons') ?>
-                </div>
-            </div>
+            
         </div>
     </div>
 

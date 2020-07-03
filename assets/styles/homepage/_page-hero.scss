@@ -118,31 +118,32 @@
     }
 
     &__name {
-      font-family: 'Freight';
-      font-size: 19px;
+      font-family: 'Druk Wide Web';
+      font-size: 14px;
       line-height: normal;
+      text-transform:uppercase;
       font-weight: 500;
       color: $white;
 
       @include media-breakpoint-up(md) {
         display: block;
-        color: $primary-dark;
-        font-size: 26px;
+        color: $black;
+        font-size: 16px;
         line-height: 30px;
       }
     }
 
     &__date {
-      font-family: 'Helvetica Neue';
+      font-family: 'Circular Book';
       font-weight: 300;
       font-size: 15px;
       line-height: 19px;
-      color: $accent-color;
+      color: $black;
 
       @include media-breakpoint-up(md) {
         color: $brown;
-        font-size: 17px;
-        line-height: 19px;
+        font-size: 20px;
+        line-height: 22px;
       }
     }
 

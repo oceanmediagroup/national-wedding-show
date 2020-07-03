@@ -3,6 +3,30 @@
     padding: 35px 0;
   }
 
+  .footer-logo{
+    width:150px;
+  }
+
+  .footer-link{
+    display:block;
+    font-family: 'Druk Wide Web';
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $black;
+  }
+  .follow{
+    padding-left:30px;
+  }
+
+  .ex-button{
+    display:block;
+    padding:15px;
+    text-align:center;
+    font-family: 'Circular Book';
+    font-weight:bold;
+    font-size: 18px;
+    
+  }
   .network-carousel {
     .owl-carousel .owl-item {
       height: 95px;

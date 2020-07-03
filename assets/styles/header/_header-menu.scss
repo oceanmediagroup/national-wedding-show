@@ -3,7 +3,7 @@
   top: 85px;
 
   @include media-breakpoint-up(md) {
-    top: 108px;
+    top: 158px;
   }
 }
 
@@ -67,7 +67,7 @@
 
   &__nav {
     width: 100%;
-    height: 60px;
+   // height: 60px;
 
     @include media-breakpoint-up(md) {
       height: $navbar-height;
@@ -94,6 +94,7 @@
     text-align: end;
   }
 
+
   .left-col-wrapper {
     padding-left: $toggler-width;
   }
@@ -107,14 +108,43 @@
 
   &__link {
     padding: 0 10px;
-    color: black;
-    @extend %link-hover;
+    top:0px !important;
+    font-family: 'Druk Wide Web';
+    text-transform: uppercase;
+    font-size: 12px;
+    @media (max-width: 1199.98px) { 
+      font-size:10px;
+    }
+   
 
+    color: black;
+    line-height: $navbar-height;
+    display: inline-block;
+    @extend %link-hover;
+    
     &--dropdown {
       line-height: $navbar-height;
       display: inline-block;
       cursor: pointer;
     }
+    
+    
+    
+
+    &--img img{
+      width:40px;
+      padding:6px;
+      .first{
+        padding-left:20px;
+      }
+
+    }
+    
+  }
+
+  .book-tickets{
+    display:inline-block;
+    height:$navbar-height;
   }
 
   &__link-dropdown {
@@ -138,18 +168,23 @@
 
   &__link--home {
     width: 193px;
-    height: 38px;
-    background-image: url("/assets/img/NWS_logo-01.svg");
+    height: 60px;
+    float:left;
+    background-image: url("/assets/img/NWS_logo-02.svg");
     background-size: contain;
-    background-position: center;
+    background-position: left ;
     background-repeat: no-repeat;
     color: transparent !important;
     display: block;
     margin: auto;
+    margin-top:15px;
 
     @include media-breakpoint-up(md) {
-      height: 45px;
+      height: 100px;
       width: 289px;
+    }
+    @media (max-width: 575.98px) { 
+      height: 50px;
     }
   }
 
