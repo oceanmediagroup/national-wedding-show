@@ -3,7 +3,7 @@
   top: 85px;
 
   @include media-breakpoint-up(md) {
-    top: 158px;
+    top: 146px;
   }
 }
 
@@ -111,10 +111,22 @@
     top:0px !important;
     font-family: 'Druk Wide Web';
     text-transform: uppercase;
+    letter-spacing:2px;
     font-size: 12px;
-    @media (max-width: 1199.98px) { 
+    @media (max-width: 1317.98px) { 
+      font-size:11px;
+    }
+
+    @media (max-width: 1251.98px) { 
       font-size:10px;
     }
+    
+    @media (max-width: 1185.98px) { 
+      font-size:9px;
+      letter-spacing:1px;
+    }
+
+
    
 
     color: black;
@@ -134,11 +146,14 @@
     &--img img{
       width:40px;
       padding:6px;
-      .first{
-        padding-left:20px;
-      }
+      
 
     }
+    &--img img.first{
+      margin-left:40px;
+
+    }
+
     
   }
 
@@ -170,7 +185,7 @@
     width: 193px;
     height: 60px;
     float:left;
-    background-image: url("/assets/img/NWS_logo-02.svg");
+    background-image: url("/assets/img/nws-logo-black.png");
     background-size: contain;
     background-position: left ;
     background-repeat: no-repeat;
@@ -180,8 +195,8 @@
     margin-top:15px;
 
     @include media-breakpoint-up(md) {
-      height: 100px;
-      width: 289px;
+      height: 80px;
+      width: 250px;
     }
     @media (max-width: 575.98px) { 
       height: 50px;
