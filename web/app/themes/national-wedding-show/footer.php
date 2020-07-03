@@ -10,7 +10,7 @@
     <div class="container ">
         <div class="row align-items-center" >
             <div class="col-lg-3 col-sm-6">
-                <a href="<?php echo get_home_url(); ?>" ><img data-src="/assets/img/nws-logo.svg" alt="The National Wedding Show Instagram" class="first lazy footer-logo"></a>
+                <a href="<?php echo get_home_url(); ?>" ><img data-src="/assets/img/nws-logo-black.png" alt="The National Wedding Show Instagram" class="first lazy footer-logo"></a>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <a href="<?php echo get_home_url(null, '/contact/', null); ?>" class="footer-link">CONTACT</a>

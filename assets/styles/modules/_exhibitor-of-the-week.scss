@@ -120,15 +120,15 @@
 
     &__title {
       margin: 20px 0 10px;
-      font-family: 'Freight';
+      font-family: 'Druk Wide Web';
       font-weight: 400;
       font-size: 28px;
       line-height: 28px;
       @include xdSpacing(10);
 
       @include media-breakpoint-up(md) {
-        font-size: 48px;
-        line-height: 46px;
+        font-size: 36px;
+        line-height: 38px;
       }
     }
 
@@ -136,7 +136,7 @@
       display: block;
       margin-bottom: 20px;
       max-width: 460px;
-      font-family: 'Helvetica Neue';
+      font-family: 'Circular Book';
       font-weight: 400;
       font-size: 14px;
       line-height: 22px;

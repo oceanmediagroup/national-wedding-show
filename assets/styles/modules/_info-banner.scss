@@ -4,9 +4,9 @@
 
   &__text {
     color: $white;
-    font-family: 'Freight';
+    font-family: 'Druk Wide Web';
     font-weight: 400;
-    font-size: 26px;
+    font-size: 12px;
     line-height: 31px;
     margin-bottom: 0;
     text-align: center;
@@ -15,8 +15,9 @@
 
     @include media-breakpoint-up(md) {
       text-align: left;
-      font-size: 41px;
+      font-size: 22px;
       line-height: 46px;
+      text-transform: uppercase;
     }
 
     a:hover {
