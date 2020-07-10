@@ -19,8 +19,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 
-    <link href="/assets/style/main.min.css?t=159378736466" rel="stylesheet" type="text/css">
+    <link href="/assets/style/main.min.css?t=1593787364662" rel="stylesheet" type="text/css">
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
 
     <link rel="icon" type="image/png" href="/assets/img/favicon.png"/>
 
