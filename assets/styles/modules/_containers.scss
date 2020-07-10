@@ -11,7 +11,8 @@
     }
   }
 
-  &__confetti--top, &__confetti--bottom {
+  &__confetti--top,
+  &__confetti--bottom {
     max-width: 50%;
 
     @include media-breakpoint-up(md) {
@@ -35,22 +36,19 @@
   padding: 15px 0;
 
   @include media-breakpoint-up(lg) {
-    padding: 42px 0;
+    padding: 70px 0;
   }
 }
 
 .container-cards {
-  margin-bottom: 60px;
 
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 0;
-  }
-
-  .container-gold__confetti--top, .container-gold__confetti--bottom {
+  .container-gold__confetti--top,
+  .container-gold__confetti--bottom {
 
     max-width: 100%;
   }
 }
+
 /*
 //.container-dotted-bg {
 //  background-image: url('/wp-content/uploads/2018/08/mask_group_344.png'), url('/wp-content/uploads/2018/08/mask_group_343.png');

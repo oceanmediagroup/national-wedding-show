@@ -40,7 +40,7 @@
 
     @include media-breakpoint-up(md) {
       box-shadow: none;
-      bottom: 56px;
+      bottom: 80px;
     }
 
     .row-wider {
@@ -91,7 +91,8 @@
         color: $white;
       }
 
-      .locations__date, .locations__arrow {
+      .locations__date,
+      .locations__arrow {
         color: $accent-color;
       }
     }
@@ -112,7 +113,8 @@
         text-decoration: underline;
       }
 
-      .link, .locations__arrow {
+      .link,
+      .locations__arrow {
         color: $accent-color;
       }
     }
@@ -121,8 +123,8 @@
       font-family: 'Druk Wide Web';
       font-size: 14px;
       line-height: normal;
-      text-transform:uppercase;
-      letter-spacing:2px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       font-weight: 500;
       color: $white;
 

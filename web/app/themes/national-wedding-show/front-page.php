@@ -7,8 +7,6 @@
 
     <?php get_template_part('components/product-cards') ?>
 
-    <?php get_template_part('components/ad-banners') ?>
-
     <?php get_template_part('components/info-banner') ?>
 
     <div class="container-gray">
@@ -30,6 +28,8 @@
     <?php get_template_part('components/clients-carousel') ?>
 
     <?php get_template_part('components/inspiration') ?>
+
+    <?php get_template_part('components/network-carousel') ?>
 
 </div>
 <?php get_footer() ?>

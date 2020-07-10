@@ -67,7 +67,7 @@
 
   &__nav {
     width: 100%;
-   // height: 60px;
+    // height: 60px;
 
     @include media-breakpoint-up(md) {
       height: $navbar-height;
@@ -91,7 +91,9 @@
   }
 
   .col--right {
-    text-align: end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
 
@@ -108,29 +110,30 @@
 
   &__link {
     padding: 0 10px;
-    top:0px !important;
+    top: 0px !important;
     font-family: 'Druk Wide Web';
     text-transform: uppercase;
-    letter-spacing:2px;
+    letter-spacing: 2px;
     font-size: 12px;
-    @media (max-width: 1317.98px) { 
-      font-size:11px;
+
+    @media (max-width: 1317.98px) {
+      font-size: 11px;
     }
 
-    @media (max-width: 1251.98px) { 
-      font-size:10px;
+    @media (max-width: 1251.98px) {
+      font-size: 10px;
     }
-    
-    @media (max-width: 1185.98px) { 
-      font-size:9px;
-      letter-spacing:1px;
+
+    @media (max-width: 1185.98px) {
+      font-size: 9px;
+      letter-spacing: 1px;
     }
 
     color: black;
     line-height: $navbar-height;
     display: inline-block;
     @extend %link-hover;
-    
+
     &--dropdown {
       line-height: $navbar-height;
       display: inline-block;
@@ -138,21 +141,22 @@
     }
 
 
-    &--img img{
-      width:40px;
-      padding:6px;
+    &--img img {
+      width: 40px;
+      padding: 6px;
     }
-    &--img img.first{
-      margin-left:40px;
+
+    &--img img.first {
+      margin-left: 40px;
 
     }
 
-    
+
   }
-  
-  .book-tickets{
-    display:inline-block;
-    height:$navbar-height;
+
+  .book-tickets {
+    display: inline-block;
+    height: $navbar-height;
   }
 
   &__link-dropdown {
@@ -177,29 +181,30 @@
   &__link--home {
     width: 193px;
     height: 60px;
-    float:left;
+    float: left;
     background-image: url("/assets/img/NWS_Logo_Horizontal_Black.png");
     background-size: contain;
-    background-position: left ;
+    background-position: left;
     background-repeat: no-repeat;
     color: transparent !important;
     display: block;
     margin: auto;
-    margin-top:15px;
+    margin-top: 15px;
 
     @include media-breakpoint-up(md) {
       background-image: url("/assets/img/nws-logo-black.png");
-      height: 80px;
+      height: 90px;
       width: 250px;
     }
-    @media (max-width: 575.98px) { 
+
+    @media (max-width: 575.98px) {
       height: 50px;
     }
   }
 
   &__book-mobile.button--book {
     position: absolute;
-    top: 46px;
+    top: 0;
     right: 0;
     text-align: center;
     letter-spacing: 0.08em;
@@ -210,7 +215,7 @@
     @include xdSpacing(15);
     font-size: 10px;
     line-height: 11px;
-    height: 60px;
+    height: 65px;
 
     @include media-breakpoint-up(md) {
       padding: 37px 5px !important;
@@ -319,12 +324,14 @@
       margin-bottom: 0;
     }
 
-    .locations__single-title, .locations__single-date {
+    .locations__single-title,
+    .locations__single-date {
       text-shadow: none;
     }
   }
 
-  &__single-title, &__single-date {
+  &__single-title,
+  &__single-date {
     display: block;
   }
 
@@ -363,6 +370,27 @@
 
   &__single-buy {
     transition: all 0.3s;
+  }
+
+}
+
+
+
+.book-bttn.button--black {
+  padding: 0 2em;
+  margin: 0 20px;
+
+  height: $navbar-height;
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  color: $white;
+
+  &:hover {
+    color: $coral;
   }
 
 }

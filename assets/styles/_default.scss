@@ -7,11 +7,13 @@ body {
   height: 100vh;
   position: relative;
 
+
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 
-  overflow-y:scroll;
-  -webkit-overflow-scrolling: touch; 
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .header {
@@ -49,11 +51,11 @@ body {
 
 .footer {
   flex-shrink: 0;
-  margin-top: 85px;
-  overflow-x: hidden;
+  padding-top: 50px;
+  // overflow-x: hidden;
 
   @include media-breakpoint-up(md) {
-    margin-top: 158px;
+    padding-top: 60px;
   }
 }
 
@@ -70,7 +72,8 @@ body {
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
+  /* 16:9 */
   height: 0;
 
 
