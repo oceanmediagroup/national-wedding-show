@@ -60,4 +60,3 @@ var subMenu = document.querySelectorAll('.main-menu__link ul');
     item.classList.add('main-menu__secondary-links');
 });
 
-

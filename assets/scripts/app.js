@@ -160,18 +160,14 @@ $('.exhibitor-list__title-top').on('click', function() {
 })
 
 $(document).ready(function () {
+	$('#WEDDINGDATE').datepicker({
+		minDate: new Date(),
+	});
+	$('#ENGAGEMENTDATE').datepicker();
 	const $inputDate = $(".datepicker");
 	if ($inputDate.length) {
 		$inputDate.each(function () {
 			const $input = $(this);
-			$input.on('focus', function() {
-				$(this).attr('type', 'date');
-			})
-
-			$input.on('blur', function() {
-				$(this).attr('type', 'text');
-			})
-
 			$input.on('change', function () {
 				if ($input.val() === '') {
 					$input.removeClass('has-value');
