@@ -1,0 +1,29 @@
+.top-accent {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: -100px;
+        width: calc(100% + 30px);
+        height: 100px;
+        z-index: 1;
+    }
+
+    &--white {
+        &:before {
+            background: url('/assets/img/section-accents/top-accent-white.png') center bottom / contain no-repeat;
+
+        }
+    }
+
+    &--secondary {
+        &:before {
+            background: url('/assets/img/section-accents/top-accent-secondary.png') center bottom / contain no-repeat;
+
+        }
+    }
+
+
+}

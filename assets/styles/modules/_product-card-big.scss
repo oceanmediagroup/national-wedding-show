@@ -1,32 +1,26 @@
 $product-card-height: 375px;
 
 .product-card-big {
-  padding: 15px 0;
+  padding: 15px 0 50px;
 
   @include media-breakpoint-up(md) {
 
-    padding: 30px 0;
+    padding: 50px 0;
   }
 
   &__wrapper {
-    height: auto;
-    overflow: hidden;
-    border: 1px solid $gray-5;
-    background-color: $white;
+
     margin-left: -15px;
     margin-right: -15px;
-
-    @include media-breakpoint-up(md) {
-      min-height: $product-card-height;
-    }
   }
 
   &__image-wrapper {
     position: relative;
     overflow: hidden;
     min-height: $product-card-height;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     height: 100%;
   }
 
@@ -48,30 +42,8 @@ $product-card-height: 375px;
     padding: 19px;
   }
 
-  &__subtitle {
-    font-family: 'Circular Book';
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 18px;
-    margin-bottom: 12px;
-  }
-
-  &__title {
-    font-family: 'Druk Wide Web';
-    color: $black;
-    font-size: 28px;
-    line-height: 28px;
-    font-weight: 400;
-    margin: 10px 0;
-    @include xdSpacing(10);
-
-    @include media-breakpoint-up(md) {
-      font-size: 36px;
-      line-height: 38px;
-    }
-  }
-
-  .button--light-coral {
-    width: auto;
+  .button {
+    margin-top: 30px;
+    display: inline-block;
   }
 }

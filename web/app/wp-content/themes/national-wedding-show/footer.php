@@ -52,10 +52,9 @@
 
 <script src="https://player.vimeo.com/api/player.js"></script>
 
-<script src="/assets/script/app.js?<?php echo rand(); ?>"></script>
+<script src="/assets/script/app.js?t=1594381916488"></script>
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
 <script src="https://oceanmediaemail.co.uk/inc/cal.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

@@ -13,11 +13,12 @@ var gulp = require('gulp'),
     babelify = require('babelify'),
     es2015 = require('babel-preset-es2015'),
     stage0 = require('babel-preset-stage-0'),
-    source = require('vinyl-source-stream');
+    source = require('vinyl-source-stream'),
+    sourcemaps = require('gulp-sourcemaps');
 
 console.timeEnd('Loading plugins');
 
-const THEME_NAME = 'snt';
+const THEME_NAME = 'national-wedding-show';
 
 function compileJS(jsFile) {
     return browserify({
@@ -39,7 +40,7 @@ function compileJS(jsFile) {
 
 function minifyJS(jsFile) {
     gulp.src("./assets/script/" + jsFile + ".js")
-        .pipe(uglify({mangle: false}))
+        .pipe(uglify({ mangle: false }))
         .on('error', function (err) {
             console.error(err);
             this.emit('end');
@@ -51,6 +52,7 @@ function minifyJS(jsFile) {
 
 function compileSass(scssFile) {
     gulp.src("assets/styles/" + scssFile + ".scss")
+        .pipe(sourcemaps.init())
         .pipe(sass())
         .on('error', notify.onError({
             title: 'sass',
@@ -58,9 +60,10 @@ function compileSass(scssFile) {
         }))
         .pipe(rename(scssFile + ".css"))
         .pipe(gulp.dest('web/assets/style'))
-        .pipe(minifyCSS({mangle: false, compress: false, processImport: false}))
+        .pipe(minifyCSS({ mangle: false, compress: false, processImport: false }))
         .pipe(rename(scssFile + ".min.css"))
-        .pipe(gulp.dest('web/assets/style/'));
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('web/assets/style/'))
 };
 
 function cacheInFile(fileName) {
@@ -75,11 +78,11 @@ gulp.task('js', function () {
     const executeJS = async () => {
         const data = await new Promise((resolve, reject) => {
             if (compileJS('app')) {
-            resolve("JS compiled");
-        } else {
-            reject("Error compiling JS");
-        }
-    });
+                resolve("JS compiled");
+            } else {
+                reject("Error compiling JS");
+            }
+        });
         // console.log(data);
         gulp.start('minifyJS');
     }
@@ -114,7 +117,7 @@ gulp.task('watch', function () {
     /* MAVEN GLOBAL*/
     gulp.watch('assets/scripts/*.js', ['js']).on('change', livereload.changed);
     gulp.watch('assets/scripts/*/*.js', ['js']).on('change', livereload.changed);
-    gulp.watch('assets/scripts/*/*/*.js', ['js']).on('change', livereload.changed);
+    gulp.watch('assets/scripts/*/*.js', ['js']).on('change', livereload.changed);
     gulp.watch('assets/styles/*/*.scss', ['sass']).on('change', livereload.changed);
     gulp.watch('assets/styles/*.scss', ['sass']).on('change', livereload.changed);
 });

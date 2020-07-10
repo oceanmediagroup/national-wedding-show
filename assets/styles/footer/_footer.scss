@@ -1,33 +1,64 @@
 .footer {
+  margin-top: 85px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 146px;
+  }
+
+  &.top-accent--white:before {
+    top: -100px;
+
+    @include media-breakpoint-up(md) {
+      top: -70px;
+    }
+  }
+
   &__network {
     padding: 35px 0;
   }
 
-  .footer-logo{
-    width:150px;
+  .footer-logo {
+    width: 150px;
   }
 
-  .footer-link{
-    display:block;
+  .footer-link {
+    display: block;
     font-family: 'Druk Wide Web';
     text-transform: uppercase;
-    letter-spacing:2px;
     font-size: 12px;
     color: $black;
   }
-  .follow{
-    padding-left:30px;
+
+
+  &__logo-col,
+  &__nav-col,
+  &__follow-us {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 30px;
+    }
   }
 
-  .ex-button{
-    display:block;
-    padding:15px;
-    text-align:center;
-    font-family: 'Circular Book';
-    font-weight:bold;
-    font-size: 18px;
-    
+  &__follow-us {
+    @include media-breakpoint-up(md) {
+      padding-left: 30px;
+
+    }
   }
+
+
+
+
+  .ex-button {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Circular Book';
+    font-weight: bold;
+    font-size: 18px;
+
+
+  }
+
   .network-carousel {
     .owl-carousel .owl-item {
       height: 95px;
@@ -141,7 +172,8 @@
     }
   }
 
-  &__social-text, &__social-links {
+  &__social-text,
+  &__social-links {
     display: inline-block;
   }
 

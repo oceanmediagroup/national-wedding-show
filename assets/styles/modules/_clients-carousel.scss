@@ -2,6 +2,8 @@
   padding: 20px 0;
   margin: 0 -15px;
   position: relative;
+  background: #F8F8F8;
+
 
   @include media-breakpoint-up(md) {
     padding: 32px 0;
@@ -61,7 +63,8 @@
     z-index: 1;
   }
 
-  &__nav button.owl-prev:nth-child(1), &__nav button.owl-next:nth-child(4) {
+  &__nav button.owl-prev:nth-child(1),
+  &__nav button.owl-next:nth-child(4) {
     display: none;
   }
 
@@ -73,9 +76,7 @@
     transform: rotate(180deg);
   }
 
-  &__arrow {
-
-  }
+  &__arrow {}
 
   &__arrow--left {
     transform: rotate(180deg);
