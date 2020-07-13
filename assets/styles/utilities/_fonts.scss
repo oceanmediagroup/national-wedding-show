@@ -145,18 +145,29 @@
 @font-face {
   font-family: 'Druk Wide Web';
   src: url('/assets/fonts/DrukWide-Bold-Web.woff2') format('woff2'),
-       url('/assets/fonts/DrukWide-Bold-Web.woff') format('woff');
-  font-weight:  700;
-  font-style:   normal;
+    url('/assets/fonts/DrukWide-Bold-Web.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
   font-stretch: normal;
-  letter-spacing:2px;
+  letter-spacing: 2px;
 }
 
-@font-face {font-family: "Circular Book";
-  src: url("/assets/fonts/02d8f1743ede250c7c9865f1574d7cc6.eot"); /* IE9*/
-  src: url("/assets/fonts/02d8f1743ede250c7c9865f1574d7cc6.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-  url("/assets/fonts/02d8f1743ede250c7c9865f1574d7cc6.woff2") format("woff2"), /* chrome、firefox */
-  url("/assets/fonts/02d8f1743ede250c7c9865f1574d7cc6.woff") format("woff"), /* chrome、firefox */
-  url("/assets/fonts/02d8f1743ede250c7c9865f1574d7cc6.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url("/assets/fonts/02d8f1743ede250c7c9865f1574d7cc6.svg#Circular Book") format("svg"); /* iOS 4.1- */
+@font-face {
+  font-family: "Circular Book";
+  src: url("/assets/fonts/02d8f1743ede250c7c9865f1574d7cc6.eot");
+  /* IE9*/
+  src: url("/assets/fonts/02d8f1743ede250c7c9865f1574d7cc6.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("/assets/fonts/02d8f1743ede250c7c9865f1574d7cc6.woff2") format("woff2"),
+    /* chrome、firefox */
+    url("/assets/fonts/02d8f1743ede250c7c9865f1574d7cc6.woff") format("woff"),
+    /* chrome、firefox */
+    url("/assets/fonts/02d8f1743ede250c7c9865f1574d7cc6.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("/assets/fonts/02d8f1743ede250c7c9865f1574d7cc6.svg#Circular Book") format("svg");
+  /* iOS 4.1- */
 }
+
+
+$baseFont: Circular Book;
+$headingFont: Druk Wide Web;
