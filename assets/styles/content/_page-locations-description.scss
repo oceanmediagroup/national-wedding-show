@@ -67,7 +67,7 @@
   &__button-link {
     margin: 10px 0;
     text-align: center;
-    background-color: $white;
+    display: inline-block;
 
     @include media-breakpoint-up(md) {
       margin: 20px 0;

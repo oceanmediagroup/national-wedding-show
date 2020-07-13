@@ -38,10 +38,6 @@
       .read-more {
         opacity: 1;
       }
-
-      .featured-pages__card-title {
-        color: $primary-dark;
-      }
     }
   }
 
@@ -92,40 +88,31 @@
   &__cards {}
 
   .read-more {
-    opacity: 0;
-    transition: 0.2s ease-in-out;
-    color: $white;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    height: 26px;
-    font-family: $headingFont;
-    font-size: 17px;
-    z-index: 1;
-    @include xdSpacing(10);
+    display: inline-block;
   }
 
   &__card {
     text-align: center;
-
-    @include media-breakpoint-up(md) {
-      border: 1px solid $gray-5;
-    }
   }
 
   &__card-img-wrapper {
-    height: 113px;
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
     position: relative;
     overflow: hidden;
     background-size: cover;
     background-position: center;
 
+    border-radius: 50%;
+
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+
     @include media-breakpoint-up(md) {
-      height: 248px;
+      height: 300;
     }
   }
 
@@ -145,23 +132,23 @@
 
   &__card-title {
     width: 100%;
-    background-color: $white;
     padding: 12px 14px;
     margin: 0;
-    color: $brown;
+    color: $black;
     font-family: $headingFont;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 22px;
     line-height: normal;
     text-align: left;
     min-height: 76px;
+    text-transform: uppercase;
 
     @include media-breakpoint-up(md) {
       font-size: 20px;
       @include xdSpacing(10);
-      padding: 16px 10px;
+      padding: 1.25rem 10px;
       text-align: center;
-      min-height: unset;
+      min-height: 100px;
     }
 
     &.coral {
