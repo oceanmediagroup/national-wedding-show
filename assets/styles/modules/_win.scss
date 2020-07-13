@@ -1,0 +1,5 @@
+.product-card-big--win {
+    @include media-breakpoint-up(md) {
+        padding-top: 100px;
+    }
+}

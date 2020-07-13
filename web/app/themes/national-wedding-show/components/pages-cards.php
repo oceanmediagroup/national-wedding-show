@@ -37,7 +37,7 @@
 
                     <div class="card-body">
                         <h5 class="card-title">
-                            <span class="t-underline">
+                            <span class="t-underline-<?php echo $colors[$color] ?>--alpha">
                                 <?php echo $title ?>
                             </span>
                         </h5>
@@ -48,7 +48,13 @@
                         </a>
                     </div>
                 </div>
-                <?php $color++?>
+                <?php 
+                    if($color == count($colors)){
+                        $color = 0;
+                    }else{
+                        $color++;
+                    }
+                ?>
                 <?php endwhile;
                 endif; ?>
 

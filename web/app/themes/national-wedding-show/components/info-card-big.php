@@ -20,12 +20,13 @@
         <div class="product-card-big__wrapper">
             <div class="row h-100">
                 <div class="col-12 col-md">
-                    <div class="product-card-big__image-wrapper lazy" data-bg="url('<?php echo $img['sizes']['medium_large'] ?>') ">
+                    <div class="product-card-big__image-wrapper lazy"
+                        data-bg="url('<?php echo $img['sizes']['medium_large'] ?>') ">
                     </div>
                 </div>
                 <div class="col-12 col-md align-self-center">
                     <div class="product-card-big__content">
-                        <h3 class="product-card-big__title">
+                        <h3 class="product-card-big__title t-underline-blush">
                             <?php echo $title; ?>
                         </h3>
                         <div class="product-card-big__text">
