@@ -32,8 +32,6 @@
 
 <?php get_template_part('content/whats-featured') ?>
 
-<?php get_template_part('components/exhibitors') ?>
-
 <?php get_template_part('components/competition-card-big') ?>
 
 <?php get_template_part('components/info-banner') ?>
