@@ -1,4 +1,6 @@
 .product-card-big--win {
+    padding-top: 150px;
+
     @include media-breakpoint-up(md) {
         padding-top: 100px;
     }
