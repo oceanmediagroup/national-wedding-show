@@ -61,6 +61,7 @@
 
         </nav>
     </div>
+    <?php get_template_part('template-parts/menu/locations-cards') ?>
     <div class="container-fluid">
         <div class="row">
             <div class="info-bar">
@@ -69,7 +70,6 @@
         </div>
     </div>
 
-    <?php get_template_part('template-parts/menu/locations-cards') ?>
 
 
 
