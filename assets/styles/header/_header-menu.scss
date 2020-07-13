@@ -199,6 +199,11 @@
       height: 90%;
       width: 100%;
     }
+
+    @media (min-width: 1600px) {
+      height: 80%;
+
+    }
   }
 
   &__book-mobile.button--book {
@@ -304,23 +309,23 @@
   }
 
   &__single-wrapper--highlighted {
-    background-color: $primary;
+    background-color: $coral;
 
     &:hover {
-      background-color: $primary-dark;
+      background-color: $blush;
     }
 
     .locations__single-title {
-      font-family: Freight;
-      font-size: 34px;
+      font-family: $headingFont;
+      font-size: 24px;
       line-height: 30px;
       @include xdSpacing(4);
     }
 
     .locations__single-date {
-      color: $accent-color;
+      color: $black;
       font-size: 21px;
-      margin-bottom: 0;
+      margin: 10px 0 0;
     }
 
     .locations__single-title,
@@ -335,13 +340,15 @@
   }
 
   &__single-title {
-    font-family: 'Lobster';
+    font-family: $headingFont;
     color: #FFFFFF;
-    font-size: 2rem;
+    font-size: 20px;
     z-index: 2;
     text-align: center;
     text-shadow: 0 6px 10px rgba(0, 0, 0, 0.38);
     transition: all 0.3s;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 
   &__single-date {
@@ -352,7 +359,7 @@
     text-align: center;
     text-shadow: 0 6px 10px rgba(0, 0, 0, 0.38);
     transition: all 0.3s;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   &__single-link {
