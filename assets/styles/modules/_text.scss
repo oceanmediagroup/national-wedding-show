@@ -48,13 +48,6 @@
   text-transform: uppercase;
   font-family: 'Druk Wide Web';
 
-  span {
-    display: inline;
-    background-image: linear-gradient(transparent calc(75% - 5px), $secondary 5px,
-      );
-
-  }
-
   @include media-breakpoint-up(md) {
     font-size: 34px;
 
