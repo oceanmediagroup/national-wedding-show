@@ -16,14 +16,15 @@
   .show {
     &__name {
       padding: 17px 10px 0;
-      font-family: 'Freight';
+      font-family: $headingFont;
       font-weight: 500;
       font-size: 23px;
       color: $primary-dark;
       margin-bottom: 0;
     }
 
-    &__dates, &__hours {
+    &__dates,
+    &__hours {
       font-family: 'Helvetica Neue';
       color: $gray-dark;
     }
@@ -39,7 +40,8 @@
       font-size: 14px;
       padding: 5px 10px 10px;
 
-      br, p {
+      br,
+      p {
         margin-bottom: 10px;
       }
     }

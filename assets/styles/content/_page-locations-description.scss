@@ -25,9 +25,10 @@
   &--simple {
     padding: 40px 0 30px;
   }
+
   &__title {
-    font-family: 'Freight';
-    color: $brown;
+    font-family: $headingFont;
+    color: $black;
     margin-bottom: 20px;
     font-size: 27px;
     line-height: 31px;
@@ -51,7 +52,7 @@
 
   &__text {
     font-size: 14px;
-    font-family: 'Helvetica Neue';
+    font-family: $baseFont;
     line-height: 24px;
     color: $gray-dark;
     padding-right: 40px;
@@ -66,7 +67,7 @@
   &__button-link {
     margin: 10px 0;
     text-align: center;
-    background-color: $white;
+    display: inline-block;
 
     @include media-breakpoint-up(md) {
       margin: 20px 0;

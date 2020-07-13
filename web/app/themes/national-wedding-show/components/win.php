@@ -6,26 +6,23 @@
  * Time: 11:37
  */ ?>
 
-<section class="product-card-big top-accent top-accent--white">
+<section class="product-card-big product-card-big--win">
     <?php
-    $img = get_field('product_card')['product_card_image'];
-    $title = get_field('product_card')['product_card_title'];
-    $subtitle = get_field('product_card')['product_card_subtitle'];
-    $button = get_field('product_card_homepage')['cta_button'];
+    $img = get_field('win_card_homepage')['product_card_image'];
+    $title = get_field('win_card_homepage')['product_card_title'];
+    $subtitle = get_field('win_card_homepage')['product_card_subtitle'];
+    $button = get_field('win_card_homepage')['cta_button'];
     ?>
 
     <div class="container">
         <div class="product-card-big__wrapper">
             <div class="row h-100">
-                <div class="col-12 col-md">
-                    <div class="product-card-big__image-wrapper lazy"
-                        data-bg="url(<?php echo $img['sizes']['medium_large'] ?>)">
-                    </div>
-                </div>
                 <div class="col-12 col-md align-self-center">
                     <div class="product-card-big__content">
                         <h3 class="product-card-big__title t-section-heading">
-                            <span class="t-underline-coral--alpha"><?php echo $title; ?></span>
+                            <span class="t-underline-powder--alpha">
+                                <?php echo $title; ?>
+                            </span>
                         </h3>
                         <?php if ($subtitle): ?>
                         <span class="product-card-big__subtitle t-paragraph d-block">
@@ -38,6 +35,12 @@
                             <?php if ($button['link_in_new_tab']) echo "target='_blank'" ?>>
                             <?php echo $button['cta_title'] ?>
                         </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md">
+                    <div class="product-card-big__image-wrapper lazy"
+                        data-bg="url(<?php echo $img['sizes']['medium_large'] ?>)">
                     </div>
                 </div>
             </div>

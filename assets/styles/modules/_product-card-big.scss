@@ -22,6 +22,11 @@ $product-card-height: 375px;
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
+
+    @include media-breakpoint-up(md) {
+      height: 110%;
+
+    }
   }
 
   &__image-wrapper img {

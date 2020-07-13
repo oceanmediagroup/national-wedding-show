@@ -1,4 +1,5 @@
-.inspiration-cards, .inspiration-section {
+.inspiration-cards,
+.inspiration-section {
 
   #tutorialSingleModal {
     width: 0;
@@ -15,6 +16,7 @@
   .grid {
     width: 100%;
   }
+
   .grid:after {
     content: '';
     display: block;
@@ -44,7 +46,9 @@
       padding: 15px;
     }
 
-    &.twitter, &.instagram, &.tutorial {
+    &.twitter,
+    &.instagram,
+    &.tutorial {
       cursor: pointer;
     }
 
@@ -80,6 +84,7 @@
           margin-bottom: 10px;
         }
       }
+
       .card-text {
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 14px;
@@ -101,6 +106,7 @@
     &.twitter {
       video {
         width: 100%;
+
         @include media-breakpoint-up(md) {
           height: auto;
         }
@@ -114,7 +120,7 @@
 
         .card-text {
           color: $white;
-          font-family: 'Freight';
+          font-family: $headingFont;
           font-size: 22px;
           font-weight: 400;
           line-height: 27px;
@@ -136,7 +142,9 @@
     }
 
     &.instagram {
-      .card-body, .modal-img-wrapper {
+
+      .card-body,
+      .modal-img-wrapper {
         padding: 0;
         width: 100%;
         position: relative;
@@ -200,6 +208,7 @@
       .modal-header {
         background-color: $primary;
         border-radius: 0;
+
         .close {
           color: $white;
           font-family: 'Helvetica Neue';
@@ -212,7 +221,8 @@
       .modal-body {
         padding: 30px 45px;
 
-        img, iframe {
+        img,
+        iframe {
           width: 100%;
         }
 
@@ -230,6 +240,7 @@
               margin-right: 10px;
               vertical-align: top;
             }
+
             h5 {
               display: inline-block;
               font-size: 14px;
@@ -238,12 +249,14 @@
               font-weight: 700;
               margin-bottom: 0;
               margin-top: 10px;
+
               span {
                 font-weight: 400;
                 display: block;
                 margin-top: 3px;
               }
             }
+
             .fab {
               position: absolute;
               right: 0;
@@ -258,11 +271,13 @@
               font-size: 14px;
               line-height: 21px;
               margin-bottom: 5px;
+
               &.data {
                 font-size: 13px;
                 margin-bottom: 10px;
               }
             }
+
             a {
               color: $primary;
               font-size: 12px;

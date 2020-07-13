@@ -99,6 +99,9 @@
 
   .left-col-wrapper {
     padding-left: $toggler-width;
+
+    display: flex;
+    align-items: center;
   }
 
   &__links {
@@ -180,7 +183,7 @@
 
   &__link--home {
     width: 193px;
-    height: 60px;
+    height: 65px;
     float: left;
     background-image: url("/assets/img/NWS_Logo_Horizontal_Black.png");
     background-size: contain;
@@ -189,16 +192,17 @@
     color: transparent !important;
     display: block;
     margin: auto;
-    margin-top: 15px;
+
 
     @include media-breakpoint-up(md) {
-      background-image: url("/assets/img/nws-logo-black.png");
-      height: 90px;
-      width: 250px;
+      background-image: url("/assets/img/NWS_Logo_Stacked_Black.png");
+      height: 90%;
+      width: 100%;
     }
 
-    @media (max-width: 575.98px) {
-      height: 50px;
+    @media (min-width: 1600px) {
+      height: 80%;
+
     }
   }
 
@@ -305,23 +309,23 @@
   }
 
   &__single-wrapper--highlighted {
-    background-color: $primary;
+    background-color: $coral;
 
     &:hover {
-      background-color: $primary-dark;
+      background-color: $blush;
     }
 
     .locations__single-title {
-      font-family: Freight;
-      font-size: 34px;
+      font-family: $headingFont;
+      font-size: 24px;
       line-height: 30px;
       @include xdSpacing(4);
     }
 
     .locations__single-date {
-      color: $accent-color;
+      color: $black;
       font-size: 21px;
-      margin-bottom: 0;
+      margin: 10px 0 0;
     }
 
     .locations__single-title,
@@ -336,13 +340,15 @@
   }
 
   &__single-title {
-    font-family: 'Lobster';
+    font-family: $headingFont;
     color: #FFFFFF;
-    font-size: 2rem;
+    font-size: 20px;
     z-index: 2;
     text-align: center;
     text-shadow: 0 6px 10px rgba(0, 0, 0, 0.38);
     transition: all 0.3s;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 
   &__single-date {
@@ -353,7 +359,7 @@
     text-align: center;
     text-shadow: 0 6px 10px rgba(0, 0, 0, 0.38);
     transition: all 0.3s;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   &__single-link {
@@ -378,7 +384,7 @@
 
 .book-bttn.button--black {
   padding: 0 2em;
-  margin: 0 20px;
+  margin: 0 20px 0 40px;
 
   height: $navbar-height;
   display: flex;
@@ -392,5 +398,6 @@
   &:hover {
     color: $coral;
   }
+
 
 }

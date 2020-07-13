@@ -21,3 +21,22 @@ $powder: #b3c2bf;
 
 
 $secondary: #f5e9e1;
+
+
+$underlines-colors: (coral: #ebaa83,
+    blush: #c97169,
+    powder: #b3c2bf,
+    secondary: #f5e9e1);
+
+@each $color,
+$bgcolor in $underlines-colors {
+    .t-underline-#{$color} {
+        background-image: linear-gradient(transparent calc(75% - 5px), $bgcolor 5px,
+            );
+    }
+
+    .t-underline-#{$color}--alpha {
+        background-image: linear-gradient(transparent calc(75% - 5px), rgba($bgcolor, .5) 5px,
+            );
+    }
+}

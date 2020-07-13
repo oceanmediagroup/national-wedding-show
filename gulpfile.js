@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 
 console.timeEnd('Loading plugins');
 
-const THEME_NAME = 'national-wedding-show';
+const THEME_NAME = 'theme';
 
 function compileJS(jsFile) {
     return browserify({
@@ -64,6 +64,7 @@ function compileSass(scssFile) {
         .pipe(rename(scssFile + ".min.css"))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('web/assets/style/'))
+        .pipe(livereload());
 };
 
 function cacheInFile(fileName) {
@@ -98,7 +99,7 @@ gulp.task('sass', function () {
     compileSass('main');
 
     // Cache after change in SASS
-    cacheInFile('header');
+    // cacheInFile('header');
 });
 
 gulp.task('minifyJS', function () {
@@ -115,11 +116,12 @@ gulp.task('fonts', function () {
 
 gulp.task('watch', function () {
     /* MAVEN GLOBAL*/
+    livereload.listen();
     gulp.watch('assets/scripts/*.js', ['js']).on('change', livereload.changed);
     gulp.watch('assets/scripts/*/*.js', ['js']).on('change', livereload.changed);
     gulp.watch('assets/scripts/*/*.js', ['js']).on('change', livereload.changed);
-    gulp.watch('assets/styles/*/*.scss', ['sass']).on('change', livereload.changed);
-    gulp.watch('assets/styles/*.scss', ['sass']).on('change', livereload.changed);
+    // gulp.watch('assets/styles/*/*.scss', ['sass']).on('change', livereload.changed);
+    gulp.watch('assets/styles/**/*.scss', ['sass']);
 });
 
 gulp.task('image_compress', function () {

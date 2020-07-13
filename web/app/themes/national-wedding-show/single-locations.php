@@ -9,36 +9,28 @@
 
 <?php get_template_part('components/video-header'); ?>
 
-    <div class="container-gold">
+<div class="container-gold">
 
-        <section class="breadcrumbs">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div typeof="BreadcrumbList" vocab="http://schema.org/">
-                            <a href="/">Home</a>
-                            >
-                            <a href="">
-                                <span class="post post-page current-item"><?php echo get_the_title() ?></span>
-                            </a>
-                        </div>
+    <section class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div typeof="BreadcrumbList" vocab="http://schema.org/">
+                        <a href="/">Home</a>
+                        >
+                        <a href="">
+                            <span class="post post-page current-item"><?php echo get_the_title() ?></span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <?php get_template_part('content/page-locations-description') ?>
-
-
-        <img src="/assets/img/patterns/contact-right-top-points.png" alt=""
-             class="container-gold__confetti container-gold__confetti--top">
-        <img src="/assets/img/patterns/shows-dots-top.png" alt=""
-             class="container-gold__confetti container-gold__confetti--bottom">
-    </div>
+    <?php get_template_part('content/page-locations-description') ?>
+</div>
 
 <?php get_template_part('content/whats-featured') ?>
-
-<?php get_template_part('components/exhibitors') ?>
 
 <?php get_template_part('components/competition-card-big') ?>
 

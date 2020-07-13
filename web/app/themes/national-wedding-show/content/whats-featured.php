@@ -11,26 +11,28 @@
                 $page = get_field('essential_info_page');
                 ?>
                 <a href="<?php echo get_the_permalink($page->ID) ?>">
-                    <div class="featured-pages__card-img-wrapper lazy" data-bg="url(<?php echo get_the_post_thumbnail_url($page->ID); ?>)">
-                        <span class="read-more">Read More</span>
+                    <div class="featured-pages__card-img-wrapper lazy"
+                        data-bg="url(<?php echo get_the_post_thumbnail_url($page->ID); ?>)">
                         <span class="color-overlay"></span>
                     </div>
-                    <h3 class="featured-pages__card-title coral">
+                    <h3 class="featured-pages__card-title">
                         Essential Info
                     </h3>
                 </a>
+                <span class="read-more button t-black button--coral">Read More</span>
             </div>
 
             <div class="grid-item featured-pages__card inspiration-and-advice color-overlay-wrapper">
                 <a href="/whats-on/show-offers-competitions/">
-                    <div class="featured-pages__card-img-wrapper lazy" data-bg="url('/assets/img/show-offers-and-competitions.jpg')">
-                        <span class="read-more">Read More</span>
+                    <div class="featured-pages__card-img-wrapper lazy"
+                        data-bg="url('/assets/img/show-offers-and-competitions.jpg')">
                         <span class="color-overlay"></span>
                     </div>
-                    <h3 class="featured-pages__card-title coral">
+                    <h3 class="featured-pages__card-title">
                         Show Offers And Competitions
                     </h3>
                 </a>
+                <span class="read-more button t-black button--coral">Read More</span>
             </div>
 
             <?php
@@ -48,33 +50,34 @@
                 while ($the_query->have_posts()) {
                     $the_query->the_post(); ?>
 
-                    <?php $show_feature = false;
+            <?php $show_feature = false;
                     $posts2 = get_field('featured_at_shows');
                     if ($posts2): ?>
-                        <?php foreach ($posts2 as $post1): ?>
-                            <?php setup_postdata($post1); ?>
-                            <?php $featured_name = $post1->post_name?>
-                            <?php if($main_page_name == $featured_name){
+            <?php foreach ($posts2 as $post1): ?>
+            <?php setup_postdata($post1); ?>
+            <?php $featured_name = $post1->post_name?>
+            <?php if($main_page_name == $featured_name){
                                 $show_feature = true;
                             } ?>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
+            <?php endforeach; ?>
+            <?php endif; ?>
 
-                    <?php if($show_feature): ?>
-                    <div class="grid-item featured-pages__card inspiration-and-advice color-overlay-wrapper">
-                        <a href="<?php echo get_the_permalink() ?>">
-                            <div class="featured-pages__card-img-wrapper lazy" data-bg="url(<?php the_post_thumbnail_url('medium'); ?>)">
-                                <span class="read-more">Read More</span>
-                                <span class="color-overlay"></span>
-                            </div>
-                            <h3 class="featured-pages__card-title coral">
-                                <?php the_title(); ?>
-                            </h3>
-                        </a>
+            <?php if($show_feature): ?>
+            <div class="grid-item featured-pages__card inspiration-and-advice color-overlay-wrapper">
+                <a href="<?php echo get_the_permalink() ?>">
+                    <div class="featured-pages__card-img-wrapper lazy"
+                        data-bg="url(<?php the_post_thumbnail_url('medium'); ?>)">
+                        <span class="color-overlay"></span>
                     </div>
-                    <?php endif; ?>
+                    <h3 class="featured-pages__card-title">
+                        <?php the_title(); ?>
+                    </h3>
+                </a>
+                <span class="read-more button t-black button--coral">Read More</span>
+            </div>
+            <?php endif; ?>
 
-                <?php }
+            <?php }
 
             }
             wp_reset_postdata(); ?>

@@ -7,19 +7,19 @@
 	.container {
 		.row {
 			margin: 0;
-			
+
 			.video-col {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				background-color: rgba(237,236,232,.9);
+				background-color: rgba(237, 236, 232, .9);
 
 				h3 {
 					padding: 26px 0 10px;
-					font-family: 'Freight';
+					font-family: $headingFont;
 					font-size: 2.25rem;
 					color: #40261C;
-					line-height: 36px;	
+					line-height: 36px;
 					margin: 0;
 					text-align: center;
 				}

@@ -9,22 +9,23 @@
   &__title {
     position: absolute;
     top: 60px;
-    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    font-family: 'Druk Wide Web';
-    letter-spacing:2px;
+    font-family: $baseFont;
+    font-weight: 700;
+    letter-spacing: 2px;
     color: $white;
     z-index: 2;
     text-align: center;
-    text-shadow: 0 10px 10px rgba($black, 0.38);
     font-size: 42px;
-    line-height: 45px;
-    @include xdSpacing(7);
+    line-height: 1.1;
+    @include xdSpacing(-21);
+    text-shadow: 0 10px 10px rgba($black, 0.38);
 
     @include media-breakpoint-up(md) {
-      top: 100px;
+      max-width: 50vw;
+      top: 10vh;
       font-size: 57px;
     }
   }
@@ -79,10 +80,12 @@
       background-repeat: no-repeat;
       background-position-y: -212px;
       display: none;
+
       @include media-breakpoint-up(lg) {
         display: block;
       }
     }
+
     &::after {
       content: ' ';
       position: absolute;
@@ -96,13 +99,14 @@
       background-position-y: -110px;
       background-position-x: center;
       display: none;
+
       @include media-breakpoint-up(lg) {
         display: block;
       }
     }
   }
 
-  .featured-at ul > * {
+  .featured-at ul>* {
     display: inline-block;
     font-family: Helvetica Neue;
     font-weight: 500;
@@ -113,7 +117,7 @@
     color: $white;
   }
 
-  .featured-at ul > span {
+  .featured-at ul>span {
     display: block;
 
     @include media-breakpoint-up(md) {
@@ -213,9 +217,15 @@
       }
 
       @include media-breakpoint-up(lg) {
-        top: 120px;
+        top: 15%;
         font-size: 57px;
       }
+
+      @media(min-width: 1600px) {
+        top: 30%;
+        font-size: 75px;
+      }
+
     }
   }
 }

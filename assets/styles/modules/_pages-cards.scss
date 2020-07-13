@@ -1,25 +1,11 @@
 .pages-cards {
+
   margin: 50px -15px 0;
   padding: 60px 0;
   background: $secondary;
 
   .card-item {
     text-align: center;
-
-    &--blush span {
-      background-image: linear-gradient(transparent calc(75% - 5px), rgba($blush, .5) 5px,
-        );
-    }
-
-    &--powder span {
-      background-image: linear-gradient(transparent calc(75% - 5px), rgba($powder, .5) 5px,
-        );
-    }
-
-    &--coral span {
-      background-image: linear-gradient(transparent calc(75% - 5px), rgba($coral, .5) 5px,
-        );
-    }
   }
 
   .card-title {

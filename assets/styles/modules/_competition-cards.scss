@@ -27,7 +27,7 @@
 
         .card-title {
           color: $brown;
-          font-family: 'Freight';
+          font-family: $headingFont;
           font-size: 22px;
           line-height: 27px;
         }
@@ -51,6 +51,7 @@
         }
       }
     }
+
     .button--light-coral {
       width: auto;
     }

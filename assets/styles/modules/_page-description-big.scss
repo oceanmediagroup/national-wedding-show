@@ -25,6 +25,7 @@
       background-image: url('/assets/img/patterns/contact-left-bottom-points.png');
     }
   }
+
   &::after {
     right: 0;
     top: -4px;
@@ -42,7 +43,7 @@
   }
 
   &__title {
-    font-family: 'Freight';
+    font-family: $headingFont;
     font-size: 25px;
     line-height: 28px;
     font-weight: 400;

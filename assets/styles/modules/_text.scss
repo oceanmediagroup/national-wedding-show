@@ -6,7 +6,7 @@
 
 .title,
 .modal-title {
-  font-family: 'Freight';
+  font-family: $headingFont;
   color: #40261C;
   line-height: 39px;
   font-size: 2.25rem;
@@ -47,13 +47,6 @@
   font-size: 28px;
   text-transform: uppercase;
   font-family: 'Druk Wide Web';
-
-  span {
-    display: inline;
-    background-image: linear-gradient(transparent calc(75% - 5px), $secondary 5px,
-      );
-
-  }
 
   @include media-breakpoint-up(md) {
     font-size: 34px;
