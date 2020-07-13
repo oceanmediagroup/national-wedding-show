@@ -99,6 +99,9 @@
 
   .left-col-wrapper {
     padding-left: $toggler-width;
+
+    display: flex;
+    align-items: center;
   }
 
   &__links {
@@ -189,12 +192,12 @@
     color: transparent !important;
     display: block;
     margin: auto;
-    margin-top: 15px;
+
 
     @include media-breakpoint-up(md) {
       background-image: url("/assets/img/NWS_Logo_Stacked_Black.png");
-      height: 90px;
-      width: 250px;
+      height: 90%;
+      width: 100%;
     }
 
     @media (max-width: 575.98px) {
@@ -378,7 +381,7 @@
 
 .book-bttn.button--black {
   padding: 0 2em;
-  margin: 0 20px;
+  margin: 0 20px 0 40px;
 
   height: $navbar-height;
   display: flex;
@@ -392,5 +395,6 @@
   &:hover {
     color: $coral;
   }
+
 
 }
