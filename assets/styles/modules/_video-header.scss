@@ -1,5 +1,5 @@
 .video-header {
-  height: 296px;
+  height: 350px;
   position: relative;
 
   @include media-breakpoint-up(md) {
@@ -20,6 +20,7 @@
     z-index: 2;
     text-align: center;
     text-shadow: 0 6px 10px rgba($black, 0.38);
+    text-transform: uppercase;
 
     @include media-breakpoint-up(md) {
       font-size: 57px;
@@ -29,7 +30,7 @@
   }
 
   &__date {
-    position:absolute;
+    position: absolute;
     top: 124px;
     bottom: 0;
     left: 0;
@@ -50,12 +51,12 @@
   }
 
   &__cta {
-    position:absolute;
+    position: absolute;
     top: 166px;
     left: 50%;
     transform: translateX(-50%);
-    z-index:10 !important;
-    text-align:center;
+    z-index: 10 !important;
+    text-align: center;
 
     @include media-breakpoint-up(md) {
       top: 230px;
@@ -63,7 +64,7 @@
   }
 
   .item {
-    height: 296px;
+    height: 350px;
 
     @include media-breakpoint-up(md) {
       height: 430px;
