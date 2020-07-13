@@ -2,7 +2,7 @@
   padding: 45px 0;
   position: relative;
 
-  &::before{
+  &::before {
     content: ' ';
     position: absolute;
     left: 0;
@@ -11,7 +11,8 @@
     width: 273px;
     height: 158px;
   }
-  &::after{
+
+  &::after {
     content: ' ';
     position: absolute;
     right: 0;
@@ -21,8 +22,8 @@
     height: 192px;
   }
 
-  &__title{
-    font-family: 'Freight';
+  &__title {
+    font-family: $headingFont;
     font-size: 36px;
     line-height: 42px;
     font-weight: 400;
@@ -30,22 +31,25 @@
     margin-bottom: 25px;
   }
 
-  &__description{
+  &__description {
     font-size: 14px;
     line-height: 24px;
     color: $gray-dark;
+
     p {
       margin-bottom: 20px;
     }
-    span{
+
+    span {
       color: $primary;
       font-weight: 600;
     }
-    ul>li{
+
+    ul>li {
       position: relative;
       padding-left: 15px;
 
-      &::before{
+      &::before {
         content: '•';
         position: absolute;
         left: 0;
@@ -54,18 +58,18 @@
     }
   }
 
-  &__link{
+  &__link {
     margin-top: 15px;
   }
 
-  &__small-text{
+  &__small-text {
     font-size: 12px;
     line-height: 19px;
     color: $gray-dark;
     margin-top: 50px;
   }
 
-  &__image{
+  &__image {
     width: 100%;
     margin-top: 20px;
   }

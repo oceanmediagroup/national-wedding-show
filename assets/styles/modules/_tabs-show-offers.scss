@@ -68,7 +68,7 @@
               padding-bottom: 20px;
 
               .title {
-                font-family: 'Freight';
+                font-family: $headingFont;
                 color: #40261C;
                 font-weight: 400;
                 line-height: 39px;
@@ -173,7 +173,7 @@
   }
 
   &__card-title {
-    font-family: 'Freight';
+    font-family: $headingFont;
     color: $black;
     font-size: 22px;
     line-height: 27px;
@@ -196,7 +196,7 @@
     padding: 44px 20px;
 
     h2 {
-      font-family: 'Freight';
+      font-family: $headingFont;
       font-weight: 400;
       color: $brown;
       line-height: 39px;

@@ -3,7 +3,7 @@
   background-color: $gray-4;
 
   &__title {
-    font-family: 'Freight';
+    font-family: $headingFont;
     font-size: 30px;
     line-height: 38px;
     font-weight: 400;
@@ -31,6 +31,7 @@
   .wpcf7 {
     width: 100%;
   }
+
   form {
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +48,8 @@
       }
     }
 
-    input, select {
+    input,
+    select {
       color: $gray-dark;
       font-size: 20px;
       font-style: italic;
@@ -65,18 +67,21 @@
         font-style: italic;
         line-height: 1;
       }
+
       &::-moz-placeholder {
         color: $gray-dark;
         font-size: 20px;
         font-style: italic;
         line-height: 1;
       }
+
       &:-ms-input-placeholder {
         color: $gray-dark;
         font-size: 20px;
         font-style: italic;
         line-height: 1;
       }
+
       &:-moz-placeholder {
         color: $gray-dark;
         font-size: 20px;
@@ -104,11 +109,13 @@
         }
       }
     }
+
     span.wpcf7-not-valid-tip {
       font-size: 14px;
       margin-bottom: -21px;
       padding-left: 20px;
     }
+
     div.wpcf7-response-output {
       margin: 0 15px 20px;
       padding: 5px 25px;
@@ -142,7 +149,8 @@
       margin-left: 24px;
     }
 
-    input, select {
+    input,
+    select {
       width: auto;
       margin-right: 10px;
       vertical-align: top;
@@ -155,7 +163,8 @@
       max-width: calc(100% - 40px);
     }
 
-    .wpcf7-list-item, .wpcf7-list-item label {
+    .wpcf7-list-item,
+    .wpcf7-list-item label {
       width: 100%;
     }
 

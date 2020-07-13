@@ -19,6 +19,7 @@
         display: block;
       }
     }
+
     &::after {
       content: ' ';
       position: absolute;
@@ -47,9 +48,10 @@
     }
   }
 
-  h1, .text-header {
+  h1,
+  .text-header {
     color: $primary;
-    font-family: 'Freight';
+    font-family: $headingFont;
   }
 
   h1 {

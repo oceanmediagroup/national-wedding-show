@@ -6,7 +6,7 @@
   }
 
   .modal-title {
-    font-family: 'Freight';
+    font-family: $headingFont;
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
@@ -55,7 +55,8 @@
       padding-right: 10px;
     }
 
-    input, select {
+    input,
+    select {
       border: 1px solid #F0F2F4;
       border-radius: 4px;
       padding: 10px 16px;

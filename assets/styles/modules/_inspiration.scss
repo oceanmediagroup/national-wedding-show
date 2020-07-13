@@ -30,6 +30,7 @@
       height: 343px;
     }
   }
+
   &::after {
     content: ' ';
     position: absolute;
@@ -55,7 +56,7 @@
   }
 
   &__title {
-    font-family: 'Freight';
+    font-family: $headingFont;
     font-weight: 400;
     font-size: 24px;
     color: $brown;
@@ -82,6 +83,7 @@
     .card {
       border: none;
       border-radius: 0;
+
       a {
         &:hover {
           text-decoration: none;
@@ -126,10 +128,12 @@
           height: 100%;
           z-index: 10;
         }
+
         &::after {
           content: 'Video';
         }
       }
+
       &.inspire {
         height: 100%;
 
@@ -159,7 +163,7 @@
     }
 
     .card-title {
-      font-family: 'Freight';
+      font-family: $headingFont;
       font-weight: 400;
       font-size: 24px;
       line-height: 33px;

@@ -43,20 +43,20 @@
     }
   }
 
-  &__title{
+  &__title {
     color: $brown;
-    font-family: 'Freight';
+    font-family: $headingFont;
     font-weight: 400;
     font-size: 36px;
     margin-bottom: 25px;
   }
 
-  &__pills{
+  &__pills {
     border-left: 1px solid #F0F2F4;
     border-top: 1px solid #F0F2F4;
     padding: 0;
 
-    .nav-link{
+    .nav-link {
       border-radius: 0;
       border-bottom: 1px solid #F0F2F4;
       font-family: 'Helvetica Neue';
@@ -65,23 +65,25 @@
       color: $black;
       padding: 28px 20px 23px;
 
-      &.active{
+      &.active {
         background-color: $primary;
       }
     }
   }
 
-  &__content{
+  &__content {
     border: 1px solid #F0F2F4;
     padding: 30px;
     background-color: $white;
 
-    p, a{
+    p,
+    a {
       font-size: 14px;
       color: $gray-dark;
       margin-bottom: 3px;
     }
-    a{
+
+    a {
       font-weight: 600;
       display: block;
     }

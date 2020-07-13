@@ -16,32 +16,22 @@
       border: 1px solid $gray-5;
       padding: 19px;
       width: 100%;
-      font-family: 'Freight';
+      font-family: $headingFont;
       font-size: 22px;
       line-height: 27px;
     }
   }
 
   .tutorial-modal {
-    &__wrapper {
+    &__wrapper {}
 
-    }
+    &__content {}
 
-    &__content {
+    &__header {}
 
-    }
+    &__body {}
 
-    &__header {
-
-    }
-
-    &__body {
-
-    }
-
-    &__text {
-
-    }
+    &__text {}
   }
 
 }

@@ -62,7 +62,8 @@
       color: $white;
     }
 
-    .location-card__date, .location-card__arrow {
+    .location-card__date,
+    .location-card__arrow {
       color: $accent-color;
     }
 
@@ -76,7 +77,7 @@
   }
 
   &__name {
-    font-family: 'Freight';
+    font-family: $headingFont;
     display: block;
     color: $primary-dark;
     font-size: 26px;
@@ -108,7 +109,8 @@
       color: $white;
     }
 
-    .location-card__date, .location-card__arrow {
+    .location-card__date,
+    .location-card__arrow {
       color: $primary;
     }
 
@@ -126,7 +128,8 @@
     //text-decoration: underline;
   }
 
-  .location-card__arrow, .location-card__date {
+  .location-card__arrow,
+  .location-card__date {
     color: $accent-color;
   }
 
@@ -135,7 +138,8 @@
   }
 }
 
-.location-card--simple, .location-card--highlighted {
+.location-card--simple,
+.location-card--highlighted {
   width: 70%;
   margin-right: auto;
   margin-left: auto;

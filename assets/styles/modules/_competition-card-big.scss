@@ -18,6 +18,7 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+
   &::after {
     content: ' ';
     position: absolute;
@@ -107,7 +108,7 @@
   }
 
   &__title {
-    font-family: 'Freight';
+    font-family: $headingFont;
     font-weight: 400;
     @include xdSpacing(10);
     margin: 20px 0 10px;

@@ -72,6 +72,7 @@
     &:hover {
       color: $black;
       text-decoration: none;
+
       &.is-checked {
         color: $white;
       }
@@ -88,9 +89,7 @@
     color: $white;
   }
 
-  &__cards {
-
-  }
+  &__cards {}
 
   .read-more {
     opacity: 0;
@@ -103,7 +102,7 @@
     left: 0;
     margin: auto;
     height: 26px;
-    font-family: 'Freight';
+    font-family: $headingFont;
     font-size: 17px;
     z-index: 1;
     @include xdSpacing(10);
@@ -150,7 +149,7 @@
     padding: 12px 14px;
     margin: 0;
     color: $brown;
-    font-family: 'Freight';
+    font-family: $headingFont;
     font-weight: 400;
     font-size: 17px;
     line-height: normal;
