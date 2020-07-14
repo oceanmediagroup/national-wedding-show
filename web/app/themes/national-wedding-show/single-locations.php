@@ -36,6 +36,6 @@
 
 <?php get_template_part('components/info-banner') ?>
 
-<?php get_template_part('components/inspiration') ?>
+<?php get_template_part('components/instagram-feed') ?>
 
 <?php get_footer(); ?>
