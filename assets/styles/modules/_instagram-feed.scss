@@ -1,0 +1,62 @@
+.instagram {
+    padding: 50px 0 100px;
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__profile-link {
+        font-family: $baseFont;
+        font-weight: 700;
+        font-size: 30px;
+
+        &:hover {
+            color: $black;
+            text-decoration: underline;
+        }
+    }
+
+    &__circle-button {
+        background: $powder;
+        color: transparent;
+        z-index: 2;
+        right: 0;
+
+        span {
+            transform: rotate(15deg);
+        }
+
+        @include media-breakpoint-up(md) {
+            width: 180px;
+            height: 180px;
+            font-size: 34px;
+        }
+
+    }
+
+    &__feed-row {
+        margin-top: 100px;
+
+        @include media-breakpoint-up(md) {
+            margin-top: 150px;
+        }
+    }
+}
+
+
+.single-locations {
+    .instagram {
+        padding-top: 100px;
+        background: $gray-2;
+
+        &__circle-button {
+            left: 0;
+            right: unset;
+
+            span {
+                transform: rotate(-15deg);
+            }
+
+        }
+    }
+}

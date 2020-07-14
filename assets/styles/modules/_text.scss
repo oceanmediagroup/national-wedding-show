@@ -69,3 +69,12 @@
 .t-black {
   color: $black;
 }
+
+.t-stroked {
+  -webkit-text-stroke-width: 1px;
+
+  &--black {
+    -webkit-text-stroke-color: black;
+
+  }
+}
