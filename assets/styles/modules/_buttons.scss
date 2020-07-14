@@ -160,12 +160,13 @@
     background-color: $white;
   }
 
-  &--circle {
+  &--circle,
+  &--circle-alt {
     position: absolute;
 
     display: flex;
     align-items: center;
-
+    justify-content: center;
     padding: 20px;
     width: 60vw;
     height: 60vw;
@@ -208,6 +209,21 @@
       }
     }
 
+  }
+
+  &--circle-alt {
+    &:after {
+      left: -5%;
+      top: 0;
+
+    }
+
+    &:hover {
+      &:after {
+        transform: translate(5%, 0);
+
+      }
+    }
   }
 
   &--blush {

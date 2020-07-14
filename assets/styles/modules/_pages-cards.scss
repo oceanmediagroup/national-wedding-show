@@ -4,6 +4,15 @@
   padding: 60px 0;
   background: $secondary;
 
+  .card-img-top {
+    @include media-breakpoint-up(md) {
+      width: 90%;
+      display: block;
+      margin: 0 auto;
+
+    }
+  }
+
   .card-item {
     text-align: center;
   }
@@ -25,7 +34,6 @@
 
   }
 
-
   .card-button {
     display: inline-block;
     margin-top: 20px;
@@ -41,18 +49,12 @@
 
 
   .confetti-accent {
-    position: absolute;
     top: -10vh;
     right: 0;
-
-    width: 50vw;
-    max-width: 400px;
-
     transform: translateX(20%);
     z-index: 1;
 
     @include media-breakpoint-up(md) {
-      width: 25vw;
       top: -30vh;
     }
   }

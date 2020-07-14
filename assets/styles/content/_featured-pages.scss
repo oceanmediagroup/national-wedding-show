@@ -25,19 +25,15 @@
   .grid-item {
     float: left;
     position: relative;
-    margin-bottom: 16px;
+    margin-bottom: 30px;
 
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 30px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 70px;
     }
 
     a:hover {
       color: $primary;
       text-decoration: none;
-
-      .read-more {
-        opacity: 1;
-      }
     }
   }
 
@@ -85,10 +81,13 @@
     color: $white;
   }
 
-  &__cards {}
-
   .read-more {
     display: inline-block;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 12px;
+      padding: 10px 20px;
+    }
   }
 
   &__card {
@@ -97,7 +96,7 @@
 
   &__card-img-wrapper {
     margin: 0 auto;
-    width: 90%;
+
     position: relative;
     overflow: hidden;
     background-size: cover;
@@ -113,6 +112,7 @@
 
     @include media-breakpoint-up(md) {
       height: 300;
+      width: 90%;
     }
   }
 
@@ -132,28 +132,25 @@
 
   &__card-title {
     width: 100%;
-    padding: 12px 14px;
+    padding: 12px 5px;
     margin: 0;
     color: $black;
     font-family: $headingFont;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: normal;
-    text-align: left;
-    min-height: 76px;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+    min-height: 90px;
     text-transform: uppercase;
 
-    @include media-breakpoint-up(md) {
-      font-size: 20px;
-      @include xdSpacing(10);
-      padding: 1.25rem 10px;
-      text-align: center;
-      min-height: 100px;
+    @include media-breakpoint-up(sm) {
+      font-size: 18px;
+      padding: 12px 14px;
     }
 
-    &.coral {
-      color: $primary;
-      min-height: 75px;
+    @include media-breakpoint-up(md) {
+      @include xdSpacing(10);
+      padding: 1.25rem 5px;
+      min-height: 100px;
     }
   }
 
