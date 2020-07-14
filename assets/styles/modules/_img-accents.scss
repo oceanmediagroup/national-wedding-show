@@ -1,0 +1,10 @@
+.confetti-accent {
+    position: absolute;
+    width: 50vw;
+    max-width: 400px;
+    z-index: 1;
+
+    @include media-breakpoint-up(md) {
+        width: 25vw;
+    }
+}

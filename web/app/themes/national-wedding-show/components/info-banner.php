@@ -7,6 +7,7 @@
  */ ?>
 
 <section class="info-banner" style="background-color: #C87169">
+    <img data-src="/assets/img/section-accents/confetti.png" class="lazy confetti-accent" alt="" />
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-12 col-md col-xl">
