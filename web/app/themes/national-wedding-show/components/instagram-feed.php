@@ -1,3 +1,5 @@
+<?php /*
+
 <?php 
     $is_home = (is_front_page() ? ' top-accent top-accent--white' : '');
 ?>
@@ -27,3 +29,4 @@
         </div>
     </div>
 </section>
+*/ ?>
