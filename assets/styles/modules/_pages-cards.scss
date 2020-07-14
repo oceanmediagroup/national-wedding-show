@@ -4,6 +4,15 @@
   padding: 60px 0;
   background: $secondary;
 
+  .card-img-top {
+    @include media-breakpoint-up(md) {
+      width: 90%;
+      display: block;
+      margin: 0 auto;
+
+    }
+  }
+
   .card-item {
     text-align: center;
   }
@@ -24,7 +33,6 @@
     }
 
   }
-
 
   .card-button {
     display: inline-block;
