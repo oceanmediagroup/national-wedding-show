@@ -1,4 +1,4 @@
-<section class="inspiration-section">
+<?php /* <section class="inspiration-section">
 
     <div class="container">
         <h2 class="inspiration-section__title">Inspiration</h2>
@@ -136,3 +136,4 @@
 
     </div>
 </section>
+*?>
