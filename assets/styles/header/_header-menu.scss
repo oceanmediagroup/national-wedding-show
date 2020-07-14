@@ -93,7 +93,8 @@
   .col--right {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+
   }
 
 
@@ -112,7 +113,7 @@
   }
 
   &__link {
-    padding: 0 10px;
+    padding: 0;
     top: 0px !important;
     font-family: 'Druk Wide Web';
     text-transform: uppercase;
@@ -132,6 +133,10 @@
       letter-spacing: 1px;
     }
 
+    @media (min-width: 1600px) {
+      font-size: 14px;
+    }
+
     color: black;
     line-height: $navbar-height;
     display: inline-block;
@@ -145,15 +150,9 @@
 
 
     &--img img {
-      width: 40px;
+      width: 45px;
       padding: 6px;
     }
-
-    &--img img.first {
-      margin-left: 40px;
-
-    }
-
 
   }
 
@@ -384,7 +383,7 @@
 
 .book-bttn.button--black {
   padding: 0 2em;
-  margin: 0 20px 0 40px;
+  margin: 0 20px;
 
   height: $navbar-height;
   display: flex;
