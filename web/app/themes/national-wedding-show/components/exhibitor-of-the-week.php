@@ -6,6 +6,7 @@
  * Time: 15:09
  */ ?>
 
+<?php /*
 <section class="exhibitor-of-the-week">
     <div class="container">
         <div class="exhibitor__wrapper">
@@ -44,3 +45,4 @@
         </div>
     </div>
 </section>
+*/?>
