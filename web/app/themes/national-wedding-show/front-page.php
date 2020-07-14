@@ -12,11 +12,11 @@
     <?php get_template_part('components/win') ?>
 
 
-    <?php get_template_part('components/exhibitor-of-the-week') ?>
+    <?php //get_template_part('components/exhibitor-of-the-week') ?>
 
     <?php get_template_part('components/clients-carousel') ?>
 
-    <?php get_template_part('components/inspiration') ?>
+    <?php //get_template_part('components/inspiration') ?>
 
     <?php get_template_part('components/network-carousel') ?>
 
