@@ -4,7 +4,10 @@
             <div class="col-12 page-locations-desc__text-wrapper text-center">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="page-locations-desc__title"><?php the_field('locations_description-title'); ?></h2>
+                        <h2 class="page-locations-desc__title t-section-heading">
+                            <span
+                                class="t-underline-secondary--alpha"><?php the_field('locations_description-title'); ?></span>
+                        </h2>
                     </div>
                     <div class="col-12 page-locations-desc__text">
                         <?php the_field('locations_description-text'); ?>
