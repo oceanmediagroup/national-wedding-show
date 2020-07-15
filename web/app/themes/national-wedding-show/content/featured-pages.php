@@ -55,20 +55,21 @@
                         $postFilter = str_replace(" ", "-", str_replace(" & ", "-", strtolower($postQueryFilter)));
 
                         ?>
-                        <div class="grid-item color-overlay-wrapper featured-pages__card <?php echo $postFilter ?>">
-                            <a href="<?php echo get_the_permalink($postID) ?>">
-                                <div class="featured-pages__card-img-wrapper lazy"
-                                        data-bg="url('<?php echo get_the_post_thumbnail_url($postID, 'medium') ?>')">
-                                    <span class="read-more">Read More</span>
-                                    <span class="color-overlay"></span>
-                                </div>
-                                <h3 class="featured-pages__card-title coral">
-                                    <?php echo get_the_title($postID) ?>
-                                </h3>
-                            </a>
-                        </div>
+            <div class="grid-item color-overlay-wrapper featured-pages__card <?php echo $postFilter ?>">
+                <a href="<?php echo get_the_permalink($postID) ?>">
+                    <div class="featured-pages__card-img-wrapper lazy"
+                        data-bg="url('<?php echo get_the_post_thumbnail_url($postID, 'medium') ?>')">
+                        <span class="color-overlay"></span>
+                    </div>
+                    <h3 class="featured-pages__card-title coral">
+                        <?php echo get_the_title($postID) ?>
+                    </h3>
+                    <a href="<?php echo get_the_permalink($postID) ?>"
+                        class="read-more read-more button t-black button--coral">Read More</a>
+                </a>
+            </div>
 
-                        <?php
+            <?php
                     endwhile;
                 endif;
             ?>

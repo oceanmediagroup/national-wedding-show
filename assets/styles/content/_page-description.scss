@@ -2,39 +2,6 @@
   padding: 30px 0;
   position: relative;
 
-  &::before, &::after {
-    background-repeat: no-repeat;
-    content: ' ';
-    position: absolute;
-    display: none;
-
-    @include media-breakpoint-up(md) {
-      display: block;
-    }
-  }
-
-  &::before {
-    left: 0;
-    bottom: 0;
-    background-image: url('/assets/img/patterns/contact-left-bottom-points.png');
-    width: 273px;
-    height: 158px;
-    background-position: bottom left;
-  }
-
-  &::after {
-    right: 0;
-    top: -72px;
-    background-image: url('/assets/img/patterns/contact-right-top-points.png');
-    width: 315px;
-    height: 192px;
-    background-position: top right;
-
-    @include media-breakpoint-up(md) {
-      top: -40px;
-    }
-  }
-
   &--simple {
     padding: 25px 0 15px;
 
@@ -47,10 +14,10 @@
     font-family: 'Druk Wide Web';
     font-size: 27px;
     line-height: 31px;
-    letter-spacing:2px;
-    text-transform:uppercase;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     font-weight: 400;
-    color: $brown;
+    color: $black;
     margin-bottom: 10px;
 
     @include media-breakpoint-up(md) {
@@ -62,36 +29,15 @@
   }
 
   &__text {
+    margin-top: 20px;
     font-size: 14px;
-    font-family: 'Helvetica Neue';
+    text-align: center;
+
     line-height: 24px;
     color: $gray-dark;
-
-    @include media-breakpoint-up(md) {
-      -webkit-column-count: 2; /* Chrome, Safari, Opera */
-      -moz-column-count: 2; /* Firefox */
-      column-count: 2;
-      column-gap: 70px;
-      padding: 0 40px;
-    }
-
-    &--one-column {
-      -webkit-column-count: 1; /* Chrome, Safari, Opera */
-      -moz-column-count: 1; /* Firefox */
-      column-count: 1;
-      padding: 0 15px;
-    }
-
-    ul {
-      list-style: disc;
-      list-style-position: inside;
-    }
   }
 
   &__button-link {
-    text-align: center;
-    background-color: white;
-    z-index: 1;
     margin: 0 15px 34px;
 
     @include media-breakpoint-up(md) {
@@ -102,35 +48,13 @@
 }
 
 .single-features .page-description {
-  &::before, &::after {
+
+  &::before,
+  &::after {
     display: none;
 
     @include media-breakpoint-up(md) {
       display: block;
-    }
-  }
-}
-
-.whats-on .page-description {
-  &::before, &::after {
-    display: block;
-  }
-
-  &::before {
-    background-image: url('/assets/img/patterns/dots-mobile-bottom.png');
-
-    @include media-breakpoint-up(md) {
-      background-image: url('/assets/img/patterns/contact-left-bottom-points.png');
-    }
-  }
-
-  &::after {
-    background-image: url('/assets/img/patterns/dots-mobile-top.png');
-    top: 0;
-
-    @include media-breakpoint-up(md) {
-      background-image: url('/assets/img/patterns/contact-right-top-points.png');
-      top: -40px;
     }
   }
 }
