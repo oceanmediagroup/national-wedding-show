@@ -30,14 +30,16 @@
             </div>
         </div>
 
-        <?php if ($post->post_type === "locations"): ?>
+        <!-- <?php if ($post->post_type === "locations"): ?>
         <div class="row align-items-center d-none d-md-flex competition-card-big__view-all-row">
             <div class="col-auto mx-auto mt-4">
                 <a href="/competitions/" class="button button--new-primary-dark mx-auto d-inline-block">VIEW ALL
                     COMPETITIONS</a>
             </div>
         </div>
-        <?php endif; ?>
+        <?php endif; ?> 
+
+        -->
     </div>
 
 </section>

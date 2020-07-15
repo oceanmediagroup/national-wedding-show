@@ -37,8 +37,8 @@
                         On</a>
                     <a href="<?php echo get_home_url(null,'/exhibitor-list/', null); ?>"
                         class="header-menu__link">Exhibitors</a>
-                    <a href="<?php echo get_home_url(null,'/competitions/', null); ?>"
-                        class="header-menu__link">Competitions</a>
+                    <!-- <a href="<?php echo get_home_url(null,'/competitions/', null); ?>"
+                        class="header-menu__link">Competitions</a> -->
                     <a href="<?php echo get_home_url(null,'/exhibit/', null); ?>" class="header-menu__link">Exhibit</a>
 
                     <a href="https://weddingshow.seetickets.com"

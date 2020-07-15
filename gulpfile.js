@@ -116,12 +116,12 @@ gulp.task('fonts', function () {
 
 gulp.task('watch', function () {
     /* MAVEN GLOBAL*/
-    // livereload.listen();
+    livereload.listen();
     gulp.watch('assets/scripts/*.js', ['js']).on('change', livereload.changed);
     gulp.watch('assets/scripts/*/*.js', ['js']).on('change', livereload.changed);
-    gulp.watch('assets/styles/*/*.scss', ['sass']).on('change', livereload.changed);
-    gulp.watch('assets/styles/*.scss', ['sass']).on('change', livereload.changed);
-    // gulp.watch('assets/styles/**/*.scss', ['sass']);
+    // gulp.watch('assets/styles/*/*.scss', ['sass']).on('change', livereload.changed);
+    // gulp.watch('assets/styles/*.scss', ['sass']).on('change', livereload.changed);
+    gulp.watch('assets/styles/**/*.scss', ['sass']);
 });
 
 gulp.task('image_compress', function () {

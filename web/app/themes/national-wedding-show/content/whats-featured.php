@@ -74,7 +74,8 @@
                         <?php the_title(); ?>
                     </h3>
                 </a>
-                <span class="read-more button t-black button--coral">Read More</span>
+                <a href="<?php echo get_the_permalink() ?>" class="read-more button t-black button--coral">Read
+                    More</a>
             </div>
             <?php endif; ?>
 

@@ -22,7 +22,5 @@
 
     <?php get_template_part('components/info-banner') ?>
 
-    <?php get_template_part('components/inspiration') ?>
-
 </div>
 <?php get_footer(); ?>
