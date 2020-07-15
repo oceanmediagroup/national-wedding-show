@@ -38,11 +38,8 @@
   }
 
   &__button-link {
-    margin: 0 15px 34px;
+    margin: 30px auto;
 
-    @include media-breakpoint-up(md) {
-      margin: 30px auto 34px;
-    }
   }
 
 }

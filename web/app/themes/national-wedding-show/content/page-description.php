@@ -5,7 +5,7 @@ $button = get_field('cta_button');
 <section class="page-description">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col text-center">
                 <h2 class="page-description__title t-section-heading">
 
                     <span class="t-underline-coral--alpha"><?php echo get_field('page_description_title'); ?></span>
