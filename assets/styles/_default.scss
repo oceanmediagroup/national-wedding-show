@@ -108,7 +108,7 @@ a {
 
   li:not(.nav-item)::before {
     content: "•";
-    color: $primary;
+    color: $blush;
     display: inline-block;
     width: 1em;
     margin-left: -1em

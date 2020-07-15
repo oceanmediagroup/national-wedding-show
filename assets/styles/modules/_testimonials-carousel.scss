@@ -22,18 +22,15 @@
     }
 
     &__title {
-      color: $primary;
-      font-family: 'Helvetica Neue';
-      font-weight: 300;
+      color: $blush;
       font-size: 15px;
-      line-height: 30px;
       padding: 11px 0 5px;
     }
 
     &__text {
       color: $gray-dark;
       font-size: 14px;
-      font-family: 'Helvetica Neue';
+      font-family: $baseFont;
       line-height: 22px;
       padding: 0 30px;
       position: relative;
@@ -43,10 +40,11 @@
       }
     }
 
-    &__text::before, &__text::after {
+    &__text::before,
+    &__text::after {
       content: '“';
       position: absolute;
-      color: $primary;
+      color: $blush;
       font-family: Arial;
       font-weight: bold;
       font-size: 53px;
@@ -65,7 +63,7 @@
     }
   }
 
-  .owl-theme .owl-nav.disabled + .owl-dots {
+  .owl-theme .owl-nav.disabled+.owl-dots {
     margin-top: 0;
   }
 
@@ -75,7 +73,8 @@
     background: $gray-3;
   }
 
-  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
     background: $gray-6;
   }
 }
@@ -95,7 +94,7 @@
     }
 
     &__title {
-      font-family: 'Arial';
+      font-family: $headingFont;
       font-weight: bold;
       font-size: 20px;
       line-height: 30px;
