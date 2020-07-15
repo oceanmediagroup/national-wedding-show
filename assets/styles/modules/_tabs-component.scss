@@ -4,7 +4,7 @@
 
   .cta-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 15px 0 0;
 
     @media screen and (max-width: 1199px) {
@@ -14,28 +14,8 @@
     }
 
     a {
-      display: block;
-      padding: 10px 10px 8px;
-      margin: 0 15px;
-      min-width: 250px;
       text-align: center;
-      border: 1px solid #FA8371;
-      color: #FA8371;
-      font-size: 0.875rem;
-      line-height: 17px;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      font-weight: 700;
-
-      @media screen and (max-width: 1199px) {
-        margin: 5px;
-      }
-
-      &:hover {
-        text-decoration: none;
-        color: #fff;
-        background-color: #FA8371;
-      }
+      flex: 0 0 calc(50% - 15px);
     }
   }
 
@@ -62,26 +42,31 @@
           }
 
           .nav-item {
+
             @media screen and (max-width: 767px) {
               width: 100% !important;
             }
           }
 
           .nav-item .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             border: 1px solid #F0F2F4;
             border-left: none;
             border-radius: 0;
             text-align: center;
-            padding: 18px 1rem 10px;
-            font-family: 'Helvetica Neue';
-            font-weight: 500;
-            color: #000;
-            font-size: 1.25rem;
-            line-height: 35px;
+            padding: 18px 1rem;
+            font-family: $headingFont;
+            color: $black;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 1.4;
             height: 100%;
 
             &.active {
-              background-color: #FA665B;
+              background-color: $blush;
               transition: all 0.3s ease;
               color: #F8F8F8;
             }
@@ -107,9 +92,10 @@
 
               .title {
                 font-family: $headingFont;
-                color: #40261C;
+                color: $black;
                 line-height: 39px;
                 font-size: 2.25rem;
+                text-transform: uppercase;
               }
 
               .content {

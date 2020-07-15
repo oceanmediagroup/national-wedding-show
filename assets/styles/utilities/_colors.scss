@@ -39,4 +39,10 @@ $bgcolor in $underlines-colors {
         background-image: linear-gradient(transparent calc(75% - 5px), rgba($bgcolor, .5) 5px,
             );
     }
+
+    .t-underline-#{$color}--alpha>p {
+        display: inline;
+        background-image: linear-gradient(transparent calc(75% - 5px), rgba($bgcolor, .5) 5px,
+            );
+    }
 }
