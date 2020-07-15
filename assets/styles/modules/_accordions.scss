@@ -1,5 +1,10 @@
 .accordion {
-  margin: 0 15px;
+  margin: 0;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 15px;
+
+  }
 
   &__arrow {
     float: right;
@@ -13,7 +18,7 @@
 
   .card-header {
     border-radius: 0 !important;
-    background-color: $primary;
+    background-color: $secondary;
     border-bottom: none !important;
     padding: 10px 0;
 
@@ -23,8 +28,11 @@
   }
 
   .card-header .btn-link {
-    color: $white;
+    color: $black;
     width: 100%;
+    font-family: $headingFont;
+    text-transform: uppercase;
+    font-size: 14px;
   }
 
   .card-header .btn-link[aria-expanded="true"] .accordion__arrow {

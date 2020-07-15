@@ -108,7 +108,7 @@ a {
 
   li:not(.nav-item)::before {
     content: "•";
-    color: $primary;
+    color: $blush;
     display: inline-block;
     width: 1em;
     margin-left: -1em
@@ -123,6 +123,7 @@ a {
   margin-bottom: 0;
 }
 
+.single .info-banner,
 .page-template .info-banner {
   margin-bottom: 50px;
   z-index: 2

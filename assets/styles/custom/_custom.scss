@@ -145,7 +145,7 @@
 
     &:before {
       content: "•";
-      color: #eb8977;
+      color: $blush;
       display: inline-block;
       width: 1em;
       margin-left: -1em;
@@ -207,14 +207,14 @@ ol {
   }
 }
 
-.contact-tabs__pills .nav-link.active,
-.contact-form form input.wpcf7-submit:hover,
-.button--bg-coral,
-.button--light-coral:hover,
-.exhibitors-video .container .row .video-col a:hover {
-  background-color: #FA665B;
-  border: 1px solid #FA665B;
-}
+// .contact-tabs__pills .nav-link.active,
+// .contact-form form input.wpcf7-submit:hover,
+// .button--bg-coral,
+// .button--light-coral:hover,
+// .exhibitors-video .container .row .video-col a:hover {
+//   background-color: #FA665B;
+//   border: 1px solid #FA665B;
+// }
 
 .button--bg-coral-bold:hover {
   color: #FA665B;
