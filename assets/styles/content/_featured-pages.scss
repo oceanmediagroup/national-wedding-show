@@ -155,3 +155,14 @@
   }
 
 }
+
+.page-template-template-whats-on {
+  .featured-pages {
+    padding-top: 50px;
+
+    @include media-breakpoint-up(md) {
+      padding-top: 100px;
+
+    }
+  }
+}
