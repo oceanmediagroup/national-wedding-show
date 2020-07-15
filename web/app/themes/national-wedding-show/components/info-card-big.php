@@ -7,7 +7,7 @@
  */ ?>
 
 
-<section class="product-card-big info-card-big">
+<section class="product-card-big info-card-big top-accent top-accent--white">
     <?php
     $img = get_field('extensive_mark_image');
     $title = get_field('extensive_mark_title');
@@ -26,13 +26,13 @@
                 </div>
                 <div class="col-12 col-md align-self-center">
                     <div class="product-card-big__content">
-                        <h3 class="product-card-big__title t-underline-blush">
-                            <?php echo $title; ?>
+                        <h3 class="product-card-big__title t-section-heading">
+                            <span class="t-underline-secondary--alpha"><?php echo $title; ?></span>
                         </h3>
                         <div class="product-card-big__text">
                             <?php echo $content ?>
                         </div>
-                        <a href="<?php echo $button_link ?>" class="button--light-coral">
+                        <a href="<?php echo $button_link ?>" class="button button--new-primary-dark">
                             <?php echo $button_text ?>
                         </a>
                     </div>

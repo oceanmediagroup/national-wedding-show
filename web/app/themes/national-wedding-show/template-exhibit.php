@@ -27,13 +27,15 @@
 		</div>
 	</div>
 
-	<div class="container-gray">
+	<div class="container-secondary exibitors-about-visitors top-accent top-accent--secondary">
 		<div class="container info-block">
 			<div class="row pt-4 pb-4">
 				<div class="col-lg-6 d-flex flex-column justify-content-center">
-					<h3 class="title"><?php the_field('about_visitors_title'); ?></h3>
+					<h3 class="t-section-heading">
+						<span class="t-underline-powder--alpha"><?php the_field('about_visitors_title'); ?></span>
+					</h3>
 					<?php the_field('about_visitors_content'); ?>
-					<a class="cta-link"
+					<a class="button button--new-primary-dark cta-link"
 						href="<?php the_field('about_visitors_cta_link'); ?>"><?php the_field('about_visitors_cta_text'); ?></a>
 				</div>
 				<div class="col-lg-6 col-img">
@@ -53,7 +55,9 @@
 			<div class="row">
 				<div class="col-lg-6"></div>
 				<div class="col-lg-6 content-block">
-					<h2 class="title text-center"><?php the_field('us_title'); ?></h2>
+					<h2 class="t-section-heading text-center">
+						<span class="t-underline-powder--alpha"><?php the_field('us_title'); ?></span>
+					</h2>
 					<div class="row">
 						<?php if( have_rows('us_dates_repeater') ): ?>
 						<?php while( have_rows('us_dates_repeater') ): the_row();
@@ -68,7 +72,8 @@
 						<?php endwhile; ?>
 						<?php endif; ?>
 					</div>
-					<a class="cta-link" href="<?php the_field('us_cta_link'); ?>"><?php the_field('us_cta_text'); ?></a>
+					<a class="cta-link button button--new-primary-dark"
+						href="<?php the_field('us_cta_link'); ?>"><?php the_field('us_cta_text'); ?></a>
 				</div>
 			</div>
 		</div>
