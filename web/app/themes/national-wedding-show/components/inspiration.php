@@ -1,4 +1,4 @@
-<section class="inspiration-section">
+<!-- <section class="inspiration-section">
 
     <div class="container">
         <h2 class="inspiration-section__title">Inspiration</h2>
@@ -122,4 +122,4 @@
         </div>
 
     </div>
-</section>
+</section> -->
