@@ -6,7 +6,7 @@
  * Time: 16:02
  */ ?>
 
-<section class="competition-card-big">
+<section class="competition-card-big top-accent top-accent--white">
     <div class="container">
         <div class="competition-card-big__wrapper">
             <div class="row h-100">
