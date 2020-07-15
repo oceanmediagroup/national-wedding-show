@@ -17,7 +17,9 @@
                         <span class="color-overlay"></span>
                     </div>
                     <h3 class="featured-pages__card-title">
-                        Essential Info
+                        <span class="t-underline-coral--alpha">
+                            Essential Info
+                        </span>
                     </h3>
                 </a>
                 <span class="read-more button t-black button--coral">Read More</span>
@@ -30,7 +32,9 @@
                         <span class="color-overlay"></span>
                     </div>
                     <h3 class="featured-pages__card-title">
-                        Show Offers And Competitions
+                        <span class="t-underline-coral--alpha">
+                            Show Offers And Competitions
+                        </span>
                     </h3>
                 </a>
                 <span class="read-more button t-black button--coral">Read More</span>
@@ -71,7 +75,7 @@
                         <span class="color-overlay"></span>
                     </div>
                     <h3 class="featured-pages__card-title">
-                        <?php the_title(); ?>
+                        <span class="t-underline-coral--alpha"><?php the_title(); ?></span>
                     </h3>
                 </a>
                 <a href="<?php echo get_the_permalink() ?>" class="read-more button t-black button--coral">Read
