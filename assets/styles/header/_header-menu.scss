@@ -182,7 +182,8 @@
   }
 
   &__link--home {
-    width: 193px;
+    width: 65%;
+    max-width: 300px;
     height: 65px;
     float: left;
     background-image: url("/assets/img/NWS_Logo_Horizontal_Black.png");
