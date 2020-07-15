@@ -38,8 +38,11 @@
                             aria-labelledby="heading<?php echo $tabs_counter; ?>" data-target="#accordionExample">
                             <div class="card-body">
 
-                                <div class="title">
-                                    <?php echo $title; ?>
+                                <div class="t-section-heading">
+                                    <span class="t-underline-powder--alpha">
+                                        <?php echo $title; ?>
+
+                                    </span>
                                 </div>
                                 <div class="content">
                                     <?php echo $text; ?>
@@ -56,7 +59,7 @@
                                             <?php while (have_rows('cta_repeater')): the_row();
                                                             $text = get_sub_field('cta_text');
                                                             $link = get_sub_field('cta_link'); ?>
-                                            <a href="<?php echo $link; ?>">
+                                            <a class="button button--new-primary-dark" href="<?php echo $link; ?>">
                                                 <?php echo $text; ?>
                                             </a>
                                             <?php endwhile; ?>
