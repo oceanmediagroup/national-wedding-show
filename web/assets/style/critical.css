@@ -2910,19 +2910,6 @@ a:hover {
   width: 1em;
   margin-left: -1em; }
 
-.home .info-banner {
-  margin-bottom: 0; }
-
-.single .info-banner,
-.page-template .info-banner {
-  margin-bottom: 50px;
-  z-index: 2; }
-
-.home .clients-carousel {
-  margin-top: 50px;
-  padding-bottom: 60px;
-  padding-top: 60px; }
-
 .main {
   position: relative;
   top: 85px; }

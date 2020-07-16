@@ -114,23 +114,3 @@ a {
     margin-left: -1em
   }
 }
-
-
-
-// some styles for layout fix after comment out some sectiosn
-
-.home .info-banner {
-  margin-bottom: 0;
-}
-
-.single .info-banner,
-.page-template .info-banner {
-  margin-bottom: 50px;
-  z-index: 2
-}
-
-.home .clients-carousel {
-  margin-top: 50px;
-  padding-bottom: 60px;
-  padding-top: 60px;
-}

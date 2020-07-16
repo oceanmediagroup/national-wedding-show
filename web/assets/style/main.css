@@ -10023,7 +10023,8 @@ body {
   color: #000000; }
 
 .t-stroked {
-  -webkit-text-stroke-width: 1px; }
+  -webkit-text-stroke-width: 1px;
+  color: transparent; }
   .t-stroked--black {
     -webkit-text-stroke-color: black; }
 
@@ -10386,6 +10387,8 @@ body {
     .product-card-big {
       padding: 50px 0; } }
   .product-card-big__wrapper {
+    position: relative;
+    z-index: 2;
     margin-left: -15px;
     margin-right: -15px; }
   .product-card-big__image-wrapper {
@@ -10678,50 +10681,17 @@ body {
   padding: 40px 0; }
   @media (min-width: 768px) {
     .exhibitor-of-the-week {
-      padding: 100px 0; } }
+      padding: 100px 0 150px;
+      margin: 80px auto 0; } }
   .exhibitor-of-the-week .col-12 {
     z-index: 10; }
   .exhibitor-of-the-week .exhibitor__wrapper {
     min-height: 311px;
     height: auto;
-    overflow: hidden;
-    border: 1px solid #EDECE8;
-    background-color: #FFFFFF;
     position: relative; }
     @media (min-width: 768px) {
       .exhibitor-of-the-week .exhibitor__wrapper {
         min-height: 375px; } }
-    .exhibitor-of-the-week .exhibitor__wrapper::before {
-      position: absolute;
-      content: ' ';
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      margin: auto;
-      right: 0;
-      top: 255px;
-      background-image: url("/assets/img/patterns/eotw-dots-top.png");
-      background-position: top right; }
-      @media (min-width: 768px) {
-        .exhibitor-of-the-week .exhibitor__wrapper::before {
-          width: 50%;
-          top: 0; } }
-    .exhibitor-of-the-week .exhibitor__wrapper::after {
-      position: absolute;
-      content: ' ';
-      width: 57%;
-      height: 100%;
-      background-repeat: no-repeat;
-      margin: auto;
-      bottom: -26px;
-      left: 0;
-      background-image: url("/assets/img/patterns/eotw-dots-bottom.png");
-      background-position: bottom left; }
-      @media (min-width: 768px) {
-        .exhibitor-of-the-week .exhibitor__wrapper::after {
-          left: calc(50% - 15px);
-          bottom: 0;
-          width: 50%; } }
   .exhibitor-of-the-week .exhibitor__content {
     padding: 20px 20px 60px; }
     @media (min-width: 768px) {
@@ -10729,67 +10699,66 @@ body {
         padding: 0 15px 0 0; } }
   .exhibitor-of-the-week .exhibitor__image-wrapper {
     position: relative;
-    overflow: hidden;
     min-height: 311px;
     height: auto; }
     @media (min-width: 768px) {
       .exhibitor-of-the-week .exhibitor__image-wrapper {
         min-height: 375px; } }
   .exhibitor-of-the-week .exhibitor__image {
-    position: absolute;
-    margin: auto;
-    width: auto;
-    min-width: 100%;
-    height: auto;
-    min-height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    right: 0;
-    top: 0;
-    bottom: 0; }
+    max-width: 100%;
+    object-fit: cover; }
+  .exhibitor-of-the-week .exhibitor__logo {
+    width: 100%; }
+  .exhibitor-of-the-week .exhibitor__logo-circle {
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover; }
   .exhibitor-of-the-week .exhibitor__logo-wrapper {
     position: absolute;
-    background-color: #FFFFFF;
-    right: 0;
-    top: 40px;
-    padding: 16px 13px; }
-  .exhibitor-of-the-week .exhibitor__logo {
-    max-width: 138px;
-    height: auto;
-    width: auto; }
-  .exhibitor-of-the-week .exhibitor__accent-text {
-    position: absolute;
-    bottom: 0;
-    width: auto;
-    padding: 4px 20px;
-    background-color: #C87169;
-    color: #FFFFFF;
-    font-size: 23px;
-    line-height: 42px;
-    font-family: 'Lobster';
-    letter-spacing: 0.007em; }
-  .exhibitor-of-the-week .exhibitor__title {
-    margin: 20px 0 10px;
-    font-family: 'Druk Wide Web';
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 28px;
-    letter-spacing: 0.01em; }
-    @media (min-width: 768px) {
-      .exhibitor-of-the-week .exhibitor__title {
-        font-size: 36px;
-        line-height: 38px; } }
-  .exhibitor-of-the-week .exhibitor__text {
-    display: block;
-    margin-bottom: 20px;
-    max-width: 460px;
-    font-family: 'Circular Book';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    color: #535252; }
+    width: 150px;
+    height: 150px;
+    left: 0;
+    top: 0;
+    z-index: 1; }
+    @media (min-width: 576px) {
+      .exhibitor-of-the-week .exhibitor__logo-wrapper {
+        width: 250px;
+        height: 250px; } }
   .exhibitor-of-the-week .exhibitor__link {
-    width: auto; }
+    margin-top: 30px;
+    display: inline-block; }
+  .exhibitor-of-the-week .exhibitor__circle-button {
+    width: 150px;
+    height: 150px;
+    background: #b3c2bf;
+    z-index: 2;
+    font-family: 'Circular Book';
+    line-height: 1;
+    font-weight: 700;
+    top: 120px; }
+    .exhibitor-of-the-week .exhibitor__circle-button .t-stroked {
+      font-weight: 400; }
+    @media (min-width: 576px) {
+      .exhibitor-of-the-week .exhibitor__circle-button {
+        top: 250px;
+        width: 200px;
+        height: 200px;
+        font-size: 35px; } }
+  .exhibitor-of-the-week .dots-accent {
+    position: absolute;
+    right: 0;
+    top: -30vh;
+    z-index: 1;
+    transform: translateX(50%); }
+  .exhibitor-of-the-week .confetti-accent {
+    bottom: -5vh;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    transform: translateX(-50%) rotate(180deg); }
+    @media (min-width: 768px) {
+      .exhibitor-of-the-week .confetti-accent {
+        bottom: -20vh; } }
 
 @media (min-width: 768px) {
   .exhibitor-list {
@@ -11992,7 +11961,7 @@ body {
   position: relative; }
   @media (min-width: 768px) {
     .competition-card-big {
-      background-color: #F8F8F8; } }
+      background-color: #FFFFFF; } }
   .competition-card-big .container {
     padding-top: 42px;
     padding-bottom: 42px; }
@@ -12877,6 +12846,9 @@ select::-ms-expand {
 
 .instagram {
   padding: 50px 0 100px; }
+  @media (min-width: 768px) {
+    .instagram {
+      padding-bottom: 50px; } }
   .instagram .container {
     position: relative; }
   .instagram__title {
@@ -12899,15 +12871,12 @@ select::-ms-expand {
       transform: rotate(15deg); }
     @media (min-width: 768px) {
       .instagram__circle-button {
-        top: 100px;
+        top: 50px;
         width: 180px;
         height: 180px;
         font-size: 34px; } }
   .instagram__feed-row {
     margin-top: 50px; }
-    @media (min-width: 768px) {
-      .instagram__feed-row {
-        margin-top: 150px; } }
 
 .single-locations .instagram {
   padding: 180px 0;
