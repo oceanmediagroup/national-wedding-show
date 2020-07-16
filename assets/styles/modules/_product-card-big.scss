@@ -9,7 +9,8 @@ $product-card-height: 375px;
   }
 
   &__wrapper {
-
+    position: relative;
+    z-index: 2;
     margin-left: -15px;
     margin-right: -15px;
   }
