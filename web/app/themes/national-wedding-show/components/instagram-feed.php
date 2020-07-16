@@ -1,7 +1,7 @@
-<?php /*
+<?php
+   
+$is_home = (is_front_page() ? ' top-accent top-accent--white' : '');
 
-<?php 
-    $is_home = (is_front_page() ? ' top-accent top-accent--white' : '');
 ?>
 
 <section class="instagram<?php echo $is_home?>">
@@ -22,11 +22,7 @@
         </div>
 
         <div class="row instagram__feed-row">
-            <div class="col-md-4 mb-5"><img class="w-100" src="https://via.placeholder.com/300" alt=""></div>
-            <div class="col-md-4 mb-5"><img class="w-100" src="https://via.placeholder.com/300" alt=""></div>
-            <div class="col-md-4 mb-5"><img class="w-100" src="https://via.placeholder.com/300" alt=""></div>
-
+            <?php echo do_shortcode('[instagram-feed]'); ?>
         </div>
     </div>
 </section>
-*/ ?>
