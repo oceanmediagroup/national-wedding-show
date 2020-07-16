@@ -12866,12 +12866,14 @@ select::-ms-expand {
     z-index: 2;
     right: 0;
     width: 50vw;
-    height: 50vw; }
+    height: 50vw;
+    bottom: 0; }
     .instagram__circle-button span {
       transform: rotate(15deg); }
     @media (min-width: 768px) {
       .instagram__circle-button {
         top: 50px;
+        bottom: unset;
         width: 180px;
         height: 180px;
         font-size: 34px; } }

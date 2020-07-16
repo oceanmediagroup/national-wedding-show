@@ -31,6 +31,7 @@
         right: 0;
         width: 50vw;
         height: 50vw;
+        bottom: 0;
 
         span {
             transform: rotate(15deg);
@@ -38,6 +39,7 @@
 
         @include media-breakpoint-up(md) {
             top: 50px;
+            bottom: unset;
             width: 180px;
             height: 180px;
             font-size: 34px;
