@@ -183,7 +183,7 @@ $(document).ready(function () {
             margin: 30,
             dots: false,
             nav: true,
-            navText: ["<span class='clients-carousel__arrow clients-carousel__arrow--left'>&#x276f;</span>", "<span class='clients-carousel__arrow clients-carousel__arrow--right'>&#x276f;</span>"],
+            navText: ["<span class='clients-carousel__arrow clients-carousel__arrow--left'></span>", "<span class='clients-carousel__arrow clients-carousel__arrow--right'></span>"],
             navContainer: '#clientsOutsideNav',
             autoplay: true,
             autoplayTimeout: 5000,
@@ -195,7 +195,7 @@ $(document).ready(function () {
                     items: 3
                 },
                 992: {
-                    items: 5
+                    items: 4
                 }
             }
         });
@@ -326,11 +326,11 @@ $(document).ready(function () {
         });
     }
 
-    if ( /Android|webOS|iPhone|iPod|Blackberry|Windows Phone/i.test(navigator.userAgent)){
-        var onchange=["if ($(this).val()!=''){"];
+    if (/Android|webOS|iPhone|iPod|Blackberry|Windows Phone/i.test(navigator.userAgent)) {
+        var onchange = ["if ($(this).val()!=''){"];
         onchange.push("        window.location = $(this).val();");
         onchange.push("}");
-        $('select[name="sort_by"]').each(function(){
+        $('select[name="sort_by"]').each(function () {
             $(this).attr("onchange", onchange.join(''));
         })
     }

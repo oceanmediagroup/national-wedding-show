@@ -2665,6 +2665,16 @@ a:hover, a:focus, a:active {
   display: inline;
   background-image: linear-gradient(transparent calc(75% - 5px), rgba(179, 194, 191, 0.5) 5px); }
 
+.t-underline-white {
+  background-image: linear-gradient(transparent calc(75% - 5px), #fff 5px); }
+
+.t-underline-white--alpha {
+  background-image: linear-gradient(transparent calc(75% - 5px), rgba(255, 255, 255, 0.5) 5px); }
+
+.t-underline-white--alpha > p {
+  display: inline;
+  background-image: linear-gradient(transparent calc(75% - 5px), rgba(255, 255, 255, 0.5) 5px); }
+
 .t-underline-secondary {
   background-image: linear-gradient(transparent calc(75% - 5px), #f5e9e1 5px); }
 

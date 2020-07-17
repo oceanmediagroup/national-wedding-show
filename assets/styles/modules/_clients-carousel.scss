@@ -1,44 +1,62 @@
 .clients-carousel {
-  padding: 20px 0;
+  padding: 60px 0 40px;
   margin: 0 -15px;
   position: relative;
-  background: #F8F8F8;
+  background: $powder;
 
+  @include media-breakpoint-up(sm) {
+    padding: 20px 0;
+
+  }
+
+  .leaf-accent {
+    display: none;
+
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      display: block;
+      z-index: 2;
+      right: 0;
+      top: -30vh;
+      width: 300px;
+      transform: translateX(10%);
+
+    }
+  }
 
   @include media-breakpoint-up(md) {
     padding: 32px 0;
   }
 
+  .images-carousel__col {
+    padding: 50px 0;
+
+    @include media-breakpoint-up(md) {
+      padding: 100px 0 150px;
+    }
+  }
+
   .images-carousel {
     position: relative;
+
   }
 
   .owl-clients {
-    width: calc(100% - 50px);
+    width: calc(100% - 100px);
     margin: auto;
   }
 
   .owl-carousel .owl-item {
-    height: 54px;
+    height: 100px;
     position: relative;
-  }
 
-  &__title {
-    font-family: $headingFont;
-    line-height: 26px;
-    font-weight: 400;
-    font-size: 18px;
-    padding-left: 1rem;
-    margin-bottom: 20px;
-    display: block;
-
-    @include media-breakpoint-up(md) {
-      font-size: 24px;
-      padding-left: 0;
-      margin-bottom: 0;
-      display: inline-block;
+    img {
+      height: 100%;
+      object-fit: contain;
     }
   }
+
+
 
   &__nav {
     width: 100%;
@@ -46,8 +64,8 @@
     z-index: 5;
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
     margin: auto;
     height: 27px;
     display: none;
@@ -58,28 +76,33 @@
   }
 
   &__nav button {
+    position: absolute;
     background: none;
     border: none;
     z-index: 1;
+    height: 30px;
+    width: 20px;
+    line-height: 1;
   }
 
-  &__nav button.owl-prev:nth-child(1),
-  &__nav button.owl-next:nth-child(4) {
-    display: none;
+  .owl-next {
+    right: 0;
+    background: url('../img/arrow-right.png') center / cover;
   }
 
-  &__nav button.owl-next:nth-child(3) {
-    float: right;
+  .owl-prev {
+    background: url('../img/arrow-left.png') center / cover;
   }
 
-  &__nav button:nth-child(2) {
-    transform: rotate(180deg);
-  }
+  // &__nav button.owl-prev:nth-child(1),
+  // &__nav button.owl-next:nth-child(4) {
+  //   display: none;
+  // }
 
-  &__arrow {}
+  // &__nav button.owl-next:nth-child(3) {
+  //   float: right;
+  // }
 
-  &__arrow--left {
-    transform: rotate(180deg);
-  }
+
 
 }

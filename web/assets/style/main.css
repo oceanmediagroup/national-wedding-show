@@ -9807,6 +9807,16 @@ a img.aligncenter {
   display: inline;
   background-image: linear-gradient(transparent calc(75% - 5px), rgba(179, 194, 191, 0.5) 5px); }
 
+.t-underline-white {
+  background-image: linear-gradient(transparent calc(75% - 5px), #fff 5px); }
+
+.t-underline-white--alpha {
+  background-image: linear-gradient(transparent calc(75% - 5px), rgba(255, 255, 255, 0.5) 5px); }
+
+.t-underline-white--alpha > p {
+  display: inline;
+  background-image: linear-gradient(transparent calc(75% - 5px), rgba(255, 255, 255, 0.5) 5px); }
+
 .t-underline-secondary {
   background-image: linear-gradient(transparent calc(75% - 5px), #f5e9e1 5px); }
 
@@ -10149,6 +10159,8 @@ body {
     padding: 20px;
     width: 60vw;
     height: 60vw;
+    max-width: 250px;
+    max-height: 250px;
     background: #ebaa83;
     font-size: 24px;
     font-family: 'Druk Wide Web';
@@ -10251,43 +10263,51 @@ body {
   font-size: 14px; }
 
 .clients-carousel {
-  padding: 20px 0;
+  padding: 60px 0 40px;
   margin: 0 -15px;
   position: relative;
-  background: #F8F8F8; }
+  background: #b3c2bf; }
+  @media (min-width: 576px) {
+    .clients-carousel {
+      padding: 20px 0; } }
+  .clients-carousel .leaf-accent {
+    display: none; }
+    @media (min-width: 576px) {
+      .clients-carousel .leaf-accent {
+        position: absolute;
+        display: block;
+        z-index: 2;
+        right: 0;
+        top: -30vh;
+        width: 300px;
+        transform: translateX(10%); } }
   @media (min-width: 768px) {
     .clients-carousel {
       padding: 32px 0; } }
+  .clients-carousel .images-carousel__col {
+    padding: 50px 0; }
+    @media (min-width: 768px) {
+      .clients-carousel .images-carousel__col {
+        padding: 100px 0 150px; } }
   .clients-carousel .images-carousel {
     position: relative; }
   .clients-carousel .owl-clients {
-    width: calc(100% - 50px);
+    width: calc(100% - 100px);
     margin: auto; }
   .clients-carousel .owl-carousel .owl-item {
-    height: 54px;
+    height: 100px;
     position: relative; }
-  .clients-carousel__title {
-    font-family: Druk Wide Web;
-    line-height: 26px;
-    font-weight: 400;
-    font-size: 18px;
-    padding-left: 1rem;
-    margin-bottom: 20px;
-    display: block; }
-    @media (min-width: 768px) {
-      .clients-carousel__title {
-        font-size: 24px;
-        padding-left: 0;
-        margin-bottom: 0;
-        display: inline-block; } }
+    .clients-carousel .owl-carousel .owl-item img {
+      height: 100%;
+      object-fit: contain; }
   .clients-carousel__nav {
     width: 100%;
     position: absolute;
     z-index: 5;
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
     margin: auto;
     height: 27px;
     display: none; }
@@ -10295,18 +10315,18 @@ body {
       .clients-carousel__nav {
         display: block; } }
   .clients-carousel__nav button {
+    position: absolute;
     background: none;
     border: none;
-    z-index: 1; }
-  .clients-carousel__nav button.owl-prev:nth-child(1),
-  .clients-carousel__nav button.owl-next:nth-child(4) {
-    display: none; }
-  .clients-carousel__nav button.owl-next:nth-child(3) {
-    float: right; }
-  .clients-carousel__nav button:nth-child(2) {
-    transform: rotate(180deg); }
-  .clients-carousel__arrow--left {
-    transform: rotate(180deg); }
+    z-index: 1;
+    height: 30px;
+    width: 20px;
+    line-height: 1; }
+  .clients-carousel .owl-next {
+    right: 0;
+    background: url("../img/arrow-right.png") center/cover; }
+  .clients-carousel .owl-prev {
+    background: url("../img/arrow-left.png") center/cover; }
 
 .images-carousel .owl-carousel .owl-item {
   position: relative; }
@@ -12828,6 +12848,8 @@ select::-ms-expand {
     background: url("/assets/img/section-accents/top-accent-white.png") center bottom/contain no-repeat; }
   .top-accent--secondary:before {
     background: url("/assets/img/section-accents/top-accent-secondary.png") center bottom/contain no-repeat; }
+  .top-accent--powder:before {
+    background: url("/assets/img/section-accents/top-accent-powder.png") center bottom/contain no-repeat; }
 
 .product-card-big--win {
   padding-top: 150px; }
@@ -12848,7 +12870,7 @@ select::-ms-expand {
   padding: 50px 0 100px; }
   @media (min-width: 768px) {
     .instagram {
-      padding-bottom: 50px; } }
+      padding-bottom: 100px; } }
   .instagram .container {
     position: relative; }
   .instagram__title {
@@ -12867,15 +12889,24 @@ select::-ms-expand {
     right: 0;
     width: 50vw;
     height: 50vw;
+    max-width: 180px;
+    max-height: 180px;
     bottom: 0; }
     .instagram__circle-button span {
       transform: rotate(15deg); }
+    @media (min-width: 576px) {
+      .instagram__circle-button {
+        top: 0;
+        bottom: unset;
+        width: 120px;
+        height: 120px;
+        font-size: 20px;
+        z-index: 0; } }
     @media (min-width: 768px) {
       .instagram__circle-button {
-        top: 50px;
-        bottom: unset;
         width: 180px;
         height: 180px;
+        top: 50px;
         font-size: 34px; } }
   .instagram__feed-row {
     margin-top: 50px; }
@@ -14210,9 +14241,6 @@ ol {
       margin-top: 146px; } }
   .footer.top-accent--white:before {
     top: -100px; }
-    @media (min-width: 768px) {
-      .footer.top-accent--white:before {
-        top: -70px; } }
   .footer__network {
     padding: 35px 0; }
   .footer .footer-logo {
