@@ -110,7 +110,8 @@
     "nws/simple-embed-code": "2.3.2",
     "mt/wpcf7-save-to-db": "1.0.1",
     "wpackagist-plugin/classic-editor": "^1.5",
-    "wpackagist-plugin/instagram-feed": "^2.4"
+    "wpackagist-plugin/instagram-feed": "^2.4",
+    "mikefunk/bustersphp": "^1.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.4.2",
