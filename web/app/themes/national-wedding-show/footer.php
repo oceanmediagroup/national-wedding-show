@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-sm-6 footer__logo-col">
-                <a href="<?php echo get_home_url(); ?>"><img data-src="/assets/img/nws-logo-black.png"
+                <a href="<?php echo get_home_url(); ?>"><img data-src="/assets/img/NWS_Logo_Stacked_Black.png"
                         alt="The National Wedding Show Instagram" class="first lazy footer-logo"></a>
             </div>
             <div class="col-lg-3 col-sm-6 footer__nav-col">
@@ -52,7 +52,7 @@
 
 <script src="https://player.vimeo.com/api/player.js"></script>
 
-<script src="/assets/script/app.js?t=1594998632243"></script>
+<script src="/assets/script/app.js?t=1595241845704"></script>
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
