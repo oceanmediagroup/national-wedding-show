@@ -8,13 +8,15 @@
 
 ?>
 <?php if (have_rows('custom_sponsors_logos')) : ?>
-<section class="clients-carousel images-carousel additional-carousel">
+<section class="clients-carousel images-carousel additional-carousel top-accent top-accent--powder">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 col-md-2 pr-0">
-                <span class="clients-carousel__title"><?php echo get_field('custom_sponsors_carousel_title') ?></span>
+            <div class="col-12 text-center">
+                <h2 class="clients-carousel__title t-section-heading"><span
+                        class="t-underline-white--alpha"><?php echo get_field('custom_sponsors_carousel_title') ?></span>
+                </h2>
             </div>
-            <div class="col-12 col-md-10">
+            <div class="col-12 images-carousel__col">
                 <div class="images-carousel">
                     <div class="owl-carousel owl-theme owl-sponsors-additional">
                         <?php if (have_rows('custom_sponsors_logos')) : ?>

@@ -87,11 +87,20 @@
 
   .owl-next {
     right: 0;
-    background: url('../img/arrow-right.png') center / cover;
+    background: url('../../assets/img/arrow-right.png') center / cover;
   }
 
   .owl-prev {
-    background: url('../img/arrow-left.png') center / cover;
+    background: url('../../assets/img/arrow-left.png') center / cover;
   }
 
+}
+
+
+.additional-carousel {
+  .images-carousel__col {
+    @include media-breakpoint-up(md) {
+      padding-bottom: 100px;
+    }
+  }
 }
