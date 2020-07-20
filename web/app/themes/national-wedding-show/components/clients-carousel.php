@@ -6,14 +6,16 @@
  * Time: 09:33
  */ ?>
 
-<section class="clients-carousel images-carousel">
+<section class="clients-carousel images-carousel top-accent top-accent--powder">
+    <img data-src="/assets/img/section-accents/leaf-accent.png" class="lazy leaf-accent" alt="" />
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 col-md-2 pr-0">
-                <span class="clients-carousel__title"><?php echo get_field('clients_carousel_title') ?></span>
+            <div class="col-12 text-center">
+                <h2 class="clients-carousel__title t-section-heading"><span
+                        class="t-underline-white--alpha"><?php echo get_field('clients_carousel_title') ?></span></h2>
             </div>
 
-            <div class="col-12 col-md-10">
+            <div class="col-12 images-carousel__col">
                 <div class="images-carousel">
                     <div class="owl-carousel owl-theme owl-clients">
                         <?php
@@ -22,21 +24,21 @@
                         $carousel = new WP_Query($args);
                         while ($carousel->have_posts()) : $carousel->the_post(); ?>
 
-                            <?php if (get_field('client_carousel_url')) : ?>
+                        <?php if (get_field('client_carousel_url')) : ?>
 
-                                <a href="<?php the_field('client_carousel_url'); ?>" class="image item">
+                        <a href="<?php the_field('client_carousel_url'); ?>" class="image item">
 
-                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="wedding-brand">
+                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="wedding-brand">
 
-                                </a>
+                        </a>
 
-                            <?php else : ?>
+                        <?php else : ?>
 
-                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="wedding-brand" class="image item">
+                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="wedding-brand" class="image item">
 
-                            <?php endif; ?>
+                        <?php endif; ?>
 
-                            <?php
+                        <?php
                         endwhile;
                         ?>
                     </div>

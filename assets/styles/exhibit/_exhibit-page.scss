@@ -47,6 +47,10 @@
   background-size: cover;
   background-position: center center;
 
+  @include media-breakpoint-up(md) {
+    padding-bottom: 100px;
+  }
+
   .container {
     .row {
       margin: 0;

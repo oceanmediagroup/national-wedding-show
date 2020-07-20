@@ -25,5 +25,12 @@
         }
     }
 
+    &--powder {
+        &:before {
+            background: url('/assets/img/section-accents/top-accent-powder.png') center bottom / contain no-repeat;
+
+        }
+    }
+
 
 }

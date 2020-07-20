@@ -2,7 +2,7 @@
     padding: 50px 0 100px;
 
     @include media-breakpoint-up(md) {
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 
     .container {
@@ -53,6 +53,7 @@
             height: 180px;
             top: 50px;
             font-size: 34px;
+            z-index: 2;
         }
 
     }
