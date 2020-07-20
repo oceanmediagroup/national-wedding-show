@@ -13,12 +13,20 @@ var gulp = require('gulp'),
     babelify = require('babelify'),
     es2015 = require('babel-preset-es2015'),
     stage0 = require('babel-preset-stage-0'),
-    source = require('vinyl-source-stream'),
     sourcemaps = require('gulp-sourcemaps');
+    source = require('vinyl-source-stream')
+    bust = require('gulp-buster');
 
 console.timeEnd('Loading plugins');
 
 const THEME_NAME = 'national-wedding-show';
+
+function transformHash(hash) {
+    Object.keys(hash).forEach(function(key) {
+        hash[key] = new Date().getTime().toString()
+    });
+    return hash;
+}
 
 function compileJS(jsFile) {
     return browserify({
@@ -38,6 +46,12 @@ function compileJS(jsFile) {
         }));
 }
 
+function bustJS(jsFile) {
+    gulp.src("./web/assets/script/" + jsFile + ".js")
+        .pipe(bust({transform: transformHash}))
+        .pipe(gulp.dest('./web/assets/'));
+}
+
 function minifyJS(jsFile) {
     gulp.src("./assets/script/" + jsFile + ".js")
         .pipe(uglify({ mangle: false }))
@@ -48,7 +62,6 @@ function minifyJS(jsFile) {
         .pipe(rename(jsFile + '.min.js'))
         .pipe(gulp.dest('./web/assets/script'));
 }
-
 
 function compileSass(scssFile) {
     gulp.src("assets/styles/" + scssFile + ".scss")
@@ -62,9 +75,9 @@ function compileSass(scssFile) {
         .pipe(gulp.dest('web/assets/style'))
         .pipe(minifyCSS({ mangle: false, compress: false, processImport: false }))
         .pipe(rename(scssFile + ".min.css"))
-        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('web/assets/style/'))
-        .pipe(livereload());
+        .pipe(bust({transform: transformHash}))
+        .pipe(gulp.dest('./web/assets/'));
 };
 
 function cacheInFile(fileName) {
@@ -84,7 +97,8 @@ gulp.task('js', function () {
                 reject("Error compiling JS");
             }
         });
-        // console.log(data);
+
+        bustJS('app');
         gulp.start('minifyJS');
     }
 

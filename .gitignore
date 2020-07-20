@@ -47,3 +47,6 @@ web/app/languages/en_GB-e2791ba830489d23043be8650a22a22b.json
 web/app/languages/en_GB-f8f49d9fc4a9cf7d78ec99285417bd9c.json
 web/app/languages/en_GB.mo
 web/app/languages/en_GB.po
+
+# Project data
+.idea/

@@ -52,7 +52,7 @@
 
 <script src="https://player.vimeo.com/api/player.js"></script>
 
-<script src="/assets/script/app.js?t=1595241845704"></script>
+<?php echo get_buster_js() ?>
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 

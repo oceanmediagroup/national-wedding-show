@@ -1,5 +1,7 @@
 <?php
 
+use MikeFunk\BustersPhp\BustersPhp;
+
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
@@ -10,6 +12,31 @@ if ( is_user_logged_in() ) {
 }
 
 add_action( 'wp_head', 'prefix_move_theme_down' );
+
+function get_buster()
+{
+    $config = array(
+        'rootPath'        => '//' . $_SERVER['HTTP_HOST'],
+        'cssTemplate'     => '<link href="{{ROOT_PATH}}/assets/style/{{FILE_NAME}}.css?v={{HASH}}" rel="stylesheet">',
+        'jsTemplate'      => '<script src="{{ROOT_PATH}}/assets/script/{{FILE_NAME}}.js?v={{HASH}}""></script>',
+        'bustersJsonPath' => $_SERVER['DOCUMENT_ROOT'].'/assets/busters.json',
+    );
+
+    return new BustersPhp($config);
+}
+
+function get_buster_js()
+{
+    $bustersPhp = get_buster();
+    return $bustersPhp->js();
+}
+
+function get_buster_css()
+{
+    $bustersPhp = get_buster();
+    return $bustersPhp->css();
+}
+
 function prefix_move_theme_down() {
   if ( is_admin_bar_showing() ) {
     ?>
