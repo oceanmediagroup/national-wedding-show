@@ -5,9 +5,13 @@
  * Date: 02/07/2018
  * Time: 15:09
  */ 
-    $circle = '';
+    $circleLogo = '';
+    $circleImg = '';
     if(get_field('exhibitor_logo_circle')){
-        $circle = 'exhibitor__logo-circle';
+        $circleLogo = 'exhibitor__logo-circle';
+    }
+    if(get_field('exhibitor_img_circle')){
+        $circleImg = 'exhibitor__img-circle';
     }
 
 ?>
@@ -22,17 +26,19 @@
         <div class="exhibitor__wrapper">
             <div class="row h-100">
                 <div class="col-12 col-md">
-                    <div class="exhibitor__image-wrapper">
+                    <div class="exhibitor__images-wrapper">
                         <div class="exhibitor__logo-wrapper">
 
                             <img src="<?php echo get_field('exhibitor_logo')['url'] ?>"
                                 alt="<?php echo get_field('exhibitor_logo')['alt'] ?>"
-                                class="exhibitor__logo <?php echo $circle ?>">
+                                class="exhibitor__logo <?php echo $circleLogo ?>">
                         </div>
-
-                        <img data-src="<?php echo get_field('exhibitor_image')['url'] ?>"
-                            alt="<?php echo get_field('exhibitor_image')['alt'] ?>" class="exhibitor__image lazy">
-
+                        
+                        <div class="exhibitor__image-wrapper <?php echo $circleImg ?>"> 
+      
+                            <img data-src="<?php echo get_field('exhibitor_image')['url'] ?>"
+                                alt="<?php echo get_field('exhibitor_image')['alt'] ?>" class="exhibitor__image lazy">
+                            </div>
 
 
 
