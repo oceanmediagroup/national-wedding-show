@@ -15,6 +15,9 @@ body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+main{
+  overflow-x: hidden;
+}
 
 .header {
   flex: 0 0 auto;
