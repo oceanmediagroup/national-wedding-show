@@ -8,28 +8,27 @@
 
   &__title {
     position: absolute;
-    top: 60px;
+    top: 62px;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    font-family: $baseFont;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-family: 'Druk Wide Web';
     color: $white;
+    font-size: 42px;
+    line-height: 45px;
     z-index: 2;
     text-align: center;
-    // text-transform: uppercase;
-    font-size: 42px;
-    line-height: 1.1;
-    @include xdSpacing(-21);
-    text-shadow: 0 10px 10px rgba($black, 0.38);
+    text-shadow: 0 6px 10px rgba($black, 0.38);
+    text-transform: uppercase;
 
     @include media-breakpoint-up(md) {
-      max-width: 50vw;
-      top: 10vh;
       font-size: 57px;
+      line-height: 45px;
+      top: 100px;
     }
   }
+
 
   .item {
     height: 293px;
