@@ -70,6 +70,25 @@
             "mime_types": ""
         },
         {
+            "key": "field_5f16c2695d0f4",
+            "label": "Exhibitor image- make circle image",
+            "name": "exhibitor_img_circle",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5b5ef12a6828f",
             "label": "Exhibitor title",
             "name": "exhibitor_title",
@@ -146,5 +165,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594908270
+    "modified": 1595327103
 }
