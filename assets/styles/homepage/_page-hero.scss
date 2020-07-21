@@ -1,6 +1,10 @@
 .page-hero {
   position: relative;
-
+  .header-carousel-simple__title {
+      
+      font-family: $baseFont;
+      text-transform: inherit;
+  }
   .header-carousel-simple {
     height: 570px;
 
