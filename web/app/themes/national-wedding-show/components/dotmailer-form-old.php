@@ -148,14 +148,6 @@
         </tr>
         <tr class="w-100 secondary">
             <td>
-                <input class="checkbox" type="checkbox" name="cd_WEDDING_OPT_IN_radio" value="y" required>
-                <span>
-                    * By entering my details, I accept the terms and conditions and opt in to being emailed about The National Wedding Show news and products.
-                </span>
-            </td>
-        </tr>
-        <tr class="w-100 secondary">
-            <td>
                 <input class="checkbox" type="checkbox" name="cd_SISTER_OPT_IN_radio" value="y">
                 <span>
                     Ocean Media Group, organiser of this event, would like to contact you by email with news and offers from our other products confetti.co.uk, <br> Wedding Style collective and wedify. Please tick this box to receive them. View our privacy policy.
