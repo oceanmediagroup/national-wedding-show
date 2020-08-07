@@ -19,20 +19,20 @@
             <input class="text" type="text" name="cd_FIRSTNAME" placeholder="Name"/>
         </div>
         <div class="newsletter-row">
-            <input class="text" type="text" name="YOUREMAIL" placeholder="Email"/>
+            <input class="text" type="text" name="Email" placeholder="Email"/>
         </div>
         <div class="newsletter-row">
-            <input class="text datepicker" id="ENGAGEMENTDATE" type="text" name="ENGAGEMENTDATE" placeholder="Engagement date"/>
+            <input class="text datepicker" id="ENGAGEMENTDATE" type="text" name="cd_ENGAGEMENT_DATE" placeholder="Engagement date"/>
         </div>
         <div class="newsletter-row">
-            <input class="text datepicker" id="WEDDINGDATE" type="text" name="WEDDINGDATE" min="<?php echo date('Y-m-d'); ?>" placeholder="Wedding Date"/>
+            <input class="text datepicker" id="WEDDINGDATE" type="text" name="cd_DATE_OF_WEDDING" min="<?php echo date('Y-m-d'); ?>" placeholder="Wedding Date"/>
         </div>
         <div class="newsletter-row">
             <input class="text" type="text" name="cd_POSTCODE" placeholder="Postcode*"/>
         </div>
         <div class="newsletter-row">
             <div class="select-style">
-                <select class="text" type="text" name="SHOWLOCATION">
+                <select class="text" type="text" name="cd_WHICH_SHOW">
                     <option value="" disabled selected>Which show are you likely to attend</option>
                     <option value="London">London</option>
                     <option value="Manchester">Manchester</option>
@@ -42,7 +42,7 @@
         </div>
         <div class="newsletter-row">
             <div class="select-style">
-                <select class="text" type="text" name="BUDGET">
+                <select class="text" type="text" name="cd_BUDGET">
                     <option value="" disabled selected>Expected wedding budget</option>
                     <option value="0-10000">£0 - £10,000</option>
                     <option value="10000-20000">£10,000 - £20,000</option>
@@ -54,7 +54,7 @@
         </div>
         <div class="newsletter-row">
             <div class="select-style">
-                <select class="text" type="text" name="WEDDINGLOCATION">
+                <select class="text" type="text" name="cd_WEDDING_LOCATION">
                     <option value="" disabled selected>Expected wedding location</option>
                     <option value="Scotland">Scotland</option>
                     <option value="Northern Ireland">Northern Ireland</option>
@@ -74,7 +74,7 @@
         </div>
         <div class="newsletter-row">
             <div class="select-style">
-                <select class="text" type="text" name="YOURGENDER">
+                <select class="text" type="text" name="cd_GENDER">
                     <option value="" disabled selected>Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -86,7 +86,7 @@
         </div>
         <div class="newsletter-row">
             <div class="select-style">
-                <select class="text" type="text" name="PARTNERGENDER">
+                <select class="text" type="text" name="cd_PARTNER_GENDER">
                     <option value="" disabled selected>Partner gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -97,7 +97,7 @@
             </div>
         </div>
         <div class="newsletter-row checkbox-container">
-            <input class="checkbox" type="checkbox" name="CHECKBOX-AGREE" value="y">
+            <input class="checkbox" type="checkbox" name="cd_TERMS_OPT_IN_radio" value="y">
             <span>
                 * By entering my details, I accept the terms and conditions and opt in to being emailed about Ocean Media Group's wedding products which include The National Wedding Shows & Confetti.
             </span>

@@ -28,7 +28,7 @@
                 Email
             </td>
             <td>
-                <input type="email" name="YOUREMAIL">
+                <input type="email" name="Email">
             </td>
         </tr>
 
@@ -37,7 +37,7 @@
                 Engagement date
             </td>
             <td>
-                <input class="text" type="date" name="ENGAGEMENTDATE"/>
+                <input class="text" type="date" name="cd_ENGAGEMENT_DATE"/>
             </td>
         </tr>
         <tr>
@@ -45,7 +45,7 @@
                 Wedding Date
             </td>
             <td>
-                <input class="text" type="date" name="WEDDINGDATE" min="<?php echo date('Y-m-d'); ?>" />
+                <input class="text" type="date" name="cd_DATE_OF_WEDDING" min="<?php echo date('Y-m-d'); ?>" />
             </td>
         </tr>
 
@@ -63,7 +63,7 @@
             </td>
             <td>
                 <div class="select-style">
-                    <select class="text" type="text" name="SHOWLOCATION" >
+                    <select class="text" type="text" name="cd_WHICH_SHOW" >
                         <option value=""></option>
                         <option value="London">London</option>
                         <option value="Manchester">Manchester</option>
@@ -76,7 +76,7 @@
             <td>Budget</td>
             <td>
                 <div class="select-style">
-                    <select class="text" type="text" name="BUDGET">
+                    <select class="text" type="text" name="cd_WD_BUDGET">
                         <option value=""></option>
                         <option value="0-10000">£0 - £10,000</option>
                         <option value="10000-20000">£10,000 - £20,000</option>
@@ -93,7 +93,7 @@
             </td>
             <td>
                 <div class="select-style">
-                    <select class="text" type="text" name="WEDDINGLOCATION">
+                    <select class="text" type="text" name="cd_LOCATION_OF_WEDDING">
                         <option value=""></option>
                         <option value="All UK Regions">All UK Regions </option>
                         <option value="Option International">Option ‘International’</option>
@@ -108,7 +108,7 @@
             </td>
             <td>
                 <div class="select-style">
-                    <select class="text" type="text" name="YOURGENDER">
+                    <select class="text" type="text" name="cd_GENDER">
                         <option value=""></option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -125,7 +125,7 @@
             </td>
             <td>
                 <div class="select-style">
-                    <select class="text" type="text" name="PARTNERGENDER">
+                    <select class="text" type="text" name="cd_PARTNER_GENDER">
                         <option value=""></option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -164,7 +164,7 @@
         </tr>
         <tr class="w-100 secondary">
             <td>
-                <input class="checkbox" type="checkbox" name="CHECKBOX-AGREE" value="y">
+                <input class="checkbox" type="checkbox" name="cd_TERMS_OPT_IN_radio" value="y">
                 <span>
                     * By entering my details, I accept the terms and conditions and opt in to being emailed about Ocean Media Group's wedding products which include The National Wedding Shows & Confetti.
                 </span>
@@ -224,4 +224,3 @@
         console.log('Captcha error (-old)')
     }
 </script>
-gt
