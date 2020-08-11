@@ -1,5 +1,6 @@
 console.time('Loading plugins');
 
+require('dotenv').config();
 var gulp = require('gulp'),
     browserify = require('browserify'),
     rename = require('gulp-rename'),
@@ -13,9 +14,10 @@ var gulp = require('gulp'),
     babelify = require('babelify'),
     es2015 = require('babel-preset-es2015'),
     stage0 = require('babel-preset-stage-0'),
-    sourcemaps = require('gulp-sourcemaps');
-    source = require('vinyl-source-stream')
-    bust = require('gulp-buster');
+    sourcemaps = require('gulp-sourcemaps'),
+    source = require('vinyl-source-stream'),
+    bust = require('gulp-buster'),
+    gutil = require('gulp-util');
 
 console.timeEnd('Loading plugins');
 
@@ -23,7 +25,7 @@ const THEME_NAME = 'national-wedding-show';
 
 function transformHash(hash) {
     Object.keys(hash).forEach(function(key) {
-        hash[key] = new Date().getTime().toString()
+        hash[key] = new Date().getTime().toString();
     });
     return hash;
 }
@@ -39,7 +41,7 @@ function compileJS(jsFile) {
     })
         .bundle()
         .pipe(source(jsFile + '.js'))
-        .pipe(gulp.dest("./web/assets/script"))
+        .pipe(gulp.dest('./web/assets/script'))
         .on('error', notify.onError({
             title: 'error',
             message: '<%= error.message %>'
@@ -47,13 +49,13 @@ function compileJS(jsFile) {
 }
 
 function bustJS(jsFile) {
-    gulp.src("./web/assets/script/" + jsFile + ".js")
-        .pipe(bust({transform: transformHash}))
+    gulp.src('./web/assets/script/' + jsFile + '.js')
+        .pipe(process.env.WP_ENV === 'production' ? bust({transform: transformHash}): gutil.noop())
         .pipe(gulp.dest('./web/assets/'));
 }
 
 function minifyJS(jsFile) {
-    gulp.src("./assets/script/" + jsFile + ".js")
+    gulp.src('./assets/script/' + jsFile + '.js')
         .pipe(uglify({ mangle: false }))
         .on('error', function (err) {
             console.error(err);
@@ -64,56 +66,42 @@ function minifyJS(jsFile) {
 }
 
 function compileSass(scssFile) {
-    gulp.src("assets/styles/" + scssFile + ".scss")
+    gulp.src('assets/styles/' + scssFile + '.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
         .on('error', notify.onError({
             title: 'sass',
             message: '<%= error.message %>'
         }))
-        .pipe(rename(scssFile + ".css"))
+        .pipe(rename(scssFile + '.css'))
         .pipe(gulp.dest('web/assets/style'))
         .pipe(minifyCSS({ mangle: false, compress: false, processImport: false }))
-        .pipe(rename(scssFile + ".min.css"))
+        .pipe(rename(scssFile + '.min.css'))
         .pipe(gulp.dest('web/assets/style/'))
-        .pipe(bust({transform: transformHash}))
+        .pipe(process.env.WP_ENV === 'production' ? bust({transform: transformHash}): gutil.noop())
         .pipe(gulp.dest('./web/assets/'));
-};
-
-function cacheInFile(fileName) {
-    gulp.src("web/app/themes/" + THEME_NAME + "/" + fileName + ".php")
-        .pipe(cachebust({
-            type: 'timestamp'
-        }))
-        .pipe(gulp.dest("web/app/themes/" + THEME_NAME + "/"));
-};
+}
 
 gulp.task('js', function () {
     const executeJS = async () => {
-        const data = await new Promise((resolve, reject) => {
+         await new Promise((resolve, reject) => {
             if (compileJS('app')) {
-                resolve("JS compiled");
+                resolve('JS compiled');
             } else {
-                reject("Error compiling JS");
+                reject('Error compiling JS');
             }
         });
 
         bustJS('app');
         gulp.start('minifyJS');
-    }
+    };
 
     executeJS();
-
-    // Cache after change in JS
-    cacheInFile('footer');
 });
 
 gulp.task('sass', function () {
     compileSass('critical');
     compileSass('main');
-
-    // Cache after change in SASS
-    cacheInFile('header');
 });
 
 gulp.task('minifyJS', function () {
@@ -129,12 +117,9 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('watch', function () {
-    /* MAVEN GLOBAL*/
     livereload.listen();
     gulp.watch('assets/scripts/*.js', ['js']).on('change', livereload.changed);
     gulp.watch('assets/scripts/*/*.js', ['js']).on('change', livereload.changed);
-    // gulp.watch('assets/styles/*/*.scss', ['sass']).on('change', livereload.changed);
-    // gulp.watch('assets/styles/*.scss', ['sass']).on('change', livereload.changed);
     gulp.watch('assets/styles/**/*.scss', ['sass']);
 });
 
