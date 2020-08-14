@@ -40,10 +40,12 @@ function get_buster_css()
 function prefix_move_theme_down() {
   if ( is_admin_bar_showing() ) {
     ?>
-    <style type="text/css">
-    #headerMenu { margin-top: 28px; }
-    </style>
-    <?php
+<style type="text/css">
+    #headerMenu {
+        margin-top: 28px;
+    }
+</style>
+<?php
   }
 }
 
@@ -264,14 +266,19 @@ function register_menus()
 
 add_action('init', 'register_menus');
 
-// Add class to footer menu <a> elements
-
-function add_menuclass($ulclass)
+add_filter( 'nav_menu_link_attributes', 'location_menu_item_attr', 10, 3 );
+function location_menu_item_attr( $attrs, $item, $args )
 {
-    return preg_replace('/<a /', '<a class="footer__link"', $ulclass);
+  $menu_target = 'locations';
+  if ($item->post_name == $menu_target) {
+        $attrs['data-toggle'] = 'collapse';
+        $attrs['data-target'] = '#locationsCollapse';
+        $attrs['id'] = 'locationsMenuDropdown';
+        $attrs['class'] = 'header-menu__link header-menu__link--dropdown';
+  }
+  return $attrs;
 }
 
-/* add_filter('wp_nav_menu','add_menuclass'); */
 
 // Add page slug to body class
 function add_slug_to_body_class($classes)

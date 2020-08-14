@@ -226,3 +226,39 @@
   }
 
 }
+
+.header-main__nav {
+  display: flex;
+  margin: 0;
+
+  li {}
+
+  a {
+
+    padding: 0 10px;
+    top: 0px !important;
+    font-family: 'Druk Wide Web';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+
+    @media (max-width: 1317.98px) {
+      font-size: 11px;
+    }
+
+    @media (max-width: 1251.98px) {
+      font-size: 10px;
+    }
+
+    @media (max-width: 1185.98px) {
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+    color: black;
+    line-height: $navbar-height;
+    display: inline-block;
+    @extend %link-hover;
+
+  }
+}

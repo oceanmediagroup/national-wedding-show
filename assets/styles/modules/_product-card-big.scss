@@ -53,3 +53,19 @@ $product-card-height: 375px;
     display: inline-block;
   }
 }
+
+
+.front-page {
+  .product-card-big {
+    &:before {
+      display: none;
+    }
+
+    @include media-breakpoint-up(md) {
+      &:before {
+
+        display: block;
+      }
+    }
+  }
+}
