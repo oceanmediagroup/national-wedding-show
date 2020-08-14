@@ -30,17 +30,13 @@
 
 
                 <div class="col col--right">
-
-                    <a data-toggle="collapse" id="locationsMenuDropdown" data-target="#locationsCollapse"
-                        class="header-menu__link header-menu__link--dropdown">Locations</a>
-                    <a href="<?php echo get_home_url(null,'/whats-on/', null); ?>" class="header-menu__link">What's
-                        On</a>
-                    <a href="<?php echo get_home_url(null,'/exhibitor-list/', null); ?>"
-                        class="header-menu__link">Exhibitors</a>
-                    <!-- <a href="<?php echo get_home_url(null,'/competitions/', null); ?>"
-                        class="header-menu__link">Competitions</a> -->
-                    <a href="<?php echo get_home_url(null,'/exhibit/', null); ?>" class="header-menu__link">Exhibit</a>
-
+                    <?php
+                    wp_nav_menu([
+                        'theme_location' => 'main-menu',
+                        'menu_class'    => 'header-main__nav',
+                        'depth'         => 1,
+                        ]); 
+                    ?>
                     <a href="https://weddingshow.seetickets.com"
                         class="button--black header-menu__link book-bttn">BUY<br />TICKETS</a>
                     <div class="btn-group">

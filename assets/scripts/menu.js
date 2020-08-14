@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $('.header__menu-toggler').click(function () {
         $('.header__menu-toggler').toggleClass('opened');
         $('#mainMenu').toggleClass('main-menu--visible');
@@ -7,27 +6,17 @@ $(document).ready(function () {
 
         console.log("toggling");
     });
-    
-    
-    $('#locationsMenuDropdown').mouseenter(function () {
+
+
+    $('#locationsMenuDropdown.header-menu__link--dropdown').mouseenter(function () {
+
         $('#locationsCollapse').collapse('toggle');
     });
-
     $('.header-menu').mouseleave(function () {
         if ($('#locationsCollapse').hasClass('show')) {
             $('#locationsCollapse').collapse('toggle');
         }
     })
-
-
-    /* $('#locationLink').click(function () {
-        $('.header-menu__locations-tab').toggleClass('visible');
-    });
- */
-    /* $('#locationLink').mouseleave(function () {
-        $('.header-menu__locations-tab').toggleClass('visible');
-    }); */
-
 });
 
 function toggle() {
@@ -47,16 +36,7 @@ $(document).mouseup(function (e) {
     }
 });
 
-
-//adding class to <a> element in footer nav
-
-var links = document.querySelectorAll('.footer__link-container a');
-[].forEach.call(links, function (item) {
-    item.classList.add('footer__link');
-});
-
 var subMenu = document.querySelectorAll('.main-menu__link ul');
 [].forEach.call(subMenu, function (item) {
     item.classList.add('main-menu__secondary-links');
 });
-

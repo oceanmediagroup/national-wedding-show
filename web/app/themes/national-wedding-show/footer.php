@@ -12,15 +12,14 @@
                         alt="The National Wedding Show Instagram" class="first lazy footer-logo"></a>
             </div>
             <div class="col-lg-3 col-sm-6 footer__nav-col">
-                <a href="<?php echo get_home_url(null, '/contact/', null); ?>" class="footer-link">CONTACT</a>
-                <a href="<?php echo get_home_url(null, '/insurance/', null); ?>" class="footer-link">WEDDING
-                    INSURANCE</a>
-                <a href="<?php echo get_home_url(null, '/cookie-policy/', null); ?>" class="footer-link">COOKIE
-                    POLICY</a>
-                <a href="<?php echo get_home_url(null, '/privacy/', null); ?>" class="footer-link">PRIVACY</a>
-                <a href="https://www.oceanmedia.co.uk/terms-and-conditions" target="blank" class="footer-link">TERMS &
-                    CONDITIONS</a>
-                <a href="<?php echo get_home_url(null, '/blog/', null); ?>" class="footer-link">BLOG</a>
+                <?php
+                wp_nav_menu([
+                    'container'     => false,
+                    'depth'         => 1,
+                    'theme_location' => 'footer-menu',
+                    'menu_class'    => 'footer__nav'   
+                    ]); 
+                ?>
             </div>
             <div class="col-lg-3 col-sm-6 footer__follow-us">
                 <h6 class="footer-link">FOLLOW US</h6>
