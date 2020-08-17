@@ -227,20 +227,28 @@
 
 }
 
+.header-menu__nav-wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+
 .header-main__nav {
   display: flex;
   margin: 0;
 
-  li {}
+  li {
+    display: flex;
+  }
 
   a {
 
     padding: 0 10px;
-    top: 0px !important;
     font-family: 'Druk Wide Web';
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 12px;
+    text-align: center;
+    line-height: 1.5;
 
     @media (max-width: 1317.98px) {
       font-size: 11px;
@@ -250,13 +258,26 @@
       font-size: 10px;
     }
 
-    @media (max-width: 1185.98px) {
-      font-size: 9px;
+
+    @media (min-width: 1000px) {
+      font-size: 10px;
       letter-spacing: 1px;
     }
 
+    @media (min-width: 1300px) {
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    @media (min-width: 1600px) {
+      letter-spacing: 2px;
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1024px) {
+      font-size: 9px;
+    }
+
     color: black;
-    line-height: $navbar-height;
     display: inline-block;
     @extend %link-hover;
 
