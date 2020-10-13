@@ -10,24 +10,30 @@ $black: #000000;
 
 $accent-color: #FFE18C;
 $primary: #e39b85;
-$primary-dark: #C87169;
+$primary-dark: #E1859D;
 $brown: #40261C;
 
+// $coral: #ebaa83;
+$coral: #fcdbe1;
 
-$coral: #ebaa83;
-$blush: #c97169;
+// $blush: #c97169;
+$blush: #E1859D;
+$rose: #E1859D;
+
+// $powder: #b3c2bf;
+$powder: #68bcb3;
+
 // $sand: #f5e9e1;
-$powder: #b3c2bf;
+$sand: #f5e9e1;
+$secondary: #fdcbb9;
 
 
-$secondary: #f5e9e1;
-
-
-$underlines-colors: (coral: #ebaa83,
+$underlines-colors: (coral: #fcdbe1,
     blush: #c97169,
+    rose: #E1859D,
     powder: #b3c2bf,
     white: #fff,
-    secondary: #f5e9e1);
+    secondary: #fdcbb9);
 
 @each $color,
 $bgcolor in $underlines-colors {

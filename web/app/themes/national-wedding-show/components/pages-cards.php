@@ -13,12 +13,12 @@
             <div class="owl-carousel owl-theme owl-pages-cards">
 
                 <?php if (have_rows('pages_cards')):
-                    $color = 0;  
-                    
+                    $color = 0;
+
                     while (have_rows('pages_cards')) : the_row(); ?>
 
                 <?php
-         
+
                         $colors = array('blush', 'powder', 'coral');
 
                         $img = get_sub_field('card_image', $post->ID);
@@ -48,7 +48,7 @@
                         </a>
                     </div>
                 </div>
-                <?php 
+                <?php
                     if($color == count($colors)){
                         $color = 0;
                     }else{
