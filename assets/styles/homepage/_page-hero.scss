@@ -1,7 +1,7 @@
 .page-hero {
   position: relative;
   .header-carousel-simple__title {
-      
+
       font-family: $baseFont;
       text-transform: inherit;
   }
@@ -134,7 +134,7 @@
 
     &__card--highlighted {
       display: none;
-      background-color: rgba($primary, 0.9);
+      background-color: rgba($primary-dark, 0.9);
 
       @include media-breakpoint-up(md) {
         display: flex;
