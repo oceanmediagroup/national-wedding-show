@@ -1,7 +1,7 @@
 <section class="featured-pages sds">
     <div class="container">
         <div class="row whats-featured__title-row justify-content-center">
-            <h4 class="whats-featured__title t-section-heading"><span class="t-underline-coral--alpha">What's On</span>
+            <h4 class="whats-featured__title t-section-heading"><span class="t-underline-rose--alpha">What's On</span>
             </h4>
         </div>
         <div class="featured-pages__cards grid justify-content-between" id="featuredPagesGrid">
