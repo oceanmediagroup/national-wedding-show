@@ -52,7 +52,7 @@
                 <div class="col-12 col-md">
                     <div class="exhibitor__content">
                         <h3 class="exhibitor__title t-section-heading">
-                            <span class="t-underline-coral--alpha"><?php echo get_field('exhibitor_title') ?></span>
+                            <span class="t-underline-powder--alpha"><?php echo get_field('exhibitor_title') ?></span>
                         </h3>
                         <span class="exhibitor__text t-paragraph d-block">
                             <?php echo get_field('exhibitor_text') ?>

@@ -236,6 +236,22 @@
     }
   }
 
+  &--rose {
+    background: $rose;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &--secondary {
+    background: $secondary;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
   &--powder {
     background: $powder;
 
