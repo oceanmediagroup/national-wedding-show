@@ -3,9 +3,11 @@
         <div class="row">
             <div class="col-12">
                 <?php if (get_post_type() !== "competitions"): ?>
-                    <h2 class="page-description-big__title"><?php echo get_field('page_description_title'); ?></h2>
+                    <h2 class="page-description-big__title">
+                      <span class="t-underline-powder--alpha"><?php echo get_field('page_description_title'); ?></span></h2>
                 <?php else: ?>
-                    <h1 class="page-description-big__title"><?php echo get_field('page_description_title'); ?></h1>
+                    <h1 class="page-description-big__title">
+                      <span class="t-underline-powder--alpha"><?php echo get_field('page_description_title'); ?></span></h1>
                 <?php endif; ?>
             </div>
             <div class="col-md-12">
