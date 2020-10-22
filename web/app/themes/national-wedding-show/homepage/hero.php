@@ -26,7 +26,7 @@
                         ?>
 
 
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 locations__custom">
                     <a class="locations__card" href="<?php echo $url ?>">
                         <div class="locations____content-wrapper ">
 
