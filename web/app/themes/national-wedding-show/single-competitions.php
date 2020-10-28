@@ -25,11 +25,13 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="page-description-big__title">
+                  <span class="t-underline-powder--alpha">
                     <?php if (get_field('page_title_h1')):
                         echo get_field('page_title_h1');
                     else:
                         the_title();
                     endif; ?>
+                  </span>
                 </h1>
             </div>
             <div class="col-md-8">
@@ -106,9 +108,11 @@
             <div class="newsletter-modal">
                 <div class="row">
                     <h5 class="modal-title text-center" id="newsletterTitle">
+                      <span class="t-underline-powder--alpha">
                         Sign up to our newsletter and be in with a chance of winning a £5,000 shopping spree at the
                         shows!
                         Plus get access to exclusive show news and offers! Register your details below:
+                      </span>
                     </h5>
 
                     <?php get_template_part('components/dotmailer-form-old') ?>
