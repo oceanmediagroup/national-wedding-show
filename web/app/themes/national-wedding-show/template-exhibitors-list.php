@@ -11,6 +11,8 @@
 
     <?php get_template_part('components/breadcrumbs'); ?>
 
+    <?php get_template_part('content/page-description') ?>
+
     <?php get_template_part('components/alphabet-filter'); ?>
 
     <?php get_template_part('components/exhibitors-list'); ?>

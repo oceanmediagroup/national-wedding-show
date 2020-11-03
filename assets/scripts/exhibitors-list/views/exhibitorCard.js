@@ -80,7 +80,7 @@ const exhibitorCard = (exhibitor, itsCopy, getLetter) => {
                                 ${exhibitedAt}
                         </div>
                         <div class="col-7 col-md-12 text-right card-button">
-                            <a href="/exhibitor-list/${exhibitor['0'].id}/${exhibitor['0'].name.toString().split(' ').filter(n => n).join('-').toLowerCase()}/" class="button--light-coral">VIEW PROFILE</a>
+                            <a href="/exhibitor-list/${exhibitor['0'].id}/${exhibitor['0'].name.toString().split(' ').filter(n => n).join('-').toLowerCase()}/" class="button--light-rose">VIEW PROFILE</a>
                         </div>
                         </div>
                     </div>

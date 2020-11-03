@@ -69,7 +69,7 @@
     margin-top: 15px;
     text-transform: uppercase;
   }
-
+  &--light-rose,
   &--light-coral,
   &--light-gold {
     padding: 8px 18px;
@@ -85,6 +85,27 @@
       padding: 10px 14px 7px;
     }
   }
+
+  &--light-rose {
+    border: 1px solid $rose;
+    color: $white;
+    transition: 0.2s ease-in-out;
+    background-color: $rose;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      background: transparent;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: $rose;
+      background-color: $white;
+      border: 1px solid $white;
+    }
+  }
+
+
 
   &--light-coral {
     border: 1px solid $primary;
