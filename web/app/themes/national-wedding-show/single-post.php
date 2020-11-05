@@ -2,7 +2,7 @@
 
 <?php get_template_part('components/image-header') ?>
 
-<section class="breadcrumbs">
+<section class="breadcrumbs top-accent top-accent--white">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -29,7 +29,7 @@
     <div class="container">
         <div class="row mt-5 mb-5">
 
-            <div class="col-lg-8 news-content">
+            <div class="col-lg-12 news-content">
                 <span class="post-card__category mt-2 d-inline-block d-md-none"><?php $category_name = get_the_category();
                     echo $category_name[0]->name; ?></span>
                 <h1 class="title"><?php the_title(); ?></h1>
@@ -72,7 +72,7 @@
                 <a href="/inspiration" class="cta-link d-inline-block mt-3">BACK TO BROWSE</a>
             </div>
 
-            <?php get_template_part('components/filter-section') ?>
+            <?php //get_template_part('components/filter-section') ?>
         </div>
     </div>
 
@@ -89,5 +89,3 @@ endif; ?>
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
-
-

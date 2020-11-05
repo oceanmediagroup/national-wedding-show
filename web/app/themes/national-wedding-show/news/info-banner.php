@@ -6,7 +6,8 @@
  * Time: 15:38
  */ ?>
 
-<section class="info-banner" style="background-color: <?php echo get_field('ribbon_color'); ?>">
+<section class="info-banner" style="margin: 131px 0px 121px; background-color: <?php echo get_field('ribbon_color'); ?>">
+  <img data-src="/assets/img/section-accents/confetti.png" class="lazy confetti-accent" alt="" />
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="col-12 col-md col-xl">
@@ -16,11 +17,11 @@
             </div>
             <div class="col-12 col-md-3 col-xl-2">
                 <?php
-                $button = get_field('cta_button', 33); ?>
+                $button = get_field('cta_button'); ?>
 
                 <a href="<?php echo $button['external_link_checkbox'] ? $button['cta_link_external'] : $button['cta_link_internal']; ?>"
-                   class="info-banner__button button--light-gold button--white-mobile w-100">
-                    <?php echo $button['cta_title'] ?>
+                   class="info-banner__button button--circle">
+                    <?php echo $button['cta_title']; ?>
                 </a>
 
             </div>
