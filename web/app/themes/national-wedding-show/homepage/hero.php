@@ -57,7 +57,7 @@
                 <?php endwhile;
                 endif; ?>
 
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 locations__custom">
                     <?php $button = get_field('highlighted_tab')['tab_link_cta_button']; ?>
 
                     <a class="locations__card locations__card--highlighted"

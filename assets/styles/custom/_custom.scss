@@ -215,6 +215,10 @@ ol {
 //   background-color: #FA665B;
 //   border: 1px solid #FA665B;
 // }
+.contact-form form input.wpcf7-submit {
+  background-color: $rose;
+  color: $white;
+}
 
 .button--bg-coral-bold:hover {
   color: #FA665B;
