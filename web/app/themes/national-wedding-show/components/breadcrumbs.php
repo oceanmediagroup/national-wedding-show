@@ -6,7 +6,7 @@
  * Time: 15:18
  */ ?>
 
-<section class="breadcrumbs">
+<section class="breadcrumbs top-accent top-accent--white">
     <div class="container">
         <div class="row">
             <div class="col">

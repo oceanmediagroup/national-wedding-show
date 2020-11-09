@@ -11,7 +11,7 @@
 
 <div class="container-gold">
 
-    <section class="breadcrumbs">
+    <section class="breadcrumbs top-accent top-accent--white">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -26,6 +26,8 @@
             </div>
         </div>
     </section>
+
+      <?php get_template_part('components/product-cards') ?>
 
     <?php get_template_part('content/page-locations-description') ?>
 </div>
