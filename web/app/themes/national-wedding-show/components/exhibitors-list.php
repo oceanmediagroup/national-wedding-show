@@ -24,7 +24,7 @@
                 <div class="exhibitors-list__filter" id="categoriesFilters">
                 </div>
 
-                <div class="button--light-coral light-weight" id="resetFilters">RESET OPTIONS</div>
+                <div class="button--light-rose light-weight" id="resetFilters">RESET OPTIONS</div>
 
             </div>
 

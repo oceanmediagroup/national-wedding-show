@@ -85,6 +85,17 @@
     cursor: pointer;
   }
 
+  .button--light-rose.light-weight {
+    background-color: $rose;
+    cursor: pointer;
+
+    &:hover {
+      border:$white;
+      background: $white;
+    }
+
+  }
+
   &__letter {
     color: $primary;
     font-family: Helvetica Neue;
