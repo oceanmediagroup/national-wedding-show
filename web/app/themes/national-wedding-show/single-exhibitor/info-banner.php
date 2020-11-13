@@ -26,13 +26,6 @@ $exhibit_page_id = '33';
                     <?php if ($button['link_in_new_tab']) echo "target='_blank'" ?>>
                     <?php echo $button['cta_title'] ?>
                 </a>
-
-              <!--  <a href="<?php //echo $button['external_link_checkbox'] ? $button['cta_link_external'] : $button['cta_link_internal']; ?>"
-                   class="info-banner__button button--light-gold button--white-mobile w-100" -->
-                    <!-- <?php //if ($button['link_in_new_tab']) echo "target='_blank'" ?>>
-                    <?php //echo $button['cta_title'] ?>
-                </a> -->
-
             </div>
         </div>
     </div>
