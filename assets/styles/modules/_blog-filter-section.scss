@@ -1,7 +1,12 @@
 .filter-section {
+  display: flex;
+   @media screen and (max-width: 992px) {
+     display: list-item;
+     list-style: none;
+  }
   & > p {
     text-align: right;
-    color: $gray-dark;
+    color: $black;
     font-size: 14px;
   }
 
@@ -150,4 +155,4 @@
       background-color: #FA8371;
     }
   }
-} 
+}

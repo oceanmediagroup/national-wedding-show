@@ -30,7 +30,7 @@
 
         <?php get_template_part('components/header-carousel-simple') ?>
 
-        <section class="breadcrumbs">
+        <section class="breadcrumbs top-accent top-accent--white">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -51,12 +51,21 @@
         <section class="blog">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 mt-5">
+                    <div class="col-lg-12 mt-5">
                         <h2 class="title"><?php the_field('ln_title'); ?></h2>
                         <?php the_field('ln_content'); ?>
+
+                        <div class="filter-section-custom">
+                          <?php get_template_part('components/filter-section') ?>
+                        </div>
                     </div>
 
-                    <div class="col-lg-8 news-content">
+                    <!-- Move Filter to top -->
+
+
+
+
+                    <div class="col-lg-12 news-content">
                         <div class="row posts-list">
                         <?php
                             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -79,7 +88,7 @@
                             if ($loop->have_posts()):
                                 while ($loop->have_posts()) : $loop->the_post(); ?>
 
-                                    <div class="grid-item news post post-card col-lg-6 mb-4" data-post-views="<?php echo $count = get_post_meta($post->ID, 'post_views_count', true); ?>">
+                                    <div class="grid-item news post post-card col-lg-4 mb-4" data-post-views="<?php echo $count = get_post_meta($post->ID, 'post_views_count', true); ?>">
                                         <a href="<?php the_permalink(); ?>">
                                             <div class="post-card__wrapper">
                                                 <div class="post-card__img-wrapper lazy"
@@ -118,7 +127,7 @@
                         </div>
                     </div>
 
-                    <?php get_template_part('components/filter-section') ?>
+
 
                 </div>
             </div>

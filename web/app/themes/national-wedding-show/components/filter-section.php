@@ -5,9 +5,10 @@ if (isset($_GET['sort_by']) && $_GET['sort_by'] == 'views') {
 }
 ?>
 
-<div class="col-lg-4 filter-section">
+<div class="filter-section">
+
     <?php if (!is_single()) : ?>
-        <div class="blog-sort select-block">
+        <div class="col-lg-4 blog-sort select-block">
             <p>Sort by <span class="select-wrapper">
                     <select name="sort_by" onchange="window.location.href=this.value">
                         <?php if($sort_by == 'views') : ?>
@@ -23,7 +24,7 @@ if (isset($_GET['sort_by']) && $_GET['sort_by'] == 'views') {
         </div>
     <?php endif; ?>
 
-    <div class="select-block select-archives">
+    <div class="col-lg-4 select-block select-archives">
         <a href="" class="toogle-button mb-3">Category</a>
         <ul>
             <?php
@@ -62,7 +63,7 @@ if (isset($_GET['sort_by']) && $_GET['sort_by'] == 'views') {
         'order' => 'DESC',
         'post_type' => 'post'
     ); ?>
-    <div class="select-block select-archives">
+    <div class="col-lg-4 select-block select-archives">
         <a href="" class="toogle-button mb-3">Archive</a>
         <ul>
             <?php wp_get_archives($arch_args); ?>
