@@ -46,6 +46,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  background-position-y: -131px;
 
   @include media-breakpoint-up(md) {
     padding-bottom: 100px;
