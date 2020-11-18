@@ -35,6 +35,11 @@
     line-height: 27px;
     text-align: left;
     color: $black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
   }
 
   &__footer {
