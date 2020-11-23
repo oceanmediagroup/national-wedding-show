@@ -27,9 +27,10 @@
         </div>
     </section>
 
-      <?php get_template_part('components/product-cards') ?>
 
-    <?php get_template_part('content/page-locations-description') ?>
+      <?php  get_template_part('components/product-cards') ?>
+
+
 </div>
 
 <?php get_template_part('content/whats-featured') ?>
