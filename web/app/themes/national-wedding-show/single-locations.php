@@ -28,7 +28,7 @@
     </section>
 
 
-      <?php  get_template_part('components/product-cards') ?>
+      <?php get_template_part('components/product-cards-custom') ?>
 
 
 </div>
