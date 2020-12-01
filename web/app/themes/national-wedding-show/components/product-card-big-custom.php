@@ -1,10 +1,3 @@
-<?php
-/**
- * Created by Atom.
- * User: Vinnie
- * Date: 27/11/2020
- * Time: 12:47
- */ ?>
 <section class="product-card-big ">
     <?php
     $img = get_field('product_card_image');
