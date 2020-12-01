@@ -1,19 +1,6 @@
 <?php
-/**
- * Created by Atom.
- * User: Vinnie
- * Date: 26/11/2020
- * Time: 21:50
- */
-    $circleLogo = '';
     $circleImg = '';
-    if(get_field('exhibitor_logo_circle')){
-        $circleLogo = 'exhibitor__logo-circle';
-    }
-    if(get_field('image_make_circle')){
-        $circleImg = 'about__img-circle';
-    }
-
+    $circleImg = (get_field('image_make_circle') ? 'about__img-circle' : ''
 ?>
 
 
