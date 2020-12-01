@@ -1,19 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dominika
- * Date: 02/07/2018
- * Time: 15:09
- */
-    $circleLogo = '';
-    $circleImg = '';
-    if(get_field('exhibitor_logo_circle')){
-        $circleLogo = 'exhibitor__logo-circle';
-    }
-    if(get_field('exhibitor_img_circle')){
-        $circleImg = 'exhibitor__img-circle';
-    }
-
+    $circleImg = '';   
+    $circleImg = (get_field('exhibitor_img_circle') ? 'exhibitor__img-circle' : ''
 ?>
 
 
