@@ -1,10 +1,7 @@
 <?php
-    $circleImg = '';   
-    $circleImg = (get_field('exhibitor_img_circle') ? 'exhibitor__img-circle' : ''
+    $getCircleImage = get_field('exhibitor_img_circle');
+    $circleImg = $getCircleImage ? 'exhibitor__img-circle' : '';
 ?>
-
-
-
 
 <section class="exhibitor-of-the-week" style="background:#ffffff">
     <div class="container">
@@ -24,9 +21,6 @@
                             <img data-src="<?php echo get_field('exhibitor_image')['url'] ?>"
                                 alt="<?php echo get_field('exhibitor_image')['alt'] ?>" class="exhibitor__image lazy">
                             </div>
-
-
-
 
                     </div>
                 </div>
