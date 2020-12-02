@@ -1,6 +1,6 @@
 <?php
-    $circleImg = '';
-    $circleImg = (get_field('image_make_circle') ? 'about__img-circle' : ''
+    $getCircleImage = get_field('image_make_circle');
+    $circleImg = $getCircleImage ? 'about__img-circle' : '';
 ?>
 
 
