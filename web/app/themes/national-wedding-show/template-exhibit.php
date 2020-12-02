@@ -27,27 +27,9 @@
 		</div>
 	</div>
 
-	<div class="container-secondary exibitors-about-visitors top-accent top-accent--secondary">
-		<div class="container info-block">
-			<div class="row pt-4 pb-4">
-				<div class="col-lg-6 d-flex flex-column justify-content-center">
-					<h3 class="t-section-heading">
-						<span class="t-underline-powder--alpha"><?php the_field('about_visitors_title'); ?></span>
-					</h3>
-					<?php the_field('about_visitors_content'); ?>
-					<a class="button button--new-primary-dark cta-link"
-						href="<?php the_field('about_visitors_cta_link'); ?>"><?php the_field('about_visitors_cta_text'); ?></a>
-				</div>
-				<div class="col-lg-6 col-img">
-					<img class="img-fluid lazy"
-						data-src="<?php $image = get_field('about_visitors_image'); echo $image['sizes']['medium_large']; ?>"
-						alt="">
-				</div>
-			</div>
-		</div>
-	</div>
+   <?php get_template_part('components/about-visitors') ?>
 
-	<?php get_template_part('components/info-card-big'); ?>
+	<?php get_template_part('components/exhibitor-of-the-week-no-logo') ?>
 
 	<section class="upcoming-shows lazy"
 		data-bg="url('<?php $bg_image = get_field('us_background_image'); echo $bg_image['url']; ?>')">
