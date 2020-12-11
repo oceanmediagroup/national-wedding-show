@@ -8,7 +8,7 @@
                     <div class="header__toggler-bar header__toggler-bar--bottom"></div>
                 </div>
                 <a href="<?php echo get_home_url(); ?>" class="header-menu__link header-menu__link--home">HOME</a>
-                <a href="https://weddingshow.seetickets.com"
+                <a href="https://weddingshow.seetickets.com/Content/ticket-options"
                     class="button button--black button--book header-menu__book-mobile">BUY TICKETS</a>
             </div>
 
@@ -35,9 +35,9 @@
                         'theme_location' => 'main-menu',
                         'menu_class'    => 'header-main__nav',
                         'depth'         => 1,
-                        ]); 
+                        ]);
                     ?>
-                    <a href="https://weddingshow.seetickets.com"
+                    <a href="https://weddingshow.seetickets.com/Content/ticket-options"
                         class="button--black header-menu__link book-bttn">BUY<br />TICKETS</a>
                     <div class="btn-group">
                         <a href="https://www.instagram.com/thenationalweddingshow/" target="blank"
