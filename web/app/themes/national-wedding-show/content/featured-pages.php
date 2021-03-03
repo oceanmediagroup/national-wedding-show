@@ -44,10 +44,10 @@
                         <span class="color-overlay"></span>
                     </div>
                     <h3 class="featured-pages__card-title">
-                        <span class="t-underline-coral--alpha"><?php echo get_the_title($postID) ?></span>
+                        <span class="t-underline-lightorange--alpha"><?php echo get_the_title($postID) ?></span>
                     </h3>
                     <a href="<?php echo get_the_permalink($postID) ?>"
-                        class="read-more read-more button t-black button--coral">Read More</a>
+                        class="read-more read-more button t-black button--lightorange">Read More</a>
                 </a>
             </div>
 

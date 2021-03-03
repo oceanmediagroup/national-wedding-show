@@ -39,7 +39,7 @@
                             <div class="card-body">
 
                                 <div class="t-section-heading">
-                                    <span class="t-underline-powder--alpha">
+                                    <span class="t-underline-mossgreen--alpha">
                                         <?php echo $title; ?>
 
                                     </span>
@@ -119,7 +119,7 @@
                         aria-labelledby="<?php echo str_replace(' ', '', $name); ?>-tab">
                         <div class="col-lg-6">
                             <div class="title t-section-heading">
-                                <span class="t-underline-powder--alpha">
+                                <span class="t-underline-mossgreen--alpha">
                                     <?php echo $title; ?>
 
                                 </span>

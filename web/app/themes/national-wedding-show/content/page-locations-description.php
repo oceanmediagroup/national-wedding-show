@@ -6,7 +6,7 @@
                     <div class="col-12">
                         <h2 class="page-locations-desc__title t-section-heading">
                             <span
-                                class="t-underline-powder--alpha"><?php the_field('locations_description-title'); ?></span>
+                                class="t-underline-mossgreen--alpha"><?php the_field('locations_description-title'); ?></span>
                         </h2>
                     </div>
                     <div class="col-12 page-locations-desc__text">

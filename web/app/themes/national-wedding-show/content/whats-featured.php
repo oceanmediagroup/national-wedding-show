@@ -1,7 +1,7 @@
 <section class="featured-pages sds">
     <div class="container">
         <div class="row whats-featured__title-row justify-content-center">
-            <h4 class="whats-featured__title t-section-heading"><span class="t-underline-rose--alpha">What's On</span>
+            <h4 class="whats-featured__title t-section-heading"><span class="t-underline-mossgreen--alpha">What's On</span>
             </h4>
         </div>
         <div class="featured-pages__cards grid justify-content-between" id="featuredPagesGrid">
@@ -17,12 +17,12 @@
                         <span class="color-overlay"></span>
                     </div>
                     <h3 class="featured-pages__card-title">
-                        <span class="t-underline-coral--alpha">
+                        <span class="t-underline-lightorange--alpha">
                             Essential Info
                         </span>
                     </h3>
                 </a>
-                <span class="read-more button t-black button--coral">Read More</span>
+                <span class="read-more button t-black button--lightorange">Read More</span>
             </div>
 
             <div class="grid-item featured-pages__card inspiration-and-advice color-overlay-wrapper">
@@ -32,12 +32,12 @@
                         <span class="color-overlay"></span>
                     </div>
                     <h3 class="featured-pages__card-title">
-                        <span class="t-underline-coral--alpha">
+                        <span class="t-underline-lightorange--alpha">
                             Show Offers And Competitions
                         </span>
                     </h3>
                 </a>
-                <span class="read-more button t-black button--coral">Read More</span>
+                <span class="read-more button t-black button--lightorange">Read More</span>
             </div>
 
             <?php
@@ -75,10 +75,10 @@
                         <span class="color-overlay"></span>
                     </div>
                     <h3 class="featured-pages__card-title">
-                        <span class="t-underline-coral--alpha"><?php the_title(); ?></span>
+                        <span class="t-underline-lightorange--alpha"><?php the_title(); ?></span>
                     </h3>
                 </a>
-                <a href="<?php echo get_the_permalink() ?>" class="read-more button t-black button--coral">Read
+                <a href="<?php echo get_the_permalink() ?>" class="read-more button t-black button--lightorange">Read
                     More</a>
             </div>
             <?php endif; ?>

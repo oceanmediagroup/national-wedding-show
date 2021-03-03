@@ -12,7 +12,7 @@
         <div class="row align-items-center">
             <div class="col-12 text-center">
                 <h2 class="clients-carousel__title t-section-heading"><span
-                        class="t-underline-white--alpha"><?php echo get_field('clients_carousel_title') ?></span></h2>
+                        class="t-underline-stone--alpha"><?php echo get_field('clients_carousel_title') ?></span></h2>
             </div>
 
             <div class="col-12 images-carousel__col">

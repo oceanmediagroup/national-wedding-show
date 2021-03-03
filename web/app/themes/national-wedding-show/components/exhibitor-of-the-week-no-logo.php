@@ -1,18 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dominika
- * Date: 02/07/2018
- * Time: 15:09
- */
-    $circleLogo = '';
-    $circleImg = '';
-    if(get_field('exhibitor_logo_circle')){
-        $circleLogo = 'exhibitor__logo-circle';
-    }
-    if(get_field('exhibitor_img_circle')){
-        $circleImg = 'exhibitor__img-circle';
-    }
+
+    $getCircleImage = get_field('exhibitor_img_circle');
+    $circleImg = $getCircleImage ? 'exhibitor__img-circle' : '';
 
 ?>
 
@@ -32,7 +21,7 @@
                                 class="exhibitor__logo <?php echo $circleLogo ?>">
                         </div>
 
-                        <div class="exhibitor__image-wrapper exhibitor__img-circle <?php echo $circleImg ?>">
+                        <div class="exhibitor__image-wrapper <?php echo $circleImg ?>">
 
                             <img data-src="<?php echo get_field('exhibitor_image')['url'] ?>"
                                 alt="<?php echo get_field('exhibitor_image')['alt'] ?>" class="exhibitor__image lazy">

@@ -19,7 +19,7 @@
 
                 <?php
 
-                        $colors = array('powder', 'rose', 'secondary');
+                        $colors = array('mauvepink', 'mossgreen', 'lightorange');
 
                         $img = get_sub_field('card_image', $post->ID);
                         $title = get_sub_field('card_title', $post->ID);

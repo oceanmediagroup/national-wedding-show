@@ -52,6 +52,7 @@
 
   .button--circle {
     right: 15px;
+    background-color: $mossgreen;
 
     @include media-breakpoint-up(md) {
       right: 0;

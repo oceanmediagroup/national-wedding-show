@@ -20,7 +20,7 @@
                 <div class="col-12 col-md align-self-center">
                     <div class="product-card-big__content">
                         <h3 class="product-card-big__title t-section-heading">
-                            <span class="t-underline-rose--alpha">
+                            <span class="t-underline-mauvepink--alpha">
                                 <?php echo $title; ?>
                             </span>
                         </h3>
