@@ -23,7 +23,7 @@
                     <div class="main-menu__social">
                         <?php get_template_part('template-parts/social-media-icons') ?>
                     </div>
-                    <a href="https://weddingshow.seetickets.com" class="button button--light-coral button--book">Book tickets</a>
+                    <a href="https://weddingshow.seetickets.com/Content/ticket-options" class="button button--light-coral button--book">Book tickets</a>
                 </div>
 
                 <div class="col-9 main-menu__cards-wrapper">
