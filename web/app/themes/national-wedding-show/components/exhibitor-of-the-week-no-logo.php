@@ -16,7 +16,7 @@
                                 class="exhibitor__logo <?php echo $circleLogo ?>">
                         </div>
 
-                        <div class="exhibitor__image-wrapper exhibitor__img-circle <?php echo $circleImg ?>">
+                        <div class="exhibitor__image-wrapper <?php echo $circleImg ?>">
 
                             <img data-src="<?php echo get_field('exhibitor_image')['url'] ?>"
                                 alt="<?php echo get_field('exhibitor_image')['alt'] ?>" class="exhibitor__image lazy">

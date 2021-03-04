@@ -10,7 +10,7 @@
     <div class="row pt-4 pb-4">
       <div class="col-lg-6 d-flex flex-column justify-content-center">
         <h3 class="t-section-heading">
-          <span class="t-underline-powder--alpha"><?php the_field('about_visitors_title'); ?></span>
+          <span class="t-underline-mossgreen--alpha"><?php the_field('about_visitors_title'); ?></span>
         </h3>
         <?php the_field('about_visitors_content'); ?>
         <a class="button button--new-primary-dark cta-link"

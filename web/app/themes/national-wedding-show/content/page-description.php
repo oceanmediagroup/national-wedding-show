@@ -8,7 +8,7 @@ $button = get_field('cta_button');
             <div class="col text-center">
                 <h2 class="page-description__title t-section-heading">
 
-                    <span class="t-underline-powder--alpha"><?php echo get_field('page_description_title'); ?></span>
+                    <span class="t-underline-mossgreen--alpha"><?php echo get_field('page_description_title'); ?></span>
                 </h2>
             </div>
         </div>

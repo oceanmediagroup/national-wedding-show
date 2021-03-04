@@ -10,29 +10,42 @@ $black: #000000;
 
 $accent-color: #FFE18C;
 $primary: #e39b85;
-$primary-dark: #E1859D;
+$primary-dark: #c97169;
 $brown: #40261C;
+
+//summer colours
+$rose: #E1859D;
+$lemonade: #fcdbe1;
+$peach: #fdcbb9;
+$turquoise: #68bcb3;
+
+//winter colours
+$lightorange: #ebaa83;
+$mauvepink: #c97169; 
+$stone: #f5e9e1;
+$mossgreen: #b3c2bf;
 
 // $coral: #ebaa83;
 $coral: #fcdbe1;
 
 // $blush: #c97169;
-$blush: #E1859D;
-$rose: #E1859D;
+$blush: #c97169;
 
 // $powder: #b3c2bf;
 $powder: #68bcb3;
+ 
 
 // $sand: #f5e9e1;
 $sand: #f5e9e1;
 $secondary: #fdcbb9;
 
-
 $underlines-colors: (coral: #fcdbe1,
-    blush: #c97169,
-    rose: #E1859D,
+    mauvepink: #c97169,
+    mossgreen: #b3c2bf,
     powder: #68bcb3,
     white: #fff,
+    stone: #f5e9e1,
+    lightorange: #ebaa83,
     secondary: #fdcbb9);
 
 @each $color,

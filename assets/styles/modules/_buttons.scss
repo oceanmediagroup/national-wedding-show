@@ -193,7 +193,7 @@
     height: 60vw;
     max-width: 250px;
     max-height: 250px;
-    background: $coral;
+    background: $lightorange;
     font-size: 24px;
     font-family: 'Druk Wide Web';
     text-align: center;
@@ -278,6 +278,40 @@
 
     &:hover {
       color: $powder;
+    }
+
+  }
+  // winter colors
+
+  &--mauvepink {
+    background: $mauvepink;
+    color: $black;
+
+    &:hover {
+      color: $mauvepink;
+      background: $white;
+    }
+
+  }
+
+  &--mossgreen {
+    background: $mossgreen;
+    color: $black;
+
+    &:hover {
+      color: $mossgreen;
+      background: $white;
+    }
+
+  }
+
+  &--lightorange {
+    background: $lightorange;
+    color: $black;
+
+    &:hover {
+      color: $lightorange;
+      background: $white;
     }
 
   }

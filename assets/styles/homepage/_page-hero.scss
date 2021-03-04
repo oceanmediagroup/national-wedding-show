@@ -134,7 +134,7 @@
 
     &__card--highlighted {
       display: none;
-      background-color: rgba($primary-dark, 0.9);
+      background-color: rgba($mauvepink, 0.9);
 
       @include media-breakpoint-up(md) {
         display: flex;

@@ -70,6 +70,7 @@
       margin-bottom: 20px;
       font-size: 18px;
       color: $white;
+      font-family: 'Helvetica Neue' !important;
 
       @include media-breakpoint-up(md) {
         margin: 30px 0;

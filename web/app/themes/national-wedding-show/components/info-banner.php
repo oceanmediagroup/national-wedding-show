@@ -6,7 +6,7 @@
  * Time: 15:38
  */ ?>
 
-<section class="info-banner" style="background-color: #E1859D">
+<section class="info-banner" style="background-color: $blush">
     <img data-src="/assets/img/section-accents/confetti.png" class="lazy confetti-accent" alt="" />
     <div class="container">
         <div class="row justify-content-between align-items-center">

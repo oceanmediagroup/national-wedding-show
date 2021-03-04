@@ -12,7 +12,7 @@ $is_home = (is_front_page() ? ' top-accent top-accent--white' : '');
             </span></a>
         <div class="row">
             <div class="col instagram__header-col text-center">
-                <h2 class="instagram__title t-section-heading "><span class="t-underline-rose--alpha">Follow us</span>
+                <h2 class="instagram__title t-section-heading "><span class="t-underline-mauvepink--alpha">Follow us</span>
                 </h2>
                 <a href="https://www.instagram.com/thenationalweddingshow/?hl=en"
                     class="instagram__profile-link t-black">@nationalweddingshow</a>

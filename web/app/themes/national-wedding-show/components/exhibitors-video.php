@@ -9,7 +9,7 @@
 		<div class="row">
 			<div class="col-12 col-lg-10 video-col m-auto">
 				<h3 class="t-section-heading"><span
-						class="t-underline-powder--alpha"><?php the_field('title'); ?></span></h3>
+						class="t-underline-mossgreen--alpha"><?php the_field('title'); ?></span></h3>
 				<div class="embed-responsive embed-responsive-21by9">
 					<iframe class="embed-responsive-item lazy" data-src="<?php the_field('video_link'); ?>?rel=0"
 						allowfullscreen></iframe>

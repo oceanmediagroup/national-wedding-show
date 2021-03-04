@@ -19,7 +19,7 @@
                     <div class="competition-card-big__content">
                         <span class="competition-card-big__subtitle">Competition</span>
                         <h3 class="competition-card-big__title t-section-heading">
-                            <span class="t-underline-coral--alpha"><?php echo get_field('competition_name'); ?></span>
+                            <span class="t-underline-mossgreen--alpha"><?php echo get_field('competition_name'); ?></span>
                         </h3>
                         <span
                             class="competition-card-big__text t-paragraph"><?php echo get_field('competition_text'); ?></span>
