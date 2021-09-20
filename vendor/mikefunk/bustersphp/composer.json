@@ -1,0 +1,20 @@
+{
+    "name": "mikefunk/bustersphp",
+    "description": "A simple class to generate js/css tags with cache names from busters.json. This is related to gulp-buster.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mike Funk",
+            "email": "mike@mikefunk.com"
+        }
+    ],
+    "require-dev": {
+        "illuminate/support": "4.1.*",
+        "mockery/mockery": "0.9.*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "MikeFunk\\BustersPhp\\": "src/MikeFunk/BustersPhp"
+        }
+    }
+}
